@@ -4,7 +4,7 @@ include "../includes/db.php";
     
 include "../includes/functions.php";
 
-            $query = "SELECT * FROM kalendar WHERE datum >= CURDATE() ORDER BY datum ASC";
+            $query = "SELECT * FROM kalendar WHERE datum >= CURDATE() ORDER BY datum ASC LIMIT 10";
             $result = mysqli_query($connection, $query);
             testQuery($result);
 ?>
