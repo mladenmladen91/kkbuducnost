@@ -23,7 +23,7 @@ redirect();
                     <i class="fas fa-plus"></i>&ensp;DODAJ VIDEO</a>
             </div>
         </div>
-        <div class="col-lg-12 p-0 text-center" style="overflow-x: auto; margin-bottom: 227px">
+        <div class="col-lg-12 p-0 text-center" style="overflow-x: auto;min-height:61.5vh;">
             <table class="tableLiga table-hover my-2">
                                   <thead>
                                       <th>ID</th>
