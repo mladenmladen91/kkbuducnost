@@ -1,0 +1,5 @@
+- Login za admin stranicu:
+  username: admin,
+  password: admin
+
+- Na stranici tabele prikaz tabela se vrši tako što aktivirate lige na stranici sa podešavanjima(admin). 

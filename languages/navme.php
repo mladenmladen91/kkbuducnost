@@ -1,0 +1,36 @@
+<?php
+	$lang = array(
+		"NASLOVNA" => "NASLOVNA",
+		"EKIPA" => "EKIPA",
+		"VIJESTI" => "VIJESTI",
+		"UPRAVA" => "UPRAVA",
+        "MULTIMEDIJA" => "MULTIMEDIJA",
+        "KLUB" => "KLUB",
+		"MEDIJA" => "MEDIJA KUTAK",
+		"KARTE" => "KARTE",
+        "strucni_stab" => 'Stručni štab',
+        "prvi_tim" => 'Prvi tim',
+        "osoblje" => 'Medicinski tim i osoblje',
+        "mladje_selekcije" => 'Mlađe selekcije',
+        "juniori" => 'Juniorska selekcija',
+        "kadeti" => 'Kadetska selekcija',
+        "pioniri" => 'Pionirska selekcija',
+        "rezultati" => 'Rezultati',
+        "tabele" => 'Tabele',
+        "kalendar" => 'Kalendar',
+        "klub" => "Klub",
+        "aba" => "ABA liga",
+        "ostalo" => "Ostalo",
+        "prva_liga" => "ERSTE prva liga",
+        "video" => "Video galerija",
+        "foto_takmicenja" => "Foto-takmičenja",
+        "foto_ostalo" => "Foto-ostalo",
+        "upravni_odbor" => "Upravni odbor",
+        "menadzment" => "Menadžment",
+        "istorija" => "Istorija",
+        "prostorije" => "Prostorije",
+        "trofeji" => "Trofeji",
+        
+        
+	);
+?>

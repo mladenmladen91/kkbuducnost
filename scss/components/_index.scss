@@ -1,0 +1,92 @@
+#euroleague-topbar{
+    width: 100vw;
+    height: 72px;
+}
+
+.swiper-container {
+      margin-top: 50px;
+      width: 100%;
+      height: 220px;
+}
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    & img{
+        border-radius: 50% !important;
+    }
+    & span{
+        font-size: 1.9rem;
+    }
+}
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+.modal{
+    background-color: rgba($cl-p,.6)  !important;
+}
+
+.modal-header{
+    background-color: transparent !important;
+    border-bottom: none !important;
+}
+.popup_header{
+    background-color: $cl-p !important;
+}
+.close{
+    color: white !important;
+    font-size: 2rem !important;
+}
+.player_info_content{
+    & span{
+       color: $cl-p;
+       font-size: 1.3rem;
+       font-family: "Montserrat", sans-serif;    
+    }
+}
+.player_info_header{
+    margin-bottom: 40px !important;
+    
+    &_name{
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: $cl-p;
+        border-bottom: 2px solid $cl-t;
+    }
+    &_number{
+        font-size: 2rem;
+       font-family: "Montserrat", sans-serif;
+       border-bottom: 2px solid $cl-t;
+       font-weight: 600;
+       color: white;
+       background-color: #004b93;
+        padding-left: 16px;
+        padding-right: 16px;
+   }
+}
+.small_sponsors{
+    display: inline-block;
+    padding: 10px;
+    
+}
+@media(max-width: 575px){
+    .small_sponsors_images{
+        height: 30px !important;
+        margin-bottom: 30px;
+        width: auto !important;
+    }
+}
+
+@media(max-width: 443px){
+    .player_info_header{
+      &_name, &_number{
+        font-size: 1.1rem;
+    }
+   
+}
+}

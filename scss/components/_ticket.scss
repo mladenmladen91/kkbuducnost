@@ -1,0 +1,60 @@
+.ticket{
+    &_title{
+        font-size: 4rem;
+        color: $cl-s;
+        text-transform: uppercase;
+    }
+    &_span{
+        color: $cl-f;
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    &_input{
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+        border-width: 1px;
+        border-color: $cl-s;
+        border-style: solid;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        padding: 10px;
+        font-style: italic;
+        outline: none !important;
+        
+        &_text{
+            height: 40px;
+        }
+        &_textarea{
+            color: $cl-s;
+        }
+        &_button{
+            background: green;
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            border: none;
+            padding: 7px;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            cursor: pointer;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+    &_info{
+        &_title{
+            color: $cl-p;
+            text-align: left;
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        &_text{
+            text-align: left;
+            font-size: 1.5rem;
+        }
+    }
+}

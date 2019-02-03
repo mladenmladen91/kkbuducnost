@@ -1,0 +1,87 @@
+.photo_league{
+    &_container{
+         &_aba{
+           height:255px;
+           background: url(../images/aba.png) center no-repeat,url(../images/shadow.png) center no-repeat, url(../images/cover1.jpg) center no-repeat;
+           background-size: 30%,cover, cover;
+        }
+        &_euroleague{
+           height:255px;
+           background: url(../images/euroleague.png) center no-repeat,url(../images/shadow.png) center no-repeat, url(../images/cover1.jpg) center no-repeat;
+           background-size: 80%,cover, cover; 
+        }
+        &_eurocup{
+           height:255px;
+           background: url(../images/eurocup.png) center no-repeat,url(../images/shadow.png) center no-repeat, url(../images/cover1.jpg) center no-repeat;
+           background-size: 80%,cover, cover; 
+        }
+        &_prva{
+           height:255px;
+           background: url(../images/prva.png) center no-repeat,url(../images/shadow.png) center no-repeat, url(../images/cover1.jpg) center no-repeat;
+           background-size: 64%,cover, cover; 
+        }
+        &_kup{
+           height:255px;
+           background: url(../images/kup.png) center no-repeat,url(../images/shadow.png) center no-repeat, url(../images/cover1.jpg) center no-repeat;
+           background-size: 35%,cover, cover; 
+        }
+    }
+    &_gallery{
+        list-style: none;
+        
+        & li{
+            display: inline-block;
+            margin: 0 !important;
+            & img{
+                backface-visibility: hidden;
+                transition: all .3s linear;
+                width: 100%;
+                margin-bottom: 3px;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        &_picture{
+            opacity: 1;
+            animation: show .5s linear;
+        }
+    }
+    
+    &_title{
+        border-bottom: 2px solid $cl-s;
+        &_span{
+            color: $cl-f;
+            padding-left: 0 !important;
+            padding: 10px;
+            font-size: 1.7rem;
+            font-weight: 600;
+            text-align: left;
+            
+        }
+        &_border{
+            border: 1px solid $cl-s;
+            margin-top: 1px;
+        }
+        &_date{
+            font-size: 1.4rem !important;
+            color: $cl-f !important;
+            padding-top: 30px !important;
+        }
+    }
+}
+
+
+
+@keyframes show{
+     0%{
+     	opacity: 0;
+        transform: scale(0); 
+     } 
+     100% {
+     	opacity: 1;
+        transform: scale(1); 
+     }
+}

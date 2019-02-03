@@ -1,0 +1,47 @@
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+.swiper-pagination-bullet-active{
+    background: white;
+}
+.custom_card{
+    text-align:center; 
+    border:none; 
+    margin: 0; 
+    padding: 0;
+}
+.custom_card:hover{
+    cursor: pointer;
+}
+.swiperImg{
+    width:auto; 
+    max-width: 175px; 
+    margin:auto; 
+    height: 90px;
+}
+.customP{
+    border: 1.5px #f1592a solid;
+    color:#f1592a;
+    font-size:13px;
+    border-radius: 5px;
+}

@@ -1,0 +1,87 @@
+<?php
+
+$scripts = [
+    'adminHeader.php' => ['jquery-3.3.1.min.js', 'popper.js', 'bootstrap.min.js'],
+    'pregledFotografija.php' => ['lightgallery.min.js', 'lg-thumbnail.min.js', 'lg-fullscreen.min.js', 'lg-autoplay.min.js', 'lg-zoom.min.js', 'pregledFotografija.js'],
+    'podesavanje.php' => ['settings.js'],
+    'dodajPrvotimca.php' => ['dodajIgraca.js'],
+    'prvi_tim.php' => ['tabeleIgraci.js'],
+    'izmijeniPrvotimca.php' => ['izmijeniPrvotimca.js'],
+    'juniori.php' => ['tabeleIgraci.js'],
+    'dodajJuniora.php' => ['dodajIgraca.js'],
+    'izmijeniJuniora.php' => ['izmijeniOstaleIgrace.js'],
+    'kadeti.php' => ['tabeleIgraci.js'],
+    'dodajKadeta.php' => ['dodajIgraca.js'],
+    'izmijeniKadeta.php' => ['izmijeniOstaleIgrace.js'],
+    'pioniri.php' => ['tabeleIgraci.js'],
+    'dodajPionira.php' => ['dodajIgraca.js'],
+    'izmijeniPionira.php' => ['izmijeniOstaleIgrace.js'],
+    'menadzment.php' => ['tabelePersonel.js'],
+    'dodajClanaMenadzmenta.php' => ['dodajPersonel.js'],
+    'izmijeniClanaMenadzmenta.php' => ['izmijeniPersonel.js'],
+    'mladje_selekcije.php' => ['tabelePersonel.js'],
+    'dodajClanaSelekcija.php' => ['dodajPersonel.js'],
+    'izmijeniClanaSelekcija.php' => ['izmijeniPersonel.js'],
+    'osoblje.php' => ['tabelePersonel.js'],
+    'dodajClanaOsoblja.php' => ['dodajPersonel.js'],
+    'izmijeniClanaOsoblja.php' => ['izmijeniPersonel.js'],
+    'strucni_stab.php' => ['tabelePersonel.js'],
+    'dodajClanaStaba.php' => ['dodajPersonel.js'],
+    'izmijeniClanaStaba.php' => ['izmijeniPersonel.js'],
+    'upravni_odbor.php' => ['tabelePersonel.js'],
+    'dodajClanaOdbora.php' => ['dodajPersonel.js'],
+    'izmijeniClanaOdbora.php' => ['izmijeniPersonel.js'],
+    'aba.php' => ['tabeleTimLiga.js'],
+    'dodajTimAba.php' => ['dodajTimLiga.js'],
+    'izmijeniTimAba.php' => ['izmijeniTimLiga.js'],
+    'euroleague.php' => ['tabeleTimLiga.js'],
+    'dodajTimEuroleague.php' => ['dodajTimLiga.js'],
+    'izmijeniTimEuroleague.php' => ['izmijeniTimLiga.js'],
+    'eurocup.php' => ['tabeleTimLiga.js'],
+    'dodajTimEurocup.php' => ['dodajTimLiga.js'],
+    'izmijeniTimEurocup.php' => ['izmijeniTimLiga.js'],
+    'cg.php' => ['tabeleTimLiga.js'],
+    'dodajTimCg.php' => ['dodajTimLiga.js'],
+    'izmijeniTimCg.php' => ['izmijeniTimLiga.js'],
+    'album.php' => ['tabeleAlbum.js'],
+    'dodajAlbum.php' => ['dodajAlbum.js'],
+    'dodajVijest.php' => ['select2.min.js','dodajVijest.js'],
+    'vijesti.php' => ['tabeleVijesti.js'],
+    'izmijeniVijest.php' => ['select2.min.js', 'izmijeniVijest.js'],
+    'timovi.php' => ['tabeleTimovi.js'],
+    'dodajTim.php' => ['dodajTim.js'],
+    'izmijeniTim.php' => ['izmijeniTim.js'],
+    'dodajRezultat.php' => ['select2.min.js', 'dodajRezultat.js'],
+    'izmijeniRezultat.php' => ['select2.min.js', 'izmijeniRezultat.js'],
+    'rezultati.php' => ['tabeleRezultati.js'],
+    'dodajMec.php' => ['select2.min.js', 'dodajMec.js'],
+    'izmijeniMec.php' => ['select2.min.js', 'izmijeniMec.js'],
+    'kalendar.php' => ['tabeleKalendar.js'],
+    'trofeji.php' => ['tabeleTrofeji.js'],
+    'dodajTrofej.php' => ['dodajTrofej.js'],
+    'izmijeniTrofej.php' => ['izmijeniTrofej.js'],
+    'baneri.php' => ['tabeleBaneri.js'],
+    'dodajBaner.php' => ['dodajBaner.js'],
+    'izmijeniBaner.php' => ['izmijeniBaner.js'],
+    'sponzori.php' => ['tabeleSponzori.js'],
+    'dodajSponzora.php' => ['dodajSponzora.js'],
+    'izmijeniSponzora.php' => ['izmijeniSponzora.js'],
+    'mediji.php' => ['tabeleMediji.js'],
+    'dodajIzjavu.php' => ['dodajIzjavu.js'],
+    'dodajNewsfeed.php' => ['dodajNewsfeed.js'],
+    'video.php' => ['tabeleVideo.js'],
+    'dodajVideo.php' => ['dodajVideo.js'],
+    'izmijeniVideo.php' => ['izmijeniVideo.js'],
+];
+
+foreach($scripts as $key => $value) {
+	if($key != $pageName) continue;
+    foreach($value as $href) {
+?>
+
+<script type="text/javascript"  src="<?php echo 'js/'.$href; ?>" ></script>
+
+<?php
+		}
+	}
+?>

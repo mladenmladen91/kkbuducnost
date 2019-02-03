@@ -1,0 +1,50 @@
+.media{
+    &_title{
+        font-size: 4rem;
+        color: $cl-p;
+        
+    }
+    &_container{
+        border: 1px solid $cl-s;
+        &_span{
+            &_title{
+                font-size: 1.5rem;
+                color: $cl-f;
+                margin: 15px;
+            }
+            &_date{
+                font-size: 1.5rem;
+                color: $cl-s;
+                margin-top: 15px !important;
+            }
+        }
+    }
+    &_contact{
+        border: 1px solid $cl-s;
+        &_title{
+            font-weight: 600;
+            font-size: 2rem;
+            color: $cl-f;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        &_info{
+            text-align: left;
+        }
+    }
+    &_logo{
+        &_title{
+            color: $cl-p;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    }
+    &_icon{
+        background: $cl-t;
+        color: white;
+        border-radius: 5px;
+    }
+    &_link{
+        display: inline-block;
+    }
+}

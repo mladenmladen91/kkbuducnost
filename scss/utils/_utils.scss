@@ -1,0 +1,414 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+
+  @include sm {
+    font-size: 50%;
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $cl-p;
+}
+
+::selection {
+  color: $white;
+  background: $cl-p;
+}
+
+
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: $font;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;    
+}
+
+body.noScroll {
+  overflow: hidden;
+}
+a{
+    &:hover{
+        text-decoration: none !important;
+    }
+}
+
+
+.content_containter{
+    border-top: 2px solid #f5a000;
+    background: url(../images/loptapozadina.png) top no-repeat, url(../images/pattern.png) repeat !important;
+}
+.container{
+    background: white;
+}
+.game_container{
+    border: 1px solid $cl-s;
+    
+    &_info{
+        background-color: $cl-p;
+        color: white;
+        border: 2px solid $cl-p !important;
+        &_text{
+            font-size: 15px;
+            padding-left: 15px;
+            cursor: context-menu;
+            font-weight: 400;
+        }
+    }
+}
+.team{
+    &_name{
+        font-size: 2rem !important;
+        cursor: context-menu;
+        
+    }
+    &_versus{
+        font-size: 2.5rem;
+        color: #f5a000;
+        font-weight: 600;
+    }
+}
+.carousel-inner img{
+    width: 100%;
+    height: 500px !important;
+}
+.carousel-indicators{
+    & li{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+}
+
+.datum_slajd {
+    background-color: $cl-t;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 7px;
+    float: left;
+    margin-left: 30px;
+}
+
+.naslov_slajd{
+    background-color: $cl-p;
+    color: white;
+    font-size: 2.2rem;
+    padding: 7px;
+    text-align: left;
+    margin-left: 30px;
+    border-bottom: 2px solid #f5a000;
+    margin-bottom: 15px;
+    cursor: pointer;
+    line-height: 1.5em;
+    max-height: 3.6em;
+    overflow: hidden;
+    
+}
+.other_news_container{
+    margin-bottom: 20px;
+    border-bottom: 2px solid $cl-t;
+    &_image{
+        & img{
+            width: 100%;
+            height: 170px !important;
+            
+        }
+        
+        &_profile{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba($cl-p, .7);
+        display: none;     
+        transition: all .3s ease-in-out;
+           
+        &_span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            border: 2px solid white;
+            padding: 8px;
+            font-weight: 600;
+            font-size: .8rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+        }
+       }
+       &:hover{
+           .other_news_container_image_profile{
+               display: block;
+               transition: all .3s ease-in-out;
+               &_span{
+                   opacity: 1 !important;
+               }
+           } 
+        }    
+    }
+    &_heading{
+        color: $cl-f;
+        font-size: 1.7rem;
+        font-weight: bold;
+        padding: 10px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        text-align: left;
+        overflow-y: hidden;
+        height: 40px !important;
+        margin-bottom: 8px !important;
+    } 
+    &_date{
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+        color: #b9b9b9;
+        cursor: pointer;
+    }
+    &_position{
+       font-size: 1.4rem;
+       color: $cl-f;
+       font-weight: 600;
+       margin-top: 0 !important;
+       margin-bottom: 30px !important;    
+    }
+    &_number{
+        color: $cl-p;
+        font-size: 3.2rem;
+        position: absolute;
+        top: -20;
+        right: 10;
+        font-weight: 600;
+    }
+    
+}
+.section{
+    &_holder{
+        border: 2px solid $cl-p;
+        position: relative;
+        margin-top: 60px !important; 
+    }
+    &_header{
+    background: $cl-p;
+    color: white;
+    border-bottom: 2px solid $cl-t;
+    position: absolute;
+    top: -25;
+      & span{
+        padding: 30px;
+        font-size: 3rem;
+      }
+    }
+}
+.table_nav_header{
+    &_span{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $cl-s;
+        
+    }
+    &_active{
+        color: $cl-f;
+    }
+}
+
+.game_navigation{
+    margin: 30px 0; 
+    
+    &_container{
+        border-right: 2px solid $cl-s;
+        &:nth-child(4){
+            border-right: none;
+        }
+    }
+    
+    &_dir{
+        font-size: 2.2rem !important;
+        font-weight: 600;
+        color: $cl-s;
+        cursor: pointer;
+        
+        &_active, &_actual, &_kalendar{
+            color: $cl-f;
+        }
+    }
+    &_league{
+        color: $cl-s;
+        font-weight: 600;
+        font-size: 2rem;
+        border: none !important;
+        text-align: center;
+        cursor: pointer;
+        &_active{
+            color: $cl-f;
+        }
+    }
+    &_next{
+        border-right: 2px solid rgb(40, 57, 71);
+        
+    }
+    
+}
+.tableLiga{
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 1.2rem;
+    border: 1px solid $cl-s;
+    
+    & thead{
+        background: $cl-p;
+        color: white;
+        border: 1px solid $cl-p;
+        & th{
+            text-align: center;
+            padding: 10px;
+            border: 1px solid $cl-p;
+        }
+    }
+    & tbody{
+        & td{
+            text-align: center;
+            padding: 7px;
+            border: 1px solid $cl-s;
+        }
+    }
+}
+.league{
+    &_category{
+    background-color: $cl-p;
+    color: white;
+    font-size: 2rem;
+    padding: 7px;
+    float: left;
+    border-bottom: 2px solid #f5a000;
+    margin-bottom: 15px;
+    cursor: pointer;
+    line-height: 1.5em;
+    max-height: 3.6em;
+    overflow: hidden;
+    }
+    
+    &_search{
+    border: 2px solid $cl-s;
+    border-radius: 29px;
+    padding: 12px;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    color: $cl-p;
+    line-height: 1.2;
+    outline: none;
+    background: url(../images/pretraga.png) no-repeat;
+    background-size: 38px;
+    background-position: center right 3px;
+    padding-left: 22px;
+    padding-right: 50px;
+    max-width: 100%;
+    }
+}
+.img-scale{
+    backface-visibility: hidden !important;
+    transition: transform .4s linear;
+    &:hover{
+        transform: scale(1.05);
+        overflow: hidden;
+    }
+}
+.results_navigation{
+    margin: 50px 0;
+    &_button{
+       color: white;
+       background-color: $cl-p;
+       font-size: 1.2rem;
+       line-height: 24px;
+       font-weight: normal;
+       text-align: center;
+       width: 14px;
+       padding: 7px;
+       margin: 0 5px 0 0;
+       border-radius: 3px;
+    }
+}
+.select2-container--default .select2-selection--single {
+    padding: 6px;
+    height: 38px !important;
+    font-size: 1.4rem !important;
+    position: relative;
+    font-weight: 400 !important;
+    border: 1px solid #ced4da !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow  b{
+    border-top-color: #576169 !important;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    
+}
+
+
+
+@media(max-width: 990px){
+    .game_navigation{
+      &_dir{
+            float: none !important;
+        }
+       &_next{
+        border: none !important;
+       }
+    }
+}
+@media(max-width: 991px){
+    .game_container_info{
+        &_date, &_location{
+            float: none !important;
+        }
+    }
+    .team_name{
+        display: none;
+    }
+    .game_navigation{
+        &_container{
+           &:nth-child(2){
+            border-right: none;
+           }
+           &:nth-child(3), &:nth-child(4){
+            border-top: 2px solid $cl-s;
+           }    
+        }
+    }
+}
+@media(max-width: 575px){
+    .game_navigation{
+        &_container{
+           border:none !important;   
+        }
+    }
+}
+@media(max-width: 436px){
+    .carousel-inner img{
+        height: 250px !important;
+    }
+
+}

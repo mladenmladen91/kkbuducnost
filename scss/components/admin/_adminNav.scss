@@ -1,0 +1,99 @@
+nav{
+    margin-top: 40px;
+}
+.nav_holder{
+    background: $cl-p;
+}
+.nav_admin_container{
+    background-color: transparent !important;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif !important;
+    
+    &_links {
+      border-top: 2px solid white;
+    
+      & a{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600 !important;
+        padding: 14px 15px;
+        line-height: 6px;
+        &:hover{
+            background: $cl-s;
+        }
+      }
+    }
+}
+.nav-admin_link_active{
+    background: $cl-s !important;
+    color: white !important;
+}
+
+.admin_dropdown{
+    &:hover > &-menu{
+        display: block !important;
+    }
+}
+.nav_admin_dropdown-menu{
+    background: $cl-p !important;
+    color: white !important;
+    
+    & a{
+       font-size: 1.1rem;     
+       border-bottom: 1px solid white !important;
+       font-weight: 300;
+       color: white !important;    
+    }
+}
+.navbar-toggler{
+	height: 36px;
+	width: 36px;
+	background: transparent;
+	text-align: center;
+    position: relative;
+    
+    &:focus{
+        box-shadow: none !important;
+        border: none !important;
+        outline: none;
+    }
+}
+.admin_ham2{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+    width:20px;
+	height:3px;
+	background: white;
+    
+    &::after{
+       width:20px;
+	   height:3px;
+	   background: white;
+       position: absolute;
+	   content: "";
+       display: block;
+	   left: 0;
+       top: -8px;    
+    }
+    
+    &::before{
+       width:20px;
+	   height:3px;
+	   background: white;
+       position: absolute;
+	   content: "";
+       display: block;
+	   left: 0;
+       top: 8px;    
+    }
+} 
+
+
+@media (max-width: 1199px){
+    nav{
+      margin-top: 0px;
+    }
+    
+}

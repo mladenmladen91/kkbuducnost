@@ -1,0 +1,63 @@
+.crew{
+    &_heading{
+        background-color: $cl-p;
+        color: white;
+        border-bottom: 2px solid $cl-t;
+        margin: 50px 0;
+        padding: 5px 10px;
+        font-size: 2.8rem;
+    }
+    &_iframe{
+        width: 100% !important;
+        
+        &_12{
+            height: 450px !important;
+        }
+        &_6{
+             width: 100% !important;
+             height: 240px !important;       
+        }
+        &_4{
+            width: 100% !important;
+            height: 160px !important;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .crew{
+        &_iframe{
+           &_12{
+             width: 100% !important;   
+             height: 400px !important;
+           }
+           &_6{
+             width: 100% !important;    
+             height: 450px !important;       
+           }
+           &_4{
+             width: 100% !important;
+             height: 300px !important;
+           }    
+        }
+    }
+}
+
+@media(max-width: 433px){
+    .crew{
+        &_iframe{
+           &_12{
+               width: 100% !important;
+               height: 300px !important; 
+            }
+            &_6{
+               width: 100% !important;    
+               height: 200px !important; 
+            }
+            &_4{
+             width: 100% !important;
+             height: 200px !important;
+           }
+        }
+    }
+}

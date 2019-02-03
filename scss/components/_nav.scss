@@ -1,0 +1,141 @@
+nav{
+    margin-top: 40px;
+}
+.nav_container{
+    background-color: transparent !important;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif !important;
+    
+    &_links {
+      border-top: 2px solid $cl-p;
+    
+      & a{
+        color: $cl-p;
+        font-size: 1.3rem;
+        font-weight: 600 !important;
+        padding: 14px 15px;
+        line-height: 6px;
+        &:hover{
+            background: $cl-s;
+        }
+      }
+    }
+}
+.nav-link_active{
+    background: $cl-p !important;
+    color: white !important;
+}
+
+.dropdown{
+    &:hover > &-menu{
+        display: block !important;
+    }
+}
+.nav_dropdown-menu{
+    background: white !important;
+    color: $cl-p !important;
+    
+    & a{
+       font-size: 1.2rem;     
+       border-bottom: 1px solid rgba(0,0,0,.15) !important;
+       font-weight: 300;
+       color: #337ab7 !important;    
+        
+    }
+}
+.navbar-toggler{
+	height: 36px;
+	width: 36px;
+	background: transparent;
+	color: $cl-p;
+    text-align: center;
+    position: relative;
+    
+    &:focus{
+        box-shadow: none !important;
+        border: none !important;
+        outline: none;
+    }
+}
+
+.ham2{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+    width:20px;
+	height:3px;
+	background: $cl-p;
+    transition: all .3s linear;
+    &::after{
+       width:20px;
+	   height:3px;
+	   background: $cl-p;
+       position: absolute;
+	   content: "";
+       display: block;
+	   left: 0;
+       top: -8px;
+       transition: all .3s linear;    
+    }
+    
+    &::before{
+       width:20px;
+	   height:3px;
+	   background: $cl-p;
+       position: absolute;
+	   content: "";
+       display: block;
+	   left: 0;
+       top: 8px;
+        transition: all .3s linear;
+    }
+}
+.transX > .ham2::after{
+	top: 0 !important;
+	transform: rotate(45deg); 
+    transition: all .3s linear;
+}
+.transX > .ham2::before{
+	top: 0 !important;
+	transform: rotate(-45deg);
+    transition: all .3s linear;
+}
+.transX > .ham2{
+    
+	background-color: transparent; 
+}
+
+.nav-admin_link_active{
+    color: $cl-p !important;
+    background: $cl-s !important;
+}
+.signout_btn{
+    color: $cl-p !important;
+    background: $white !important;
+}
+.language_link{
+    background: white !important;
+    color: $cl-p !important;
+    padding: 7px !important;
+    font-size: 1.4rem !important;
+    &_active{
+        background: $cl-p !important;
+        color: white !important;
+    }
+}
+.brand_holder{
+        display: none !important;
+    }
+
+@media (max-width: 1199px){
+    nav{
+      margin-top: 0px;
+    }
+    .brand_holder{
+        display: block !important;
+    }
+    .logo_holder{
+        display: none !important;
+    }
+}

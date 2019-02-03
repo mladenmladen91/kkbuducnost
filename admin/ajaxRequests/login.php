@@ -1,0 +1,37 @@
+<?php
+session_start();
+
+include "../../includes/db.php";
+    
+include "../../includes/functions.php";
+
+if(empty($_POST['username']) || empty($_POST['password'])){
+    echo "* Morate popuniti oba polja";
+}else{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+    
+    $hashPassword = password_hash($password, PASSWORD_BCRYPT, array('cost'=> 12));
+    
+    $stmtLogin = mysqli_prepare($connection, "SELECT username, password FROM admin WHERE username=?");
+    $stmtLogin->bind_param('s', $username);
+    $stmtLogin->execute();
+    testQuery($stmtLogin);
+    $stmtLogin->bind_result($db_username, $db_password);
+    $stmtLogin->fetch();
+   
+    if(!password_verify($password, $db_password) || $username !== $db_username){
+         echo '* Unesite ispravne validacione podatke';
+    }else{
+        
+        $_SESSION['username'] = $db_username;
+         
+        echo 'Success';
+    }
+}
+
+
+?>
