@@ -25,7 +25,7 @@
                     <span class="footer_newsletter_span"><?php echo $lang['newsletter'] ?>:</span>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <input type="email" placeholder="Vaša e-mail adresa" class="footer_newsletter_form" id="newsfeed_mail"><a href="#" style="width: 15%;" id="mailClick">
+                    <input type="email" placeholder="<?php echo $lang['email'] ?>" class="footer_newsletter_form" id="newsfeed_mail"><a href="#" style="width: 15%;" id="mailClick">
 						<img style="height:32px;cursor:pointer; margin-bottom:3px" src="images/avioncic.svg">
 					</a>
                     <div class="col-lg-12"><span id="newsfeed_span" style="color:red; font-size: 10px; font-weight:600"></span></div>

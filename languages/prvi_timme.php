@@ -5,5 +5,6 @@
         "datum" => "Datum rođenja",
         "nacionalnost" => "Nacionalnost",
         "visina" => "Visina",
+        "profil" => "Vidi profil"
     );
 ?>

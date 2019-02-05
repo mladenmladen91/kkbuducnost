@@ -37,7 +37,7 @@
                                  <div class="col-lg-12 other_news_container_image p-2" style="position:relative" >
                                      <img class="img-responsive" src="admin/images/igraci/<?php echo $fotografija; ?>" style="max-width:100% !important;" alt="image">
                                      <div class="other_news_container_image_profile" data-toggle="modal" data-target="#igrac<?php echo $id ?>">
-                                         <span class="other_news_container_image_profile_span">POGLEDAJ PROFIL</span>
+                                         <span class="other_news_container_image_profile_span"><?php echo $lang['profil'] ?></span>
                                      </div>
                                  </div>
                                  <div class="col-lg-12 other_news_container_heading p-2" style="height:30px !important">

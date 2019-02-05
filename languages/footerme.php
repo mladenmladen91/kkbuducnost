@@ -9,5 +9,6 @@
         "galerija" => "GALERIJA",
         "newsletter" => "Prijavite se na naš newletter",
         "pratite" => "Pratite nas",
+        "email" => "Vaša email adresa"
 	);
 ?>

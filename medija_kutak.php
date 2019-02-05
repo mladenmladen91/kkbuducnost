@@ -65,7 +65,7 @@
                                 <img src="images/buducnostvoli.svg" class="img-responsive" width="130">
                             </div>
                             <div class="col-lg-12 text-center mb-4">
-                                <span style="font-size: 18px; font-weight:600">Preuzmi:</span>
+                                <span style="font-size: 18px; font-weight:600"><?php echo $lang['preuzmi'] ?>:</span>
                             </div>
                             <div class="col-lg-12 text-center mb-4">
                               <div class="row justify-content-center">   
