@@ -29,11 +29,11 @@
             <div class="col-lg-9 col-md-9">
                 <div class="col-lg-12 game_navigation">
                    <div class="row">
-                       <div class="col-lg-6 text-center p-0 game_navigation_next" style="border-right: 2px solid rgb(40, 57, 71)">
-                           <span class="game_navigation_dir game_navigation_dir_active" onclick="loadLatestFixture('kalendar',$(this))"><?php echo $lang['next'] ?></span>
+                       <div class="col-lg-6 text-center px-4 game_navigation_next" style="border-right: 2px solid rgb(40, 57, 71)">
+                           <span class="game_navigation_dir game_navigation_dir_active float-right" onclick="loadLatestFixture('kalendar',$(this))"><?php echo $lang['next'] ?></span>
                        </div>
-                       <div class="col-lg-6 text-center p-0">
-                          <span class="game_navigation_dir" onclick="loadLatestFixture('rezultati', $(this))"><?php echo $lang['prev'] ?></span>
+                       <div class="col-lg-6 text-center px-4">
+                          <span class="game_navigation_dir float-left" onclick="loadLatestFixture('rezultati', $(this))"><?php echo $lang['prev'] ?></span>
                        </div>       
                     </div>       
                 </div>
@@ -118,8 +118,8 @@
                                           while($stmtTables->fetch()){
                                                 
                                      ?>
-                                     <div class="col-lg-6 text-center <?php echo ($i === 0)?'game_navigation_next': '' ?>" >
-                                         <span id="<?php echo ($i === 0)? 'prvi': '' ?>" class="game_navigation_dir <?php echo ($i === 0)?'game_navigation_dir_actual': '' ?>" onclick="loadIndexTables('<?php echo $naziv ?>', $(this))"><?php echo strtoupper($naziv) ?></span>
+                                     <div class="col-lg-6 text-center px-4 <?php echo ($i === 0)?'game_navigation_next': '' ?>" >
+                                         <span id="<?php echo ($i === 0)? 'prvi': '' ?>" class="game_navigation_dir <?php echo ($i === 0)?'game_navigation_dir_actual float-right': 'float-left' ?>" onclick="loadIndexTables('<?php echo $naziv ?>', $(this))"><?php echo strtoupper($naziv) ?></span>
                                      </div>
                                      <?php
                                          $i++;

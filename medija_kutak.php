@@ -29,11 +29,11 @@
             
             <div class="col-lg-8 game_navigation">
                    <div class="row">
-                       <div class="col-lg-6 text-center p-0 game_navigation_next" style="border-right: 2px solid rgb(40, 57, 71)">
-                           <span class="game_navigation_dir game_navigation_dir_active" id="izjave" onclick="getStatements($(this))"><?php echo $lang['h1'] ?></span>
+                       <div class="col-lg-6 text-center px-4 game_navigation_next" style="border-right: 2px solid rgb(40, 57, 71)">
+                           <span class="game_navigation_dir game_navigation_dir_active float-right" id="izjave" onclick="getStatements($(this))"><?php echo $lang['h1'] ?></span>
                        </div>
-                       <div class="col-lg-6 text-center p-0">
-                          <span class="game_navigation_dir" onclick="getPhotos($(this))"><?php echo $lang['h2'] ?></span>
+                       <div class="col-lg-6 text-center px-4">
+                          <span class="game_navigation_dir float-left" onclick="getPhotos($(this))"><?php echo $lang['h2'] ?></span>
                        </div>       
                     </div>       
             </div>
