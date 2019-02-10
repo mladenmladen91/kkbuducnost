@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
 
                 $stmt = mysqli_prepare($connection, "SELECT link, naslov, datum FROM video WHERE id=?");
@@ -35,7 +38,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="naslov">Naslov</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naslov" id="naslov" class="add_news_form_text form-control form-control-lg" value="<?php echo $naslov ?>">
+                            <input required type="text" name="naslov" id="naslov" class="add_news_form_text form-control form-control-lg" value="<?php echo $naslov ?>" maxlength="40">
                         </div>
                     </div>
                     
@@ -45,7 +48,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Datum</label> 
                             </div>   
                             <div class="col-sm-6 col-6">
-                                <input type="date" name="datum" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $datum ?>">
+                                <input type="date" name="datum" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $datum ?>" required>
                             </div>
                             <div class="col-sm-2 col-2 pl-0">
                                 <label class="news_form_label" for="datum"><i style="font-size:35px" class="fas fa-calendar-alt"></i></label>

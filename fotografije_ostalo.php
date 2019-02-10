@@ -13,7 +13,7 @@ $connection = mysqli_connect('localhost','root','','kkbuducnost');
 
 </head>
 <body>
-   
+<div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div>    
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
     

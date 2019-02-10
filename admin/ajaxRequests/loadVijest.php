@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
 
                 $stmt = mysqli_prepare($connection, "SELECT a.naslov, a.tekst, a.datum, a.fotografija, b.id, b.naziv, a.naslov_en, a.tekst_en FROM vijesti a JOIN kategorija b ON a.kategorija_id = b.id WHERE a.id=?");
@@ -36,7 +39,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="naslov">Naslov</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naslov" id="naslov" class="add_news_form_text form-control form-control-lg" value="<?php echo $naslov; ?>">
+                            <input required type="text" name="naslov" id="naslov" class="add_news_form_text form-control form-control-lg" value="<?php echo $naslov; ?>" maxlength="70">
                         </div>
                     </div>
                     
@@ -45,7 +48,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="naslov_en">Naslov-engleski</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naslov_en" id="naslov_en" class="add_news_form_text form-control form-control-lg" value="<?php echo $naslov_en; ?>" >
+                            <input required type="text" name="naslov_en" id="naslov_en" class="add_news_form_text form-control form-control-lg" value="<?php echo $naslov_en; ?>" maxlength="70">
                         </div>
                     </div>
                     

@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
 
                 $stmtSezone = mysqli_prepare($connection, "SELECT id, naziv, logo, dvorana FROM timovi WHERE id=?");
@@ -36,7 +39,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="naziv">Naziv</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" value="<?php echo $naziv ?>">
+                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" value="<?php echo $naziv ?>" maxlength="30">
                         </div>
                     </div>
                     
@@ -45,7 +48,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="dvorana">Dvorana</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="dvorana" id="dvorana" class="add_news_form_text form-control form-control-lg" value="<?php echo $dvorana ?>">
+                            <input required type="text" name="dvorana" id="dvorana" class="add_news_form_text form-control form-control-lg" value="<?php echo $dvorana ?>" maxlength="30">
                         </div>
                     </div>
                     

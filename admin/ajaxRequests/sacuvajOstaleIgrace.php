@@ -4,8 +4,11 @@
     
     include "../../includes/functions.php";
 
-      $ime = mysqli_real_escape_string($connection, $_POST['ime']);
-      $prezime = mysqli_real_escape_string($connection, $_POST['prezime']);
+    // redirect if not login
+    redirect();
+
+      $ime = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['ime']))));
+      $prezime = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['prezime']))));
       $broj = mysqli_real_escape_string($connection, $_POST['broj']);
       
       // getting images
@@ -26,8 +29,12 @@
             $query = "INSERT INTO kadeti  VALUES(null, ?, ?, ?, ?)";
             break;
        }
-    
-     
+
+     if($ime === '' || $prezime === ''){
+        echo "Morate popuniti sva polja";
+      }else if(!extension($fotografija)){
+        echo "Unesite jpg ili png format fotografije";
+      }else{
       
        $stmtAdd = mysqli_prepare($connection, $query);
        $stmtAdd->bind_param('sssi', $ime, $prezime,  $fotografija, $broj);
@@ -39,7 +46,5 @@
       
         echo 'Success';
 
-    
+     }
 ?>
-            
-            

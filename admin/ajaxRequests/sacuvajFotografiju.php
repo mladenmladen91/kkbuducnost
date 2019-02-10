@@ -4,11 +4,17 @@
     
     include "../../includes/functions.php";
 
+    // redirect if not login
+    redirect();
+
       $album_id = mysqli_real_escape_string($connection, $_POST['album_id']);
       // getting images
       $fotografija = time().$_FILES['fotografija']['name'];
       $fotografija_tmp = $_FILES['fotografija']['tmp_name'];       
 
+   if(!extension($fotografija)){
+          echo "Unesite jpg ili png format fotografije";
+    }else{
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO fotografije VALUES(null, ?, ?)");
        $stmtAdd->bind_param('si', $fotografija, $album_id);
        $stmtAdd->execute();
@@ -18,7 +24,7 @@
        
       
         echo 'Success';
-            
+   }
     
 ?>
             

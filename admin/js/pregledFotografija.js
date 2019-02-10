@@ -40,7 +40,7 @@ function savePhoto(formData, id){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                         
                     }else{
@@ -85,7 +85,8 @@ function deleteSection(izbrisi){
                 type: 'POST',
                 data: "id="+id+"&photo="+photo,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    console.log(returndata);
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Obrisano!", "Uspješno ste obrisali sekciju!", "success");

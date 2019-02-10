@@ -36,7 +36,7 @@ function savePlayer(formData, tableName, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Album dodat!", "Uspješno ste dodali album!", "success").then(function(){

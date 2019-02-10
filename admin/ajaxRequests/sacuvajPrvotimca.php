@@ -4,23 +4,31 @@
     
     include "../../includes/functions.php";
 
-      $ime = mysqli_real_escape_string($connection, $_POST['ime']);
-      $prezime = mysqli_real_escape_string($connection, $_POST['prezime']);
-      $pozicija = mysqli_real_escape_string($connection, $_POST['pozicija']);
-      $nacionalnost = mysqli_real_escape_string($connection, $_POST['nacionalnost']);
+    // redirect if not login
+    redirect();
+
+      $ime = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['ime']))));
+      $prezime = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['prezime']))));
+      $pozicija = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['pozicija']))));
+      $nacionalnost = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['nacionalnost']))));
       $broj = mysqli_real_escape_string($connection, $_POST['broj']);
       $visina = mysqli_real_escape_string($connection, $_POST['visina']);
       $datumRodjenja= mysqli_real_escape_string($connection, $_POST['datum_rodjenja']);
-      $karijera = mysqli_real_escape_string($connection, $_POST['karijera']);
+      $karijera = strip_tags(trim(mysqli_real_escape_string($connection, $_POST['karijera'])));
       
         
     
       // getting images
       $fotografija = time().$_FILES['fotografija']['name'];
       $fotografija_tmp = $_FILES['fotografija']['tmp_name'];
-    
-      
-     
+
+     if($datumRodjenja >= date("Y-m-d")){
+         echo "Datum rođenja mora biti u prošlosti"; 
+      }elseif($ime === '' || $prezime === '' || $nacionalnost === '' || $pozicija === ''){
+        echo "Morate popuniti sva polja";
+      }else if(!extension($fotografija)){
+        echo "Unesite jpg ili png format fotografije";
+      }else{
       
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO prvi_tim  VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
        $stmtAdd->bind_param('sssisssis', $ime, $prezime, $nacionalnost, $visina, $fotografija, $karijera, $pozicija, $broj, $datumRodjenja);
@@ -32,7 +40,7 @@
       
         echo 'Success';
 
-    
+     }
 ?>
             
             

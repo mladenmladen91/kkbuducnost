@@ -32,9 +32,8 @@ redirect();
                                 <label class="news_form_label">Tim</label> 
                             </div>   
                             <div class="col-sm-4 col-8" id="selectTagovi">
-                                <select class="form-control form-control-lg add_news_form_select" name="klub_id">
-                                 <option disabled selected>Odaberi tim</option>
-                           <?php 
+                                <select class="form-control form-control-lg add_news_form_select" name="klub_id" required>
+                            <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT id, naziv FROM timovi");
                                $stmtTim->execute();
                                testQuery($stmtTim);
@@ -54,7 +53,7 @@ redirect();
                             <label class="news_form_label" for="broj_utakmica">Broj utakmica</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="broj_utakmica" id="broj_utakmica" class="add_news_form_text form-control form-control-lg">
+                            <input required type="number" name="broj_utakmica" id="broj_utakmica" class="add_news_form_text form-control form-control-lg" min="0">
                         </div>
                     </div>
                     
@@ -63,7 +62,7 @@ redirect();
                             <label class="news_form_label" for="dobijene">Dobijene utakmice</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="dobijene" id="dobijene" class="add_news_form_text form-control form-control-lg">
+                            <input required type="number" name="dobijene" id="dobijene" class="add_news_form_text form-control form-control-lg" min="0">
                         </div>
                     </div>
                     
@@ -72,7 +71,7 @@ redirect();
                             <label class="news_form_label" for="izgubljene">Izgubljene utakmice</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="izgubljene" id="izgubljene" class="add_news_form_text form-control form-control-lg">
+                            <input required type="number" name="izgubljene" id="izgubljene" class="add_news_form_text form-control form-control-lg" min="0">
                         </div>
                     </div>
                     

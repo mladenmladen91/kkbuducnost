@@ -4,13 +4,22 @@
     
     include "../../includes/functions.php";
 
-      $naziv = mysqli_real_escape_string($connection, $_POST['naziv']);
-      $dvorana = mysqli_real_escape_string($connection, $_POST['dvorana']);
+    // redirect if not login
+    redirect();
+
+      $naziv = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naziv']))));
+      $dvorana = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['dvorana']))));
       
       
       // getting images
       $fotografija = time().$_FILES['logo']['name'];
-      $fotografija_tmp = $_FILES['logo']['tmp_name'];       
+      $fotografija_tmp = $_FILES['logo']['tmp_name'];
+
+    if($naziv === '' || $dvorana === ''){
+        echo "Morate popuniti sva polja";
+    }else if(!extension($fotografija)){
+        echo "Unesite jpg ili png format fotografije";
+    }else{
 
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO timovi VALUES(null, ?, ?, ?)");
        $stmtAdd->bind_param('sss', $naziv, $fotografija, $dvorana);
@@ -31,7 +40,7 @@
        }
 
         echo 'Success';
-
+    }
     
 ?>
             

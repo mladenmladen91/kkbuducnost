@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
                 $table = $_POST['table'];
                  
@@ -50,7 +53,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="broj_utakmica">Broj utakmica</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="broj_utakmica" id="broj_utakmica" class="add_news_form_text form-control form-control-lg" value="<?php echo $broj_utakmica ?>">
+                            <input required type="number" name="broj_utakmica" id="broj_utakmica" class="add_news_form_text form-control form-control-lg" value="<?php echo $broj_utakmica ?>" min="0">
                         </div>
                     </div>
                     
@@ -59,7 +62,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="dobijene">Dobijene utakmice</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="dobijene" id="dobijene" class="add_news_form_text form-control form-control-lg" value="<?php echo $dobijene ?>">
+                            <input required type="number" name="dobijene" id="dobijene" class="add_news_form_text form-control form-control-lg" value="<?php echo $dobijene ?>" min="0">
                         </div>
                     </div>
                     
@@ -68,7 +71,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="izgubljene">Izgubljene utakmice</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="izgubljene" id="izgubljene" class="add_news_form_text form-control form-control-lg" value="<?php echo $izgubljene ?>">
+                            <input required type="number" name="izgubljene" id="izgubljene" class="add_news_form_text form-control form-control-lg" value="<?php echo $izgubljene ?>" min="0">
                         </div>
                     </div>
                     

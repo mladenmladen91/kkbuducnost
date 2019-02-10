@@ -1,12 +1,19 @@
 <?php
     session_start();
+
+    
     $connection = mysqli_connect('localhost','root','','kkbuducnost');
 
      if(!$connection){
   	   die('error '.mysqli_error($connection));
      }
 
-    $broj = $_POST['broj'];
+    include "../../includes/functions.php";
+
+    // redirect if not login
+    redirect();
+
+    $broj = clean(strip_tags(trim($_POST['broj'])));
     $kategorije = $_POST['kategorije'];
     
    // checking if this club is already written into the database
@@ -17,7 +24,9 @@
        }
        $count = mysqli_num_rows($result);
 
-   if($count > 0){
+   if($broj === ''){
+       echo "Unesite validan broj";
+   }elseif($count > 0){
        echo "Ova sezona već postoji";
    }else{
 

@@ -30,10 +30,10 @@ $category = $_POST['category'];
                     <?php
                         while($row = mysqli_fetch_assoc($result)){
                     ?>  
-                       <div class="col-lg-4 col-md-6 m-0 mb-4">
+                       <div class="col-lg-4 col-md-4 col-sm-6 m-0 mb-4">
                           <div class="col-lg-12 other_news_container p-0 mx-2" style="min-height: 325px;">
-                                 <div class="col-lg-12 other_news_container_image p-2">
-                                     <img class="img-responsive img-scale" src="admin/images/staff/<?php echo $row['fotografija'] ?>" style="max-width:100% !important;" alt="image">
+                                 <div class="col-lg-12 other_news_container_image p-0 other_news_container_image_staff" style="overflow:hidden !important;">
+                                     <img class="img-scale" src="admin/images/staff/<?php echo $row['fotografija'] ?>" style="width:100% !important;" alt="image">
                                  </div>
                                  <div class="col-lg-12 other_news_container_heading px-2" style="height:35px !important">
                                      <span><?php echo $row['ime'] ?>&ensp;<?php echo $row['prezime'] ?></span>

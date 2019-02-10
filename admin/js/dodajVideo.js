@@ -37,7 +37,7 @@ function saveVideo(formData, tableName, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Video dodat!", "Uspješno ste dodali video!", "success").then(function(){

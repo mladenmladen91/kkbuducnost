@@ -33,7 +33,6 @@ redirect();
                             </div>   
                             <div class="col-sm-12 col-8" id="selectTim">
                                 <select class="form-control form-control-lg add_news_form_select selectTim" name="domacin" required>
-                                    <option disabled selected>Odaberi domaćina</option>
                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT naziv FROM timovi");
                                $stmtTim->execute();
@@ -57,7 +56,6 @@ redirect();
                             </div>   
                             <div class="col-sm-12 col-8" >
                                 <select class="form-control form-control-lg add_news_form_select select_tim" id="selectGost" name="gost" required>
-                                           <option disabled selected>Odaberi gosta</option>
                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT naziv FROM timovi");
                                $stmtTim->execute();
@@ -108,7 +106,6 @@ redirect();
                             </div>   
                             <div class="col-sm-4 col-8" id="selectTagovi">
                                 <select class="form-control form-control-lg add_news_form_select" name="liga_id" required>
-                                      <option selected disabled>Odaberi ligu</option>
                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT id, naziv FROM lige");
                                $stmtTim->execute();

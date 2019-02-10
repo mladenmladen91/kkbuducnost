@@ -45,7 +45,7 @@ redirect();
                             <label class="news_form_label" for="tekst">Tekst objave</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea name="tekst" id="text1" class="add_news_form_textarea" ></textarea>
+                           <textarea name="tekst" id="texter" class="add_news_form_textarea"></textarea>
                         </div>
                     </div>
                     
@@ -64,9 +64,15 @@ redirect();
     </div>
 
 
-   <script>
+
+   
+
+
+    <?php include "scripts.php"; ?>
+    
+       <script>
 			ClassicEditor
-				.create( document.querySelector( '#text1' ) )
+				.create( document.querySelector( '#texter' ) )
 				.then( editor => {
 					console.log( editor );
 				} )
@@ -75,10 +81,6 @@ redirect();
 				} );
        
 		</script>
-   
-
-
-    <?php include "scripts.php"; ?>
   
     <!-- footer including -->
     <?php include "includes/adminFooter.php";?>

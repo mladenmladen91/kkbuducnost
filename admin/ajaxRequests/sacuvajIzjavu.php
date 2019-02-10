@@ -4,7 +4,10 @@
     
     include "../../includes/functions.php";
 
-      $naslov = mysqli_real_escape_string($connection, $_POST['naslov']);
+     // redirect if not login
+    redirect();
+
+      $naslov = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naslov']))));
       $datum = mysqli_real_escape_string($connection, $_POST['datum']);
       
       
@@ -13,6 +16,11 @@
       $izjava = time().$_FILES['izjava']['name'];
       $izjava_tmp = $_FILES['izjava']['tmp_name'];       
 
+     if($naslov === ''){
+         echo "Popunite prazno polje";
+     }elseif(!documentRecognizer($izjava)){
+         echo "Unesite fajl formata pdf, doc ili docx";
+     }else{
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO mediji VALUES(null, ?, ?, ?)");
        $stmtAdd->bind_param('sss', $naslov, $izjava, $datum);
        $stmtAdd->execute();
@@ -24,7 +32,7 @@
       
        
         echo 'Success';
-
+     }
     
 ?>
             

@@ -4,7 +4,10 @@
     
     include "../../includes/functions.php";
 
-    $naziv = $_POST['naziv'];
+    // redirect if not login
+    redirect();
+
+     $naziv = clean(strip_tags(trim($_POST['naziv'])));
 
     // checking if this club is already written into the database
        $queryExists = "SELECT * FROM kategorija WHERE naziv= '{$naziv}'";
@@ -14,7 +17,9 @@
        }
        $count = mysqli_num_rows($result);
 
-   if($count > 0){
+   if($naziv === ''){
+       echo "Unesite validan naziv";
+   }elseif($count > 0){
        echo "Ova kategorija već postoji";
    }else{
 

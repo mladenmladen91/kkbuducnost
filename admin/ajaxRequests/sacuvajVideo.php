@@ -4,10 +4,17 @@
     
     include "../../includes/functions.php";
 
-      $link = mysqli_real_escape_string($connection, $_POST['link']);
-      $naslov = mysqli_real_escape_string($connection, $_POST['naslov']);
-      $datum = mysqli_real_escape_string($connection, $_POST['datum']);
+    // redirect if not login
+    redirect();
 
+      $link = clearify(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['link']))));
+      $naslov = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naslov']))));
+      $datum = mysqli_real_escape_string($connection, $_POST['datum']);
+   if($link === '' || $naslov === ''){
+       echo "Morate popuniti sva polja"; 
+   }elseif($datum > date('Y-m-d')){
+    echo "Ne možete odabratti datum u budućnosti";
+   }else{
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO video VALUES(null, ?, ?, ?)");
        $stmtAdd->bind_param('sss', $link, $naslov, $datum);
        $stmtAdd->execute();
@@ -16,7 +23,7 @@
        
 
         echo 'Success';
-     
+   }
     
 ?>
             

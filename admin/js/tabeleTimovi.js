@@ -30,7 +30,7 @@ function deleteSection(izbrisi){
                 type: 'POST',
                 data: "id="+id,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Obrisano!", "Uspješno ste obrisali sekciju!", "success");

@@ -4,6 +4,9 @@
     
     include "../../includes/functions.php";
 
+    // redirect if not login
+    redirect();
+
 if(isset($_GET['delete'])){
     
     $id = $_POST['id'];

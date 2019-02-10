@@ -20,16 +20,22 @@ $stmt->bind_param('i', $id);
 $stmt->execute();
 testQuery($stmt);
 $stmt->bind_result($naslov, $naslov_en, $tekst, $tekst_en, $datum, $fotografija, $kategorija_id, $kategorija);
+mysqli_stmt_store_result($stmt);
+$rows = mysqli_stmt_num_rows($stmt);
 $stmt->fetch();
 $stmt->close();
 
+//redirecting if id not found
+if($rows <= 0){
+    header("location: 404.php");
+}
 ?>
 
 <title>Članak</title>
 
 </head>
 <body>
-    
+<div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div>     
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
     
@@ -46,7 +52,7 @@ $stmt->close();
             <div class="col-lg-9">
                 <div class="col-lg-12 px-2 mt-4 px-4">
                     <div class="col-lg-12">
-                         <img class="img-responsive" src="admin/images/vijesti/<?php echo $fotografija ?>" style="width:100%; max-height: 400px">
+                         <img class="img-responsive" src="admin/images/vijesti/<?php echo $fotografija ?>" style="width:100%; max-height: 400px; object-fit:cover; object-position:top">
                     </div>
                     <div class="col-lg-12" class="article" style="margin:40px 0;">
                         <span class="article_title"><?php echo ($_SESSION['lang'] === 'en')? $naslov_en :$naslov ?></span><br>

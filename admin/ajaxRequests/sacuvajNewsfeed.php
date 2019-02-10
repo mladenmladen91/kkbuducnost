@@ -4,20 +4,24 @@
     
     include "../../includes/functions.php";
 
+    // redirect if not login
+    redirect();
+
       $tekst = mysqli_real_escape_string($connection, $_POST['tekst']);
       $datum = mysqli_real_escape_string($connection, $_POST['datum']);
      
+     
       
-      
-      $stmtAdd = mysqli_prepare($connection, "INSERT INTO newsfeed VALUES(null, ?, ?)");
-       $stmtAdd->bind_param('ss', $datum, $tekst);
-       $stmtAdd->execute();
-       testQuery($stmtAdd);
-       $stmtAdd->close();
-
+     if($datum !== date('Y-m-d')){
+         echo "Datum mora biti sadašnji";
+     }elseif(clearSpace($tekst)){ 
+         echo "Popunite polje validnim tekstom";
+     }else{
+         echo $tekst;
        $query = "SELECT * FROM newsfeed_emails";
        $result = mysqli_query($connection, $query);
        testQuery($result);
+       mysqli_close($connection);
     
        while($row = mysqli_fetch_assoc($result)){
              $to = $row['email'];
@@ -28,8 +32,14 @@
              mail($to, $subject, $body, $header);
        }
 
-        echo 'Success'; 
+       $stmtAdd = mysqli_prepare($connection, "INSERT INTO newsfeed VALUES(null, ?, ?)");
+       $stmtAdd->bind_param('ss', $datum, $tekst);
+       $stmtAdd->execute();
+       testQuery($stmtAdd);
+       $stmtAdd->close();
 
+        echo 'Success'; 
+     }
     
 ?>
             

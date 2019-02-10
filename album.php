@@ -5,7 +5,7 @@
 
 <?php
 
-if(!isset($_GET['kategorija_id']) || !isset($_GET['sezona_id'])){
+if(!isset($_GET['kategorija_id']) || !isset($_GET['sezona_id']) || !is_numeric($_GET['kategorija_id']) || !is_numeric($_GET['sezona_id'])){
        header('location:javascript://history.go(-1)');
 }
 
@@ -16,7 +16,7 @@ $sezona_id = $_GET['sezona_id'];
 
 </head>
 <body>
-   
+<div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div>    
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
     

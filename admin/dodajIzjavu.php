@@ -32,7 +32,7 @@ redirect();
                             <label class="news_form_label" for="naslov">Naslov</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naslov" id="naslov" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="naslov" id="naslov" class="add_news_form_text form-control form-control-lg" maxlength="50">
                         </div>
                     </div>
                     

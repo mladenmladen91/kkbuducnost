@@ -4,9 +4,12 @@
     
     include "../../includes/functions.php";
 
-      $ime = mysqli_real_escape_string($connection, $_POST['ime']);
-      $prezime = mysqli_real_escape_string($connection, $_POST['prezime']);
-      $pozicija = mysqli_real_escape_string($connection, $_POST['pozicija']);
+    // redirect if not login
+    redirect();
+
+      $ime = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['ime']))));
+      $prezime = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['prezime']))));
+      $pozicija = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['pozicija']))));
       
       // getting images
       $fotografija = time().$_FILES['fotografija']['name'];
@@ -37,20 +40,13 @@
             break;      
        } 
 
-      /* if($table === "osoblje"){
-           $query = "INSERT INTO osoblje VALUES(null, ?, ?, ?, ?)";
-       }elseif($table === "menadzment"){
-           $query = "INSERT INTO menadzment VALUES(null, ?, ?, ?, ?)";
-       }elseif($table === "strucni_stab"){
-           $query = "INSERT INTO strucni_stab VALUES(null, ?, ?, ?, ?)";
-       }elseif($table === "mladje_selekcije"){
-           $query = "INSERT INTO mladje_selekcije VALUES(null, ?, ?, ?, ?)";
-       }else{
-           $query = "INSERT INTO upravni_odbor  VALUES(null, ?, ?, ?, ?)";
-       } */
-    
-     
       
+     
+      if($ime === '' || $prezime === '' || $pozicija === ''){
+        echo "Morate popuniti sva polja";
+      }else if(!extension($fotografija)){
+        echo "Unesite jpg ili png format fotografije";
+      }else{
        $stmtAdd = mysqli_prepare($connection, $query);
        $stmtAdd->bind_param('ssss', $ime, $prezime, $pozicija, $fotografija);
        $stmtAdd->execute();
@@ -60,7 +56,7 @@
        
       
         echo 'Success';
-
+      }
     
 ?>
             

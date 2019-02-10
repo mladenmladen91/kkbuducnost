@@ -83,9 +83,15 @@ a{
         font-weight: 600;
     }
 }
+.carousel-item{
+   // height: 500px !important;
+}
 .carousel-inner img{
+     object-fit: cover;
+    object-position: top;
+    height: 500px;
     width: 100%;
-    height: 500px !important;
+    
 }
 .carousel-indicators{
     & li{
@@ -121,13 +127,23 @@ a{
     
 }
 .other_news_container{
+    
     margin-bottom: 20px;
     border-bottom: 2px solid $cl-t;
     &_image{
+        height: 170px !important;
+        transition: all .3s ease-in-out;
+        &_staff{
+            height: 230px !important;
+            & img{
+                height: 230px !important;
+            }
+        }
         & img{
             width: 100%;
-            height: 170px !important;
-            
+            object-fit: cover;
+            object-position: top;
+            height: 170px;
         }
         
         &_profile{
@@ -138,8 +154,8 @@ a{
         bottom: 0;
         right: 0;
         background: rgba($cl-p, .7);
-        display: none;     
-        transition: all .3s ease-in-out;
+        opacity: 0;     
+        transition: opacity .3s ease-in-out;
            
         &_span{
             position: absolute;
@@ -158,9 +174,10 @@ a{
        }
        &:hover{
            .other_news_container_image_profile{
-               display: block;
-               transition: all .3s ease-in-out;
+               opacity: 1;
+               transition: opacity .3s ease-in-out;
                &_span{
+                   transition: opacity .3s ease-in-out;
                    opacity: 1 !important;
                }
            } 
@@ -329,10 +346,13 @@ a{
 }
 .img-scale{
     backface-visibility: hidden !important;
-    transition: transform .4s linear;
+    transition: transform .2s linear;
+    height: 100% !important;
     &:hover{
         transform: scale(1.05);
         overflow: hidden;
+        object-fit: cover;
+            object-position: top;
     }
 }
 .results_navigation{
@@ -399,6 +419,17 @@ a{
         }
     }
 }
+
+@media(max-width: 767px){
+    .other_news_container_image_staff{
+        height: 400px !important;
+        & img{
+           height: 400px !important; 
+        }
+    }
+}
+
+
 @media(max-width: 575px){
     .game_navigation{
         &_container{

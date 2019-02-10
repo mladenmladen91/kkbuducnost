@@ -20,7 +20,7 @@
         border-radius: 50% !important;
     }
     & span{
-        font-size: 1.9rem;
+        font-size: 1.4rem !important;
     }
 }
 .swiper-button-prev, .swiper-button-next{
@@ -28,6 +28,7 @@
 }
 .modal{
     background-color: rgba($cl-p,.6)  !important;
+    z-index: 10000 !important;
 }
 
 .modal-header{
@@ -74,6 +75,7 @@
     padding: 10px;
     
 }
+
 @media(max-width: 575px){
     .small_sponsors_images{
         height: 30px !important;

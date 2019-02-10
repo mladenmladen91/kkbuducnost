@@ -4,6 +4,9 @@ session_start();
 include "../../includes/db.php";
     
 include "../../includes/functions.php";
+
+// redirect if not login
+    redirect();
 ?>
    <select class="form-control form-control-lg add_news_form_select" id="tagSelect" name="tagovi[]" required multiple>
          <?php 

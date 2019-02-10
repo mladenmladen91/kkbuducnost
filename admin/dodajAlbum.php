@@ -33,7 +33,7 @@ redirect();
                             <label class="news_form_label" for="naziv">Naziv</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" maxlength="35">
                         </div>
                     </div>
                     
@@ -54,7 +54,6 @@ redirect();
                             </div>   
                             <div class="col-sm-4 col-8" id="selectTagovi">
                                 <select class="form-control form-control-lg add_news_form_select" name="sezona_id" required>
-                                    <option selected disabled>Odaberite sezonu</option>
                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT id, broj FROM sezone");
                                $stmtTim->execute();
@@ -77,8 +76,7 @@ redirect();
                             </div>   
                             <div class="col-sm-4 col-8" id="selectTagovi">
                                 <select class="form-control form-control-lg add_news_form_select" name="kategorija_id" required >
-                                    <option selected disabled>Odaberite kategoiju</option>
-                           <?php 
+                            <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT id, naziv FROM kategorija");
                                $stmtTim->execute();
                                testQuery($stmtTim);

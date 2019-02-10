@@ -2,7 +2,7 @@ $(document).ready(function(){
     // submiting form for adding news
     $(".add_news_form").submit(function(e){
             e.preventDefault();
-            
+        
             var tableName = $(".tableName").val();
             var page = $(".pageName").val();
             var formData = new FormData($(this)[0]);
@@ -36,7 +36,7 @@ function saveData(formData, tableName, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Newsfeed dodat!", "Uspješno ste dodali newsfeed!", "success").then(function(){

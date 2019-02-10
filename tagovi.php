@@ -6,7 +6,7 @@
 <?php
     $newsArray = []; 
 
-if(!isset($_GET['id'])){
+if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
           header('location:javascript://history.go(-1)');
 }
 
@@ -16,6 +16,8 @@ if(!isset($_GET['id'])){
 
     $query = "SELECT a.id, a.naslov, a.naslov_en, a.datum, a.fotografija FROM vijesti a JOIN tag_vijest b ON a.id = b.vijest_id WHERE aktivno='aktivan' AND b.tag_id={$tagId} ORDER BY datum DESC";
     $stmtKalendar = mysqli_query($connection, $query);
+    $rows = mysqli_num_rows($stmtKalendar);
+    
     if(!$stmtKalendar){
         die(mysqli_error($connection));
     }
@@ -23,12 +25,17 @@ if(!isset($_GET['id'])){
     while($row = mysqli_fetch_assoc($stmtKalendar)){
         array_push($newsArray, $row);
     }
+
+   //redirecting if id not found
+if($rows <= 0){
+    header("location: 404.php");
+}
     
 ?>    
 
 </head>
 <body>
-    
+<div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div>     
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
     
@@ -39,6 +46,7 @@ if(!isset($_GET['id'])){
               <div class="category_news_container">                
                   <?php
       
+                  
      if(sizeof($newsArray) > 0){
 ?>
                 <div class="col-lg-12 my-4" style="margin: 50px 0 !important">

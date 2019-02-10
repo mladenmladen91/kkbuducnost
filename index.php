@@ -17,6 +17,7 @@
 </div>    
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
+    
 <?php
   
    $stranica = str_replace('.php','',basename(__FILE__));
@@ -64,8 +65,8 @@
                                  while($stmtTeam->fetch()){  
                               ?>      
                                 <div class="swiper-slide">
-                                    <div class="col-lg-12 col-sm-12" data-toggle="modal" data-target="#igrac">
-                                       
+                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" data-toggle="modal" data-target="#igrac" style="cursor:pointer">
+                                       <div class="row justify-content-center">
                                         <div class="col-lg-12 p-0 m-0 swiperIgrac">
                                          <input type="hidden" class="swiper_ime" name="swiper_ime" value="<?php echo $ime ?> <?php echo $prezime ?>">
                                         <input type="hidden" class="swiper_broj" name="swiper_broj" value="<?php echo $broj ?>">    
@@ -74,13 +75,14 @@
                                         <input class="swiper_visina" type="hidden" name="swiper_visina" value="<?php echo $visina ?> cm">
                                         <input class="swiper_pozicija" type="hidden" name="swiper_pozicija" value="<?php echo $pozicija ?>">
                                         <input class="swiper_datum" type="hidden" name="swiper_datum" value="<?php echo $newDate = date("d.m.Y", strtotime($datum_rodjenja)) ?>">    
-                                         <img src="admin/images/igraci/<?php echo $fotografija ?>" class="img-responsive" height="150" width="150" >
+                                         <img src="admin/images/igraci/<?php echo $fotografija ?>" class="img-responsive mx-auto d-block" height="100" width="100" style="object-fit:cover; object-position:top">
                                          </div>
                                          <div class="col-lg-12 p-0 m-0 text-center">     
-                                             <span class="player_name text-center"><?php echo $ime ?>&ensp;<?php echo $prezime ?></span>
+                                             <span class="player_name text-center"><?php echo $ime ?></span><br>
+                                             <span  class="player_name text-center"><?php echo $prezime ?></span>
                                          </div>
                                      </div>
-                                 
+                                  </div>
                                  </div>
                                <?php } ?>
                             </div>
@@ -266,14 +268,23 @@
 <!-- scripts including -->
 <?php include "scripts.php"; ?>
 <script>
+    var screen = window.innerWidth;
+    var slide = 0;
+    if(screen >= 1006){
+        slide = 4;
+    }else{
+         slide = 2;
+    }
+       
+       
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: slide,
       spaceBetween: 30,
       slidesPerGroup: 1,
       loop: true,
       loopFillGroupWithBlank: true,
       autoplay: {
-        delay: 2000,
+        delay: 5000,
         disableOnInteraction: false,
       },    
       
@@ -282,6 +293,7 @@
         prevEl: '.swiper-button-prev',
       },
     });
+    
 </script>    
 <!-- footer including -->
 <?php include "includes/footer.php"; ?>    

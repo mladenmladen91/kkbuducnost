@@ -45,7 +45,7 @@ $category = $_POST['category'];
                                   ?>      
                                      <tr>  
                                       <td><?php echo $i; ?></td>
-                                      <td><img class="img-resposnive" src="admin/images/timovi/<?php echo $logo ?>" style="max-height: 16px">&ensp;<?php echo $naziv ?></td>
+                                      <td style="text-align:left !important"><img class="img-resposnive" src="admin/images/timovi/<?php echo $logo ?>" style="max-height: 16px">&ensp;<?php echo $naziv ?></td>
                                       <td><?php echo $broj_utakmica ?></td>
                                       <td><?php echo $dobijene ?></td>
                                       <td><?php echo $izgubljene ?></td>

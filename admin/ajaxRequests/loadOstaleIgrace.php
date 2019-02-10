@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
                 $table = $_POST['table'];
                  
@@ -71,7 +74,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="broj">Broj</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg" value="<?php echo $broj ?>">
+                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg" value="<?php echo $broj ?>" min="1" max="99">
                         </div>
                     </div>
                     

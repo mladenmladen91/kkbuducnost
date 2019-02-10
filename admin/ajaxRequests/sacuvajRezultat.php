@@ -4,6 +4,9 @@
     
     include "../../includes/functions.php";
 
+    // redirect if not login
+    redirect();
+
       $domacin = mysqli_real_escape_string($connection, $_POST['domacin']);
       $gost = mysqli_real_escape_string($connection, $_POST['gost']);
       $domacin_kosevi = mysqli_real_escape_string($connection, $_POST['domacin_kosevi']);

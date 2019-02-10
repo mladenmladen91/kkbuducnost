@@ -8,7 +8,7 @@
 
 <?php
 
-if(!isset($_GET['id'])){
+if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
        header('location:javascript://history.go(-1)');
 }
 
@@ -20,7 +20,7 @@ $id = $_GET['id'];
 
 </head>
 <body>
-   
+ <div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div>   
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
     

@@ -32,7 +32,7 @@ redirect();
                             <label class="news_form_label" for="ime">Ime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" maxlength="25">
                         </div>
                     </div>
                     
@@ -41,7 +41,7 @@ redirect();
                             <label class="news_form_label" for="prezime">Prezime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" maxlength="25">
                         </div>
                     </div>
                     
@@ -50,7 +50,7 @@ redirect();
                             <label class="news_form_label" for="broj">Broj</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg" min="1" max="99">
                         </div>
                     </div>
                     
@@ -66,7 +66,7 @@ redirect();
                             <label class="news_form_label" for="nacionalnost">Nacionalnost</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="nacionalnost" id="nacionalnost" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="nacionalnost" id="nacionalnost" class="add_news_form_text form-control form-control-lg" maxlength="10">
                         </div>
                     </div>
                     
@@ -75,7 +75,7 @@ redirect();
                             <label class="news_form_label" for="pozicija">Pozicija</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg" maxlength="15">
                         </div>
                     </div>
                     
@@ -84,7 +84,7 @@ redirect();
                             <label class="news_form_label" for="visina">Visina (cm)</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input type="number" name="visina" id="visina" class="add_news_form_text form-control form-control-lg">
+                            <input type="number" name="visina" id="visina" class="add_news_form_text form-control form-control-lg" min="1" max="300" required>
                         </div>
                     </div>
                     
@@ -93,7 +93,7 @@ redirect();
                             <label class="news_form_label" for="text1">Karijera</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea name="karijera" id="text1" class="add_news_form_textarea" ></textarea>
+                            <textarea name="karijera" id="text1" class="add_news_form_textarea" required></textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 col-12 form-group my-4">

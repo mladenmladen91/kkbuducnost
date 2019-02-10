@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
 
                 $stmt = mysqli_prepare($connection, "SELECT ime, prezime, nacionalnost, visina, fotografija, karijera, pozicija, broj, datum_rodjenja FROM prvi_tim WHERE id=?");
@@ -37,7 +40,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="ime">Ime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" value="<?php echo $ime ?>">
+                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" value="<?php echo $ime ?>" maxlength="25">
                         </div>
                     </div>
                     
@@ -46,7 +49,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="prezime">Prezime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" value="<?php echo $prezime ?>">
+                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" value="<?php echo $prezime ?>" maxlength="25">
                         </div>
                     </div>
                     
@@ -55,7 +58,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="broj">Broj</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg" value="<?php echo $broj ?>">
+                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg" value="<?php echo $broj ?>" min="1" max="99">
                         </div>
                     </div>
                     
@@ -64,7 +67,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="nacionalnost">Nacionalnost</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="nacionalnost" id="nacionalnost" class="add_news_form_text form-control form-control-lg" value="<?php echo $nacionalnost ?>">
+                            <input required type="text" name="nacionalnost" id="nacionalnost" class="add_news_form_text form-control form-control-lg" value="<?php echo $nacionalnost ?>" maxlength="10">
                         </div>
                     </div>
                     
@@ -73,7 +76,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="pozicija">Pozicija</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg" value="<?php echo $pozicija ?>">
+                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg" value="<?php echo $pozicija ?>" maxlength="15">
                         </div>
                     </div>
                     
@@ -82,7 +85,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="visina">Visina (cm)</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="visina" id="visina" class="add_news_form_text form-control form-control-lg" value="<?php echo $visina ?>">
+                            <input required type="number" name="visina" id="visina" class="add_news_form_text form-control form-control-lg" value="<?php echo $visina ?>" min="1" max="300">
                         </div>
                     </div>
                     
@@ -91,7 +94,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="text1">Karijera</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea name="karijera" id="text1" class="add_news_form_textarea" ><?php echo $karijera ?></textarea>
+                            <textarea required name="karijera" id="text1" class="add_news_form_textarea" ><?php echo $karijera ?></textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 col-12 form-group my-4">
@@ -100,7 +103,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Datum rođenja</label> 
                             </div>   
                             <div class="col-sm-6 col-6">
-                                <input type="date" name="datum_rodjenja" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $datum_rodjenja ?>">
+                                <input type="date" name="datum_rodjenja" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $datum_rodjenja ?>" required>
                             </div>
                             <div class="col-sm-2 col-2 pl-0">
                                 <label class="news_form_label" for="datum"><i style="font-size:35px" class="fas fa-calendar-alt"></i></label>

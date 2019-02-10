@@ -5,7 +5,7 @@
 
 </head>
 <body>
-   
+<div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div>    
 <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
     
@@ -43,10 +43,10 @@
                     
                    <div class="row justify-content-center p-0">
                          
-                    <div class="col-lg-12 text-center p-0">
-                         <?php echo $array[0]['link'] ?>
+                    <div class="col-lg-12 text-center p-4">
+                        <iframe height="500" width="100%" <?php echo $array[0]['link'] ?>></iframe>
                     </div>
-                    <div class="col-lg-12 article text-center" style="margin:40px 0;">
+                    <div class="col-lg-12 article text-center" style="margin:10px 0;">
                         <span class="article_title"><?php echo $array[0]['naslov'] ?></span><br>
                         <div class="col-lg-12 p-0 mt-4" style="margin-bottom: 50px;">
                            <span class="article_video_title mt-4"><i class="fas fa-calendar-alt"></i>&ensp;<?php echo $newDate = date("d.m.Y", strtotime($array[0]['datum'])); ?></span>
@@ -59,39 +59,43 @@
                     <div class="row">
                       <div class="col-lg-12 mb-4">
                        <div class="row justify-content-center">
-                      <?php for($i = 1; $i < 3; $i++){ ?>       
+                      <?php
+                         if(sizeof($array) > 1){
+                         for($i = 1; $i < 3; $i++){ ?>       
                         <div class="col-lg-6 m-0">
                           <div class="col-lg-12 other_news_container p-0">
-                                 <div class="col-lg-12 other_news_container_image p-2">
-                                     <?php echo $array[$i]['link'] ?>
+                                 <div class="col-lg-12 other_news_container_image p-2" style="height: 250px !important">
+                                   <iframe width="100%" height="100%" <?php echo $array[$i]['link'] ?> ></iframe>
                                  </div>
                                  <div class="col-lg-12 other_news_container_heading">
-                                     <span><?php echo $array[0]['naslov'] ?></span>
+                                     <span><?php echo $array[$i]['naslov'] ?></span>
                                  </div>
                                  <div class="col-lg-12 other_news_container_date">
-                                     <span><i class="fas fa-calendar-alt"></i>&ensp;<?php echo $newDate = date("d.m.Y", strtotime($array[0]['datum'])) ?></span>
+                                     <span><i class="fas fa-calendar-alt"></i>&ensp;<?php echo $newDate = date("d.m.Y", strtotime($array[$i]['datum'])) ?></span>
                                  </div>
                             </div>
                          </div>
-                       <?php } ?>   
+                       <?php } } ?>   
                           
                         </div>   
                        </div>
-                        <?php for($i = 3; $i < sizeof($array); $i++){ ?> 
+                        <?php 
+                             if(sizeof($array) > 1){
+                              for($i = 3; $i < sizeof($array); $i++){ ?> 
                         <div class="col-lg-4 col-md-6 m-0 mb-4">
                           <div class="col-lg-12 other_news_container p-0">
-                                 <div class="col-lg-12 other_news_container_image p-2">
-                                     <?php echo $array[$i]['link'] ?>
+                                 <div class="col-lg-12 other_news_container_image p-2" style="overflow:hidden !important; height:200px!important">
+                                  <iframe height="100%" width="100%" <?php echo $array[$i]['link'] ?>  ></iframe>
                                  </div>
                                  <div class="col-lg-12 other_news_container_heading">
-                                     <span><?php echo $array[0]['naslov'] ?></span>
+                                     <span><?php echo $array[$i]['naslov'] ?></span>
                                  </div>
                                  <div class="col-lg-12 other_news_container_date">
-                                     <span><i class="fas fa-calendar-alt"></i>&ensp;<?php echo $newDate = date("d.m.Y", strtotime($array[0]['datum'])) ?></span>
+                                     <span><i class="fas fa-calendar-alt"></i>&ensp;<?php echo $newDate = date("d.m.Y", strtotime($array[$i]['datum'])) ?></span>
                                  </div>
                             </div>
                         </div>
-                      <?php } ?>  
+                      <?php } } ?>  
                         
                     </div>
                 </div>

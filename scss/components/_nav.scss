@@ -1,5 +1,13 @@
 nav{
-    margin-top: 40px;
+    margin-bottom: 10px !important;
+    background: white !important;
+}
+.nav-link_active{
+    background: $cl-p !important;
+    color: white !important;
+    & > span{
+        color: white !important;
+    }
 }
 .nav_container{
     background-color: transparent !important;
@@ -21,10 +29,7 @@ nav{
       }
     }
 }
-.nav-link_active{
-    background: $cl-p !important;
-    color: white !important;
-}
+
 
 .dropdown{
     &:hover > &-menu{
@@ -33,16 +38,16 @@ nav{
 }
 .nav_dropdown-menu{
     background: white !important;
-    color: $cl-p !important;
+    color: $cl-p;
     
     & a{
        font-size: 1.2rem;     
        border-bottom: 1px solid rgba(0,0,0,.15) !important;
        font-weight: 300;
-       color: #337ab7 !important;    
-        
-    }
+       color: #337ab7;    
+     }
 }
+
 .navbar-toggler{
 	height: 36px;
 	width: 36px;
@@ -126,16 +131,54 @@ nav{
 }
 .brand_holder{
         display: none !important;
-    }
+}
+.logo_holder:hover{
+     &>.logo_sign{   
+       background: transparent !important;
+     }
+}
+#navbar{
+    background: white !important;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+
 
 @media (max-width: 1199px){
+    
     nav{
-      margin-top: 0px;
+      margin: 0px !important;
     }
+    
     .brand_holder{
         display: block !important;
+        padding-bottom: 30px;
     }
     .logo_holder{
         display: none !important;
+    }
+}
+
+@media (max-width: 450px){
+    .navbar-brand{
+        & img{
+            height: 70px;
+            width: 70px;
+            
+        }
+    }
+    .language_link{
+        top: 70 !important;
+        &_en{
+            left: 43 !important;
+        }
+    }
+    .brand_holder{
+        padding-bottom: 20px !important;
     }
 }

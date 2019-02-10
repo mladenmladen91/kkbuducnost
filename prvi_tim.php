@@ -5,19 +5,17 @@
 
 </head>
 <body>
-    
-<!-- navigation including -->
+<div class="section" style="color:transparent; font-size:1px; padding:0; margin:0; height:0.5px">a</div> 
+ <!-- navigation including -->
 <?php include "includes/nav.php"; ?>
-    
 <?php
   
    $stranica = str_replace('.php','',basename(__FILE__));
   
    include "config.php";
-?>     
-    
-<div class="section content_containter p-4">
-    <div class="container">    
+?>      
+<div class="content_containter p-4">
+     <div class="container">    
         <div class="row justify-content-center">
             <div class="col-lg-4 col-sm-8 text-center crew_heading">
                 <span><i class="fas fa-basketball-ball"></i>&ensp;<?php echo $lang['prvi_tim'] ?></span>
@@ -32,10 +30,10 @@
                                      
                                       while($stmtSezone->fetch()){  
                  ?>        
-                       <div class="col-lg-4 col-md-6 m-0 mb-4">
+                       <div class="col-lg-4 col-md-6 col-sm-6 m-0 mb-4">
                           <div class="col-lg-12 other_news_container p-0 mx-2" >
-                                 <div class="col-lg-12 other_news_container_image p-2" style="position:relative" >
-                                     <img class="img-responsive" src="admin/images/igraci/<?php echo $fotografija; ?>" style="max-width:100% !important;" alt="image">
+                                 <div class="col-lg-12 other_news_container_image p-0 other_news_container_image_staff" style="position:relative;overflow:hidden !important;" >
+                                     <img class="img-scale" src="admin/images/igraci/<?php echo $fotografija; ?>" style="max-width:100% !important;" alt="image">
                                      <div class="other_news_container_image_profile" data-toggle="modal" data-target="#igrac<?php echo $id ?>">
                                          <span class="other_news_container_image_profile_span"><?php echo $lang['profil'] ?></span>
                                      </div>
@@ -98,13 +96,12 @@
                   
                 </div>
         </div>
-
+ 
     
 <?php $pageName = basename(__FILE__); ?>
 <!-- scripts including -->
 <?php include "scripts.php"; ?>
-
-    
+  
     
 <!-- footer including -->
 <?php include "includes/footer.php"; ?>

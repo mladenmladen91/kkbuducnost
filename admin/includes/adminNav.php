@@ -19,7 +19,7 @@
               <a class="dropdown-item mladje_selekcije" href="mladje_selekcije.php">Mlađe selekcije</a>
               <a class="dropdown-item juniori" href="juniori.php">Juniorska selekcija</a> <a class="dropdown-item kadeti" href="kadeti.php">Kadetska selekcija</a>   <a class="dropdown-item pioniri" href="pioniri.php">Pionirska selekcija</a>
               <a class="dropdown-item rezultati" href="rezultati.php">Rezultati</a>  
-              <a class="dropdown-item kalendar" href="kalendar.php">Kalendar</a>      
+              <a class="dropdown-item kalendar" href="kalendar.php">Kalendar</a>   <a class="dropdown-item trofeji" href="trofeji.php">Trofeji</a>   
             </div>
           </li>
           <li class="nav-item dropdown admin_dropdown">

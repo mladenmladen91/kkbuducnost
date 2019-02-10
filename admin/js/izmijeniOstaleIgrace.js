@@ -36,8 +36,7 @@ function savePlayer(formData, id, location){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    console.log(returndata.length);
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                         
                     }else{

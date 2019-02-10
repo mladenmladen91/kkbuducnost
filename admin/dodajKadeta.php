@@ -29,7 +29,7 @@ redirect();
                             <label class="news_form_label" for="ime">Ime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" maxlength="20">
                         </div>
                     </div>
                     
@@ -38,7 +38,7 @@ redirect();
                             <label class="news_form_label" for="prezime">Prezime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" maxlength="20">
                         </div>
                     </div>
                     
@@ -47,7 +47,7 @@ redirect();
                             <label class="news_form_label" for="broj">Broj</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="number" name="broj" id="prezime" class="add_news_form_text form-control form-control-lg" max="99" min="1">
                         </div>
                     </div>
                     

@@ -4,6 +4,9 @@
     
     include "../../includes/functions.php";
 
+    // redirect if not login
+    redirect();
+
       $id = mysqli_real_escape_string($connection, $_POST['id']);
       $ime = mysqli_real_escape_string($connection, $_POST['ime']);
       $prezime = mysqli_real_escape_string($connection, $_POST['prezime']);

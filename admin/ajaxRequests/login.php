@@ -14,7 +14,7 @@ if(empty($_POST['username']) || empty($_POST['password'])){
     $username = mysqli_real_escape_string($connection, $username);
     $password = mysqli_real_escape_string($connection, $password);
     
-    $hashPassword = password_hash($password, PASSWORD_BCRYPT, array('cost'=> 12));
+    
     
     $stmtLogin = mysqli_prepare($connection, "SELECT username, password FROM admin WHERE username=?");
     $stmtLogin->bind_param('s', $username);
@@ -22,8 +22,10 @@ if(empty($_POST['username']) || empty($_POST['password'])){
     testQuery($stmtLogin);
     $stmtLogin->bind_result($db_username, $db_password);
     $stmtLogin->fetch();
+    
+    $password = crypt($password, $db_password);
    
-    if(!password_verify($password, $db_password) || $username !== $db_username){
+    if($password !== $db_password || $username !== $db_username){
          echo '* Unesite ispravne validacione podatke';
     }else{
         

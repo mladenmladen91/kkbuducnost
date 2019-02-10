@@ -7,9 +7,12 @@
   	die('error '.mysqli_error($connection));
   }
     
+ include "../../includes/functions.php";
 
+  // redirect if not login
+    redirect();
 
-    $naziv = $_POST['naziv'];
+    $naziv = clean(strip_tags(trim($_POST['naziv'])));
 
     // checking if this club is already written into the database
        $queryExists = "SELECT * FROM lige WHERE naziv= '{$naziv}'";
@@ -19,7 +22,9 @@
        }
        $count = mysqli_num_rows($result);
 
-   if($count > 0){
+   if($naziv === ''){
+       echo "Unesite validan naziv";
+   }elseif($count > 0){
        echo "Ova liga već postoji";
    }else{
     $stmtTagovi = mysqli_prepare($connection, "INSERT INTO lige VALUES(null, ?, 'neaktivan')");

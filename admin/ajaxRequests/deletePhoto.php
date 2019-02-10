@@ -4,6 +4,9 @@
     
     include "../../includes/functions.php";
 
+    // redirect if not login
+    redirect();
+
     $id = $_POST['id'];
     $fotografija = $_POST['photo'];
     

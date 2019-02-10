@@ -65,7 +65,7 @@ function saveData(formData, tableName, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Vijest dodata!", "Uspješno ste dodali vijest!", "success").then(function(){

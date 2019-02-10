@@ -31,7 +31,7 @@ redirect();
                             <label class="news_form_label" for="naziv">Naziv</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" maxlength="30">
                         </div>
                     </div>
                     
@@ -40,7 +40,7 @@ redirect();
                             <label class="news_form_label" for="dvorana">Dvorana</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="dvorana" id="dvorana" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="dvorana" id="dvorana" class="add_news_form_text form-control form-control-lg" maxlength="30">
                         </div>
                     </div>
                     
@@ -55,11 +55,10 @@ redirect();
                     <div class="col-sm-12 col-12 form-group my-4">
                         <div class="row">
                             <div class="col-sm-12 col-12">
-                                <label class="news_form_label">Liga</label> 
+                                <label class="news_form_label">Liga(* Tim može da bude učesnik više liga)</label> 
                             </div>   
                             <div class="col-sm-4 col-8" id="selectTagovi">
                                 <select class="form-control form-control-lg add_news_form_select" name="liga[]" multiple required>
-                                    <option selected disabled>Odaberi ligu</option>
                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT id, naziv FROM lige");
                                $stmtTim->execute();

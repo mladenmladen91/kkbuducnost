@@ -4,8 +4,11 @@
     
     include "../../includes/functions.php";
 
-      $naslov = mysqli_real_escape_string($connection, $_POST['naslov']);
-      $naslov_en = mysqli_real_escape_string($connection, $_POST['naslov_en']);
+     // redirect if not login
+    redirect();
+
+      $naslov = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naslov']))));
+      $naslov_en = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naslov_en']))));
       $tekst = mysqli_real_escape_string($connection, $_POST['tekst']);
       $tekst_en = mysqli_real_escape_string($connection, $_POST['tekst_en']);
       $datum = mysqli_real_escape_string($connection, $_POST['datum']);
@@ -15,6 +18,12 @@
       // getting images
       $fotografija = time().$_FILES['fotografija']['name'];
       $fotografija_tmp = $_FILES['fotografija']['tmp_name'];       
+
+     if(clearSpace($tekst) || clearSpace($tekst_en) || $naslov === '' || $naslov_en === ''){ 
+         echo "Popunite polja validnim tekstom";
+     }elseif(!extension($fotografija)){
+          echo "Unesite jpg ili png format fotografije";
+     }else{
 
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO vijesti VALUES(null, ?, ?, ?, ?, ?, 'neaktivan', ?, ?)");
        $stmtAdd->bind_param('ssssiss', $naslov, $tekst, $datum, $fotografija, $kategorija_id, $naslov_en, $tekst_en);
@@ -36,7 +45,7 @@
       
         echo 'Success'; 
 
-    
+     }
 ?>
             
             

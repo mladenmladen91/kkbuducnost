@@ -4,6 +4,9 @@
     
     include "../../includes/functions.php";
 
+    // if user isn't logged redirecting
+    redirect();
+
       $id = mysqli_real_escape_string($connection, $_POST['id']);
       $status = mysqli_real_escape_string($connection, $_POST['status']);
       $table = mysqli_real_escape_string($connection, $_POST['table']); 

@@ -4,6 +4,9 @@
     include "../../includes/db.php";
     
     include "../../includes/functions.php";
+
+    // redirect if not login
+    redirect();
 ?>
 <!-- / lige container -->
             
@@ -249,8 +252,7 @@
                         <div class="col-lg-8">  
                         <input type="text" placeholder="Unesite sezonu" name="broj" class="form-control form-control-lg" id="sezona" required>
                         <select class="form-control form-control-lg my-2" name="kategorije[]" required multiple>
-                            <option disabled selected>Odaberite kategoriju</option>
-                          <?php 
+                           <?php 
                                $stmtKategorije = mysqli_prepare($connection, "SELECT id, naziv FROM kategorija");
                                $stmtKategorije->execute();
                                testQuery($stmtKategorije);

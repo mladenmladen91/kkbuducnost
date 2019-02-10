@@ -37,7 +37,7 @@ function saveBaner(formData, tableName, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    if(returndata.length != 33){
+                    if(returndata !== "Success"){
                         swal(returndata);
                     }else{
                         swal("Baner dodat!", "Uspješno ste dodali baner!", "success").then(function(){

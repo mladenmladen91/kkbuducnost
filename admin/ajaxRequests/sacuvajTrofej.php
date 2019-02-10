@@ -4,8 +4,11 @@
     
     include "../../includes/functions.php";
 
-      $naziv = mysqli_real_escape_string($connection, $_POST['naziv']);
-      $sezone = mysqli_real_escape_string($connection, $_POST['sezone']);
+    // redirect if not login
+    redirect();
+
+      $naziv = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naziv']))));
+      $sezone = strip_tags(trim(mysqli_real_escape_string($connection, $_POST['sezone'])));
        
       $table = $_POST['table'];
        
@@ -14,7 +17,14 @@
       $broj_tmp = $_FILES['broj']['tmp_name']; 
                                                  
       $trofej = time().$_FILES['trofej']['name'];
-      $trofej_tmp = $_FILES['trofej']['tmp_name'];                                                 
+      $trofej_tmp = $_FILES['trofej']['tmp_name'];                                   
+if($naziv === '' || $sezone === ''){
+    echo "Morate popuniti polja validnim tekstom";
+}elseif(!extension($broj)){
+          echo "Unesite jpg ili png format fotografije";
+}elseif(!extension($trofej)){
+          echo "Unesite jpg ili png format fotografije";
+     }else{
 
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO trofeji VALUES(null, ?, ?, ?, ?)");
        $stmtAdd->bind_param('ssss', $naziv, $broj, $sezone, $trofej);
@@ -27,7 +37,7 @@
       
         echo 'Success';
 
-    
+}
 ?>
             
             

@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
 
                 $stmt = mysqli_prepare($connection, "SELECT fotografija, link FROM baneri WHERE id=?");

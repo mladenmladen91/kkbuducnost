@@ -5,6 +5,9 @@ include "../../includes/db.php";
     
 include "../../includes/functions.php";
 
+// redirect if not login
+    redirect();
+
                 $id = $_POST['id'];
 
                 $stmt = mysqli_prepare($connection, "SELECT domacin, gost, domacin_kosevi, gost_kosevi, datum, vrijeme, liga_id FROM rezultati WHERE id=? ORDER BY datum DESC");
@@ -28,7 +31,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Domaći Tim</label> 
                             </div>   
                             <div class="col-sm-12 col-8" id="selectTagovi">
-                                <select class="form-control form-control-lg add_news_form_select" id="select_tim" name="domacin">
+                                <select class="form-control form-control-lg add_news_form_select" id="select_tim" name="domacin" required>
                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT naziv FROM timovi");
                                $stmtTim->execute();
@@ -52,7 +55,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Domaćin- poeni</label> 
                             </div>   
                             <div class="col-sm-12 col-8">
-                                <input required type="number" name="domacin_kosevi" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $domacin_kosevi ?>">
+                                <input required type="number" name="domacin_kosevi" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $domacin_kosevi ?>" min="0" max="200">
                             </div>
                         </div>       
                     </div>
@@ -63,7 +66,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Gostujući Tim</label> 
                             </div>   
                             <div class="col-sm-12 col-8" >
-                                <select class="form-control form-control-lg add_news_form_select" id="selectGost" name="gost">
+                                <select class="form-control form-control-lg add_news_form_select" id="selectGost" name="gost" required>
                                     <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT naziv FROM timovi");
                                $stmtTim->execute();
@@ -87,7 +90,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Gost- poeni</label> 
                             </div>   
                             <div class="col-sm-12 col-8">
-                                <input required type="number" name="gost_kosevi" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $gost_kosevi ?>">
+                                <input required type="number" name="gost_kosevi" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $gost_kosevi ?>" min="0" max="200">
                             </div>
                         </div>       
                     </div>
@@ -99,7 +102,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Datum</label> 
                             </div>   
                             <div class="col-sm-6 col-6">
-                                <input type="date" name="datum" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $datum ?>">
+                                <input type="date" name="datum" id="datum" class="add_news_form_text form-control form-control-lg" value="<?php echo $datum ?>" required>
                             </div>
                             <div class="col-sm-2 col-2 pl-0">
                                 <label class="news_form_label" for="datum"><i style="font-size:35px" class="fas fa-calendar-alt"></i></label>
@@ -113,7 +116,7 @@ include "../../includes/functions.php";
                                 <label class="news_form_label">Vrijeme</label> 
                             </div>   
                             <div class="col-sm-6 col-6">
-                                <input type="time" name="vrijeme" id="vrijeme" class="add_news_form_text form-control form-control-lg" value="<?php echo $vrijeme ?>" >
+                                <input type="time" name="vrijeme" id="vrijeme" class="add_news_form_text form-control form-control-lg" value="<?php echo $vrijeme ?>" required>
                             </div>
                             <div class="col-sm-2 col-2 pl-0">
                                 <label class="news_form_label" for="vrijeme"><i class="fas fa-clock"></i></label>
@@ -128,8 +131,7 @@ include "../../includes/functions.php";
                             </div>   
                             <div class="col-sm-4 col-8">
                                 <select class="form-control form-control-lg add_news_form_select" name="liga_id" required>
-                                      <option selected disabled>Odaberi ligu</option>
-                            <?php 
+                             <?php 
                                $stmtTim = mysqli_prepare($connection, "SELECT id, naziv FROM lige");
                                $stmtTim->execute();
                                testQuery($stmtTim);

@@ -4,6 +4,9 @@
     
     include "../../includes/functions.php";
 
+     // redirect if not login
+    redirect();
+
       $id = mysqli_real_escape_string($connection, $_POST['id']);
       $broj_utakmica = mysqli_real_escape_string($connection, $_POST['broj_utakmica']);
       $dobijene = mysqli_real_escape_string($connection, $_POST['dobijene']);
