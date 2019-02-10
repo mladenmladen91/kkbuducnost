@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2019 at 03:44 PM
+-- Generation Time: Feb 10, 2019 at 10:15 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -44,7 +44,6 @@ CREATE TABLE `aba` (
 
 INSERT INTO `aba` (`id`, `klub_id`, `broj_utakmica`, `dobijene`, `izgubljene`, `krajnja_razlika`, `bodovi`) VALUES
 (1, 10, 17, 12, 5, 103, 29),
-(2, 11, 17, 7, 10, -45, 24),
 (3, 15, 17, 16, 1, 253, 33),
 (4, 14, 17, 12, 5, 119, 29),
 (5, 16, 17, 11, 6, 76, 28);
@@ -92,7 +91,6 @@ INSERT INTO `album` (`id`, `naziv`, `kategorija_id`, `datum`, `fotografija`, `se
 (8, 'KK BuduÄ‡nost VOLI vs KK Cedevite', 1, '2019-01-23', '1548965127clanak-06-01-2019-5c3254729ec55.jpg', 29, 'aktivan'),
 (10, 'Otvaranje fan shopa', 12, '2019-01-15', '1548968501test.jpg', 29, 'aktivan'),
 (11, 'Karte', 13, '2019-01-29', '1548974530Karte0010.jpg', 29, 'aktivan'),
-(12, 'KK BuduÄ‡nost VOLI - KK Partizan', 1, '2019-02-05', '1548982385clanak-06-12-2018-5c098fdeaa80a.jpg', 27, 'aktivan'),
 (14, 'KK BuduÄ‡nost VOLI - KK Real Madrid', 7, '2017-12-03', '1548982476clanak-06-12-2018-5c098fdeaa80a.jpg', 27, 'aktivan'),
 (15, 'KK BuduÄ‡nost VOLI - KK Gran Canaria', 7, '2018-02-03', '1548982518FB_IMG_1526926013296.jpg', 28, 'aktivan'),
 (16, 'KK Zadar', 1, '2017-07-09', '1548982547glibson.jpg', 28, 'aktivan'),
@@ -182,8 +180,7 @@ CREATE TABLE `euroleague` (
 INSERT INTO `euroleague` (`id`, `klub_id`, `broj_utakmica`, `dobijene`, `izgubljene`, `krajnja_razlika`, `bodovi`) VALUES
 (1, 20, 20, 18, 2, 187, 38),
 (2, 12, 20, 15, 5, 102, 35),
-(3, 19, 20, 12, 8, 55, 32),
-(4, 17, 20, 8, 12, -47, 28);
+(3, 19, 20, 12, 8, 55, 32);
 
 -- --------------------------------------------------------
 
@@ -212,8 +209,6 @@ INSERT INTO `fotografije` (`id`, `naziv`, `album_id`) VALUES
 (10, '1548974564Karte0012.jpg', 11),
 (11, '1548982745clanak-18-01-2019-5c42354ab3f22.jpg', 14),
 (12, '1548982767clanak-14-01-2019-5c3ce04b965cb.jpg', 17),
-(13, '1549026110FB_IMG_1526926013296.jpg', 12),
-(14, '1549026119clanak-24-12-2018-5c21311830d88.jpg', 12),
 (15, '1549026143clanak-06-12-2018-5c098fdeaa80a.jpg', 18),
 (16, '1549026168BuducnostVoliDarussafaka.png', 15),
 (17, '1549026180clanak-25-01-2019-5c4b70fa5365b.jpg', 16),
@@ -305,10 +300,10 @@ CREATE TABLE `kalendar` (
 --
 
 INSERT INTO `kalendar` (`id`, `domacin`, `gost`, `datum`, `vrijeme`, `liga_id`, `domacin_logo`, `gost_logo`, `dvorana`) VALUES
-(7, 'KK FMP', 'KK BuduÄ‡nost VOLI', '2019-01-31', '18:00:00', 1, '1548624839fmp.png', '1548623774buducnostpng.png', 'SC Å½eleznik'),
 (8, 'KK BuduÄ‡nost VOLI', 'KK Partizan', '2019-02-10', '18:00:00', 1, '1548623774buducnostpng.png', '1549027732partizan.png', 'SC MoraÄa'),
-(9, 'KK FMP', 'KK BuduÄ‡nost VOLI', '2019-02-02', '16:01:00', 2, '1548624839fmp.png', '1548623774buducnostpng.png', 'SC Å½eleznik'),
-(10, 'KK CSKA', 'KK BuduÄ‡nost VOLI', '2019-02-07', '20:00:00', 2, '1549026498cska.png', '1548623774buducnostpng.png', 'Megasport arena');
+(10, 'KK CSKA', 'KK BuduÄ‡nost VOLI', '2019-02-07', '20:00:00', 2, '1549026498cska.png', '1548623774buducnostpng.png', 'Megasport arena'),
+(12, 'BC Panathinaikos', 'KK BuduÄ‡nost VOLI', '2019-02-10', '13:00:00', 2, '1549028007panathaniakois.png', '1548623774buducnostpng.png', 'Dvorana mira i prijateljstva'),
+(13, 'KK Cedevita', 'KK BuduÄ‡nost VOLI', '2019-02-12', '13:00:00', 1, '1549026590cedevita.png', '1548623774buducnostpng.png', 'SC Zagreb');
 
 -- --------------------------------------------------------
 
@@ -354,8 +349,6 @@ INSERT INTO `liga_tim` (`liga_id`, `tim_id`) VALUES
 (2, 10),
 (3, 10),
 (4, 10),
-(1, 11),
-(3, 11),
 (2, 12),
 (1, 13),
 (3, 13),
@@ -365,12 +358,9 @@ INSERT INTO `liga_tim` (`liga_id`, `tim_id`) VALUES
 (3, 16),
 (1, 15),
 (3, 15),
-(2, 17),
 (2, 18),
 (2, 19),
-(2, 20),
-(3, 21),
-(3, 22);
+(2, 20);
 
 -- --------------------------------------------------------
 
@@ -435,7 +425,7 @@ CREATE TABLE `menadzment` (
 INSERT INTO `menadzment` (`id`, `ime`, `prezime`, `pozicija`, `fotografija`) VALUES
 (1, 'Marko', 'ÄŒegerec', 'Zamjenik izvrÅ¡nog direktora', '1548427630marko_cegerec.png'),
 (3, 'Gavrilo', 'PajoviÄ‡', 'Sportski direktor', '1548428411gavrilo_pajovic.png'),
-(4, 'Slavko', 'RaduloviÄ‡', 'IzvrÅ¡nin direktor', '1548428445slavko_radulovic.png');
+(4, 'Slavko', 'RaduloviÄ‡', 'IzvrÅ¡ni direktor', '1548428445slavko_radulovic.png');
 
 -- --------------------------------------------------------
 
@@ -522,7 +512,7 @@ INSERT INTO `osoblje` (`id`, `ime`, `prezime`, `pozicija`, `fotografija`) VALUES
 (1, 'PeriÅ¡a', 'ÄŒagoroviÄ‡', 'Fizioterapeut', '1548431175perisa_cagorovic.JPG'),
 (3, 'Dr Bojan', 'MIlaÄiÄ‡', 'Ljekar ekipe', '1548432676_Dr.-Bojan-MilacÌŒicÌ.jpg'),
 (4, 'SaÅ¡a', 'BuriÄ‡', 'Fizioterapeut', '1548432699sasa_buric.JPG'),
-(5, 'DragiÅ¡a Bato', 'KrstajiÄ‡', 'Ekonom', '1548432731dragisa_krstajic.JPG');
+(5, 'DragiÅ¡a Bato', 'KrstajiÄ‡', 'Ekonomista', '1548432731dragisa_krstajic.JPG');
 
 -- --------------------------------------------------------
 
@@ -626,8 +616,8 @@ CREATE TABLE `rezultati` (
 INSERT INTO `rezultati` (`id`, `domacin`, `gost`, `domacin_kosevi`, `gost_kosevi`, `datum`, `vrijeme`, `liga_id`, `domacin_logo`, `gost_logo`, `dvorana`) VALUES
 (12, 'KK BuduÄ‡nost VOLI', 'Fenerbahce Ulker', 80, 90, '2019-01-23', '20:00:00', 2, '1548623774buducnostpng.png', '1549028048fenerbache.png', 'SC MoraÄa'),
 (13, 'KK Cedevita', 'KK BuduÄ‡nost VOLI', 70, 75, '2019-01-15', '20:00:00', 1, '1549026590cedevita.png', '1548623774buducnostpng.png', 'SC Zagreb'),
-(14, 'Oldenburg', 'KK BuduÄ‡nost VOLI', 90, 88, '2017-08-09', '08:00:00', 3, '1549137921oldenburg.png', '1548623774buducnostpng.png', 'Opel arenaaa'),
-(15, 'KK BuduÄ‡nost VOLI', 'KK Partizan', 0, 100, '2018-11-20', '19:00:00', 1, '1548623774buducnostpng.png', '1549027732partizan.png', 'SC MoraÄa');
+(15, 'KK BuduÄ‡nost VOLI', 'KK Partizan', 0, 100, '2018-11-20', '19:00:00', 1, '1548623774buducnostpng.png', '1549027732partizan.png', 'SC MoraÄa'),
+(16, 'KK BuduÄ‡nost VOLI', 'KK Cedevita', 33, 29, '2019-02-09', '18:01:00', 1, '1548623774buducnostpng.png', '1549026590cedevita.png', 'SC MoraÄa');
 
 -- --------------------------------------------------------
 
@@ -660,7 +650,8 @@ INSERT INTO `sezona_kategorija` (`sezona_id`, `kategorija_id`) VALUES
 (30, 1),
 (30, 4),
 (30, 6),
-(30, 11);
+(30, 11),
+(30, 4);
 
 -- --------------------------------------------------------
 
@@ -725,7 +716,7 @@ INSERT INTO `sponzori` (`id`, `link`, `fotografija`, `ranking`, `aktivan`) VALUE
 (23, 'http://pewmc.com/', '1548692874Regionalni-vodovod.png', 1, 'aktivan'),
 (24, 'http://www.normalcompany.me/', '1548692897normalko.png', 1, 'aktivan'),
 (25, 'https://niksickopivo.com/me/agegateway', '154869292116-9-niksicko.jpg', 1, 'aktivan'),
-(26, 'https://www.kkbuducnost.me/', '1548692992Logo-PENTA.png', 1, 'neaktivan'),
+(26, 'https://www.kkbuducnost.me/', '1548692992Logo-PENTA.png', 1, 'aktivan'),
 (27, 'http://www.lowcarbonmne.me/', '1548693016Logo-MNE-SmanjiSvojKarbonskiOotisak-40x40mm.png', 1, 'aktivan');
 
 -- --------------------------------------------------------
@@ -779,7 +770,6 @@ INSERT INTO `tagovi` (`id`, `naziv`) VALUES
 (35, 'KK Olimpiakos'),
 (36, 'KK Barcelona'),
 (39, 'KK Zadar'),
-(53, 'HERBALIFE GRAN CANARIA'),
 (54, 'euroleague'),
 (56, 'Kup Crne Gore'),
 (57, 'aba'),
@@ -802,10 +792,6 @@ CREATE TABLE `tag_vijest` (
 --
 
 INSERT INTO `tag_vijest` (`tag_id`, `vijest_id`) VALUES
-(59, 35),
-(5, 36),
-(34, 36),
-(54, 36),
 (59, 34),
 (5, 33),
 (5, 32),
@@ -835,8 +821,6 @@ INSERT INTO `tag_vijest` (`tag_id`, `vijest_id`) VALUES
 (10, 21),
 (5, 20),
 (10, 20),
-(5, 19),
-(54, 19),
 (5, 18),
 (56, 18),
 (13, 16),
@@ -861,18 +845,14 @@ CREATE TABLE `timovi` (
 
 INSERT INTO `timovi` (`id`, `naziv`, `logo`, `dvorana`) VALUES
 (10, 'KK BuduÄ‡nost VOLI', '1548623774buducnostpng.png', 'SC MoraÄa'),
-(11, 'KK FMP', '1548624839fmp.png', 'SC Å½eleznik'),
 (12, 'KK CSKA', '1549026498cska.png', 'Megasport arena'),
 (13, 'KK Union Olimpija', '1549026543olimpija.png', 'SC Tivoli'),
 (14, 'KK Cedevita', '1549026590cedevita.png', 'SC Zagreb'),
 (15, 'KK Crvena Zvezda FMP', '1549027670zvezda.png', 'SC Å½eleznik'),
 (16, 'KK Partizan', '1549027732partizan.png', 'Aleksandar NikoliÄ‡'),
-(17, 'Olimpiakos Pireaus', '1549027890olimpiakos.png', 'Olimpiakos arena'),
 (18, 'FC Barcelona Lassa', '1549027956barcelona.png', 'Barcelona arena'),
 (19, 'BC Panathinaikos', '1549028007panathaniakois.png', 'Dvorana mira i prijateljstva'),
-(20, 'Fenerbahce Ulker', '1549028048fenerbache.png', 'Abdi Pekci arena'),
-(21, 'Nizhny Novgorod', '1549028232nizhny.png', 'Nizhy arena'),
-(22, 'Oldenburg', '1549137921oldenburg.png', 'Opel arenaaa');
+(20, 'Fenerbahce Ulker', '1549028048fenerbache.png', 'Abdi Pekci arena');
 
 -- --------------------------------------------------------
 
@@ -933,6 +913,17 @@ CREATE TABLE `video` (
   `datum` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `video`
+--
+
+INSERT INTO `video` (`id`, `link`, `naslov`, `datum`) VALUES
+(2, 'src=\"https://www.youtube.com/embed/H_j_TA9m658\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'dcdc', '2019-02-12'),
+(3, 'src=\"https://www.youtube.com/embed/H_j_TA9m658\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'de', '2019-02-13'),
+(4, '\"560\" \"315\" src=\"https://www.youtube.com/embed/02ux1dKNPXo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'Joe ropgan', '2019-02-13'),
+(5, '\"560\" \"315\" src=\"https://www.youtube.com/embed/02ux1dKNPXo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'Joe Rogan', '2019-02-10'),
+(7, '\"560\" \"315\" src=\"https://www.youtube.com/embed/MsjhqyCvfW4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'sdede', '2019-02-10');
+
 -- --------------------------------------------------------
 
 --
@@ -958,7 +949,6 @@ CREATE TABLE `vijesti` (
 INSERT INTO `vijesti` (`id`, `naslov`, `tekst`, `datum`, `fotografija`, `kategorija_id`, `aktivno`, `naslov_en`, `tekst_en`) VALUES
 (16, 'MORAÄŒA PROGUTALA Å AMPIONA EVROPE!', '<p><i>FantastiÄnom igrom koÅ¡arkaÅ¡i BuduÄ‡nost VOLI sruÅ¡ili su prvaka Evrope Real Madrid!</i></p><p>U atmosferi koja odavno nije viÄ‘ena koÅ¡arkaÅ¡i BuduÄ‡nost VOLI napravili su veliki podvig i pobijedili aktuelnog prvaka Evrope Real Madrid rezultatom 73-60! NaÅ¡a ekipa je sjajno otvorila meÄ i na krilima Colea i Jacksona povela 7-0. NoÅ¡eni sjajnom podrÅ¡kom sa tribina Plavi su nastavili u dobrom ritmu, odbrana je bila na visokom nivou i protivniku je dozvoljeno samo 15 poena u prvom kvartalu. OdliÄna kontrola ritma i mali broj izgubljenih lopti usmjerili su utakmicu u pravcu koji viÅ¡e odgovara naÅ¡oj ekipi. Protivniku nijesu dozvoljeni laki poeni, odbrana je bila veoma agresivna i na poluvrijeme se otiÅ¡lo sa prednoÅ¡Ä‡u naÅ¡e ekipe od 36-28.&nbsp;</p><p>TreÄ‡a Äetvrtina je otvorena na najbolji moguÄ‡i naÄin, Cole i Clark su pogodili po jednu trojku i prvi put Plavi dolaze do dvocifrene prednosti. U tim momentima posebno se u defanzivi istakao Earl Clark nakon Äijih je reakcija ekipa postizala lagane poene. Odbrana Plavih nije posustajala, tjerala je protivnika na veliki broj izgubljenih lopti, na kraju gotovo nevjerovatnih 18! U posljednjoj Äetvrtini vidjeli smo mnogo atraktivnih poteza naÅ¡e ekipe i veÄ‡ pomenutu granitnu odbranu, rotacije su bile pravovremene bez gotovo ijedne greÅ¡ke. Na kraju ubjedljivih 73-60 i samo 7 izgubljenih lopti dovoljno govori o partiji Å¡ampiona ABA lige. Plave su do velikog trijumfa vodili Cole sa 14, Bitadze 13 poena dok je Earl Clark uz 10 poena imao nemjerljiv defanzivni doprinos. Kod Å¡ampiona Evrope jediniigraÄ sa dvocifrenim uÄinkom bio je Llull sa 10 poena.</p><p>U ponedjeljak 20. januara naÅ¡u ekipu oÄekuje derbi ABA lige protiv ekipe Cedevite.</p>', '2019-01-18', '1548619049clanak-18-01-2019-5c42354ab3f22.jpg', 4, 'aktivan', 'MORAÄŒA DROWNS EUROLEAGUE CHAMPION!', '<p>The fantastic game of basketball The future of VOLI crashed the champions of Europe Real Madrid!&nbsp;<br><br>In an atmosphere that has not been seen before, the Future of VOLI have made a big feat and have won the Real Madrid Real Madrid 73-60! Our team greatly opened the match and led 7-0 on the wings of Cole and Jackson. Carried with great support from the tribune Plava continued in good rhythm, the defense was high and the opponent was allowed only 15 points in the first quarter. Excellent control of the rhythm and a small number of lost balls directed the game in a direction that suits our team. The opponent was not allowed light points, the defense was very aggressive and in the half time went with the advantage of our team from 36-28.&nbsp;<br><br>The third quarter was opened in the best possible way, Cole and Clark scored a triple, and for the first time, Plavi came up to a two-point advantage. At the moment, Earl Clark was particularly prominent in the defensive, after which the team scored a lightweight point. The Blacks\\\\\\\' defense did not let go, it drove the opponent to a large number of lost balls, at the end of almost unbelievable 18! In the last quarter we saw many attractive moves of our team and already mentioned granite defense, the rotations were timely without almost any mistake. At the end of a convincing 73-60 and only 7 lost balls enough talk about the ABA league champions league. The Blues were led by Cole with 14, Bitadze 13 points while Earl Clark with 10 points had an unbelievable defensive contribution. With a European champion, the single-player with a double-digit performance was Llull with 10 points.&nbsp;<br><br>On Monday, January 20th, our team is expecting a derby of the ABA League against the Cedevite team.</p>'),
 (18, '30.01. KK BUDUÄ†NOST VOLI DOÄŒEKUJE KK IBAR R', '<p><i>U srijedu u 19:00h plavi igraju u Äetvrtfinalu Kupa Crne Gore.</i></p><p>Nakon utakmice protiv Petrol Olimpije plavi svoju sledeÄ‡u utakmicu igraju na domaÄ‡em terenu protiv KK Ibar RoÅ¾aje.</p><p>Za ovu utakmicu je ulaz slobodan, dok sezonske karte zadrÅ¾avaju svoju numeraciju</p>', '2019-01-26', '1548712327buducnostpng.png', 11, 'aktivan', '30.01. KK BUDUÄ†NOST LOVES EVENTS KK IBAR ROÅ', '<p>On Wednesday at 19:00 the blue play in the quarterfinals of the Cup of Montenegro.&nbsp;<br><br>After the game against Petrol Olimpija Plavi will play their next match on home court against KK Ibar Rozaje.&nbsp;<br><br>For this game, the entry is free, while season tickets retain their numbering</p>'),
-(19, 'PLAVI U SERIJI POBJEDA!', '<p><i>U 20. kolu Evrolige koÅ¡arkaÅ¡i BuduÄ‡nost VOLI savladali su ekipu Herbalife Gran Canaria rezultatom 75-70.</i></p><p>Nova pobjeda u Evroligi, nakon Å¡ampiona Evrope koÅ¡arkaÅ¡i BuduÄ‡nost VOLI savladali su u 20. kolu ekipu Herbalife Gran Canaria rezultatom 75-70 i na taj naÄin upisali 6. pobjedu. Plavi su mnogo bolje otvorili utakmicu, Cole i Clark su bili nezadrÅ¾ivi pa je prednost rasla iz minuta u minut. Da nije bilo ofazivnih skokova gostiju prednost bi bila mnogo ubjedljivija. Efikasna Äetvrtina zavrÅ¡ena je rezultatom 27-24 u korist naÅ¡e ekipe, dominirao je Noris Cole sa 13 poena u prvom kvartalu. Ulaskom Bella i Clarkea naÅ¡a ekipa je povratila kontrolu skoka i zaigrala mnogo ÄvrÅ¡Ä‡e u odbrani. Ipak, neuobiÄajeno veliki broj izgubljenih lopti naÅ¡e ekipe gosti su znali da iskoriste kao i neÅ¡to loÅ¡iju napadaÄku produkciju te se na odmor otiÅ¡lo sa prednoÅ¡Ä‡u ekipe Herbalife Gran Canaria rezultatom 38-36.</p><p>Djelovalo je da u nastavku utakmica ide istim tokom, Rabaseda je pogodio dvije vezane trojke, gosti su poveli 42-38 ali to kao da je probudilo naÅ¡u ekipu. Trojkama Jacksona i Å ehoviÄ‡a najavljen je preokret kada im se prikljuÄio i Bitadze utakmica se okrenula u suprotnom smjeru. NaÅ¡ centar je bio nezadrÅ¾iv u napadu, sa nekoliko atraktivnih zakucavanja podigao je atmosferu u dvorani a defanzivno je zatvorio prilaze obruÄu naÅ¡e ekipe. Strpljivom igrom i Ävrstom odbranom Å¡ampion ABA lige je bez veÄ‡ih problema priveo utakmicu kraju a Äini se da je trojka koju je postigao Earl Clark otklonila sve dileme oko pobjednika. Sjajan meÄ odigrao je Noris Cole koji je uz 20 poena imao po 5 skokova i asistencija, odliÄno ga je pratio Bitadze sa 16 poena, 7 skokova i 3 blokade. U poraÅ¾enom sastavu bolji od ostalih bio je Vene sa 16 poena.</p><p><strong>Jasmin RepeÅ¡a, trener BuduÄ‡nost Volija:</strong></p><p>Prije svega, ÄestitaÄ‡u mom timu na novoj pobjedi u Evroligi. OÄekivao sam teÅ¾ak meÄ. ÄŒestitaÄ‡u i navijaÄima, pomogli su nam mnogo u kljuÄnim momentima. U prvom poluvremenu napravili smo samo Å¡est faulova, patili u skoku. Gran Kanarija je postigla osam trojki u prvom poluvremenu, kao da nijesmo poÅ¡tovali oÄigledne kvalitete pojedinaca rivala, za koje smo znali. U drugom poluvremenu je sve bilo drugaÄije, jer smo igrali drugaÄije odbranu, mnogo bolje. Moram ponoviti, joÅ¡ jednom, naÅ¡i rezultati u Evroligi zavise od defanzive, to nam donosi Å¡anse za pobjede.</p><p>Svaka pobjeda je bitna, u svakom pogledu za samopouzdanje, za sinergiju ekipe i navijaÄa, za sve. Trenira se i pobjeÄ‘ivati. Odlika vrhunskih timova je da pobjeÄ‘uju i kad se suoÄe sa krizama u igri. Å to se tiÄe GordiÄ‡a, on mi je jedan od draÅ¾ih igraÄa tokom moje trenerske karijere. Uvijek Ä‡e se staviti u sluÅ¾bu ekipe, vrhunski je momak. Evidentno je da je doÅ¡lo do zamora i pada samopouzdanja. Svi znamo da je sezona duga, njegova faza loÅ¡ije forme nije opasna. Volio bih da svi na tribinama prepoznaju to i da podrÅ¾e one koji se suoÄe sa krizom forme. Njegov karakter i igru oboÅ¾avam, ne treba zaboraviti da je ovom timu donio titulu proÅ¡le sezone.</p><p>U narednom, 21. kolu Evrolige, naÅ¡a ekipa gostuje u Moskvi ekipi CSKA. Taj susret je na programu u petak 1. februara.</p>', '2019-01-25', '1548712406clanak-25-01-2019-5c4b70fa5365b.jpg', 4, 'aktivan', 'BLUE IN THE WINNING SERIES!', '<p>In Round 20, Euroleague basketball players VOLI Future won the Herbalife Gran Canaria team by 75-70.&nbsp;<br><br>The new win in Euroleague, after the European champions, basketball players Buducnost VOLI won the Herbalife Gran Canaria team in the 20 th round with a score of 75-70 and thus recorded the 6th victory. Blue opened the game much better, Cole and Clark were unsustainable and the advantage grew from minute to minute. If there were no apparent guest jumps, the advantage would be much more convincing. An effective quarter finished 27-24 in favor of our team, Norris Cole dominated with 13 points in the first quarter. By entering Bella and Clarke, our team regained control of the jump and played a lot harder in defense. However, the unusually large number of lost balls of our team were able to use the guests as well as a slightly worse offensive production, and went on holiday with the advantage of the Herbalife Gran Canaria team 38-36.&nbsp;<br><br>It seemed that the match was going in the same way, Rabased scored two bound triples, the guests took 42-38, but it seemed to have awakened our team. The trio of Jackson and Sehovic announced a reversal when they joined and the Bitadze game turned in the opposite direction. Our center was unsustainable in the attack, with several attractive dungeons he raised the atmosphere in the hall and defensively closed the approach to the ring of our team. A tough game and a solid defense champion of the ABA League without major problems brought the game to an end and it seems that the trio earned by Earl Clark has eliminated all the dilemma around the winner. A great match was played by Norris Cole, who had 20 rebounds and 20 assists, was followed by Bitadze with 16 points, 7 rebounds and 3 blocks. In the defeated squad better than others was Vene with 16 points.&nbsp;<br><br>Jasmin Repesha, coach Future of Voli:&nbsp;<br><br>First of all, I will congratulate my team on the new victory in Euroleague. I expected a heavy sword. Congratulations to the fans, they helped us in many key moments. In the first half, we made only six fouls, we suffered in a jump. Gran Canaria scored eight in the first half, as if we did not respect the obvious qualities of the individual rivals, which we knew. In the second half everything was different, because we played a different defense, much better. I have to repeat, once again, our Euroleague results depend on defensive, which gives us chances of winning.</p>'),
 (20, 'SRCE Å AMPIONA!', '<p><i>Plavi su u veoma neizvijesnoj zavrÅ¡nici savladali Cedevitu rezultatom 80-78.</i></p><p>U triler zavrÅ¡nici i fenomenalnoj atmosferi Spottskog centra MoraÄa koÅ¡arkaÅ¡i BuduÄ‡nost VOLI savladali su u derbiju 16. kola ABA lige ekipu Cedevite rezultatom 80-78 i na taj naÄin se izjednaÄili po broju pobjeda. NaÅ¡a ekipa je mnoho bolje otvorila meÄ i na krilima Noris Colea stekla prvu osjetniju prednost. Gosti su se ulaskom Pullena stabilizovali i doveli utakmicu u ravnoteÅ¾u, kada mu se i Cobbs prikljuÄio gosti su preuzeli voÄ‘stvo i dobili prvu Äetvrtinu rezultatom 22-21. Bekovski tandem gostiju je nastavio sa dobrom igrom i naÅ¡a ekipa nije uspijevala da povrati prednost. U meÄu bez pretjeranog ritma i sa velikim brojem prekrÅ¡aja bolje se snaÅ¡la ekipa iz Zagreba i na poluvrijeme otiÅ¡la sa prednoÅ¡Ä‡u od 2 poena.</p><p>Nastavak je poÄeo sjajno, Cole je pogodio pod faulom i Äinilo se da je momentum na strani naÅ¡e ekipe. Ipak gosti su nastavili sjajnonda igraju, teÄno u napadu i kombinovanom odbranom pravili mnogo problema aktuelnom Å¡ampionu. NaÅ¡i momci su pokuÅ¡avali individualnim rjeÅ¡enjima da se nametnu u napadu ali bez mnogo uspijeha. U posljednjem kvartalu trener RepeÅ¡a je zaigrao sa dva plejmejkera ali ni to nije dalo previÅ¡e rezultata. Kada su gosti poveli rezultatom 76-68 Plavi su pokazali zaÅ¡to su Å¡ampioni ABA lige i da imaju veliko srce. Serijom 12-0 koju su napadaÄki predvodili Cole i Clarke povratili su prednost. U odbrani su dominirali Bitadze i Clark i praktiÄno zakljuÄali reket. Posebno treba istaÄ‡i trojku Cole za 80-76 nakon koje je MoraÄa \\\\\\\"eksplodirala\\\\\\\". NoÅ¡eni fenomenalnom publikom Plavi su odbranili posljednji napad i donijeli navijaÄima neopisivno slavlje. Prvi meÄ‘u jednakima u naÅ¡oj ekipi bili su Clark sa 17 i Jackson sa 14 poena. Treba istaÄ‡i i fenomenalnu rolu Clarke u zavtÅ¡nici, krilo Plavih je susret zavrÅ¡ilo sa 10 poena. PoraÅ¾enu ekipu je predvodio bekovski tandem Pullen- Cobbs sa 25 odnosno 18 poena.</p><p>Naredni meÄ naÅ¡a ekipa igra taloÄ‘e u MoraÄi, kada u okviru 20.kola Evrolige doÄekuje ekipu Herbalife Gran Canaria. MeÄ je na programu u petak 25. januara.</p>', '2019-01-21', '1548712491clanak-25-01-2019-5c4b70fa5365b.jpg', 1, 'aktivan', 'A HEART OF THE CHAMPION', '<p>In a very uncertain finale, Blue won the Cedevita 80-78.&nbsp;<br><br>In the thriller finals and the phenomenal atmosphere of the Spots Center Moraca, the basketball players of the VOLI FUDA won the derby of the 16th round of the ABA League team Cedevita by the score of 80-78 and thus equaled the number of victories. Our team opened the sword better, and on the wings of Norris Cole gained the first sensation. With Pullen entering, the guests stabilized and brought the game into balance, when Cobbs joined him, the guests took the lead and scored the first quarter with a score of 22-21. Beck\\\'s tandem of guests continued with a good game and our team was not able to regain advantage. In the match without excessive rhythm and with a large number of violations, the team from Zagreb scored better and half-time went with the advantage of 2 points.&nbsp;<br><br>The continuation started great, Cole hit the foul and it seemed that the momentum was on the side of our team. However, the hosts continued to play a bright game, in the attack and combined defense, they made many problems to the current champion. Our guys tried to get individual solutions to attack in the attack, but without much success. In the last quarter, Coach Repes played with two playmakers, but this did not give too much result. When the hosts scored a score of 76-68 Blue showed why they are ABA league champions and have a big heart. The 12-0 series led by Cole and Clarke took the lead. The defense was dominated by Bitadze and Clark and practically locked the racket. It is especially worth mentioning the Troika Cole for 80-76 after which Moraca \\\\ \\\"exploded \\\\\\\". Carried to the phenomenal crowd Plavi defended the last attack and brought the fans an indescribable celebration. The first among the equals in our team were Clark with 17 and Jackson with 14 points. It should also be noted that Clarke\\\'s phenomenal role in the flank, the wing of the Blues ended with 10 points. The defeated team was led by the Bundesliga tandem Pullen-Cobbs with 25 and 18 points.&nbsp;<br><br>The next match, our team plays a pitch in Moraca, when in the 20th round of Euroleague they are waiting for the team Herbalife Gran Canaria. The match is on the program on Friday, January 25th.</p>'),
 (21, 'Najava utakmive protiv KK Cedevita', '<p><i>21.01.2019. plavi doÄekuju ekipu KK Cedevita u SC \\\\\\\\\\\\\\\"MoraÄa\\\\\\\\\\\\\\\"</i></p><p>Nakon velike pobjede u SC \\\\\\\\\\\\\\\"MoraÄa\\\\\\\\\\\\\\\" protiv Å¡ampiona evrolige, sljedeÄ‡a utakmica za naÅ¡e momke Ä‡e se odigrati&nbsp;u ponedjeljak u 18:00h uoÄi 16. kola ABA lige. Ova utakmica je od velike vaÅ¾nosti za naÅ¡u ekipu, jer od nje zavisi drugo mjesto na tabeli. Drugo mjesto na tabeli daje prednost domaÄ‡eg terena tokom plej ofa. DoÄ‘i i podrÅ¾i svoj klub!</p><p>Karte Ä‡e se prodavati u nedjelju od 12:00h do 19:00h i u ponedjeljak od 12:00h do poÄetka utakmice.</p>', '2019-01-19', '1548712549clanak-21-01-2019-5c45824b657f2.png', 1, 'aktivan', 'Announcement of the match against KK Cedevita', '<p>01/21/2019. blue are welcoming the team of KK Cedevita in SC \\\\\\\\\\\\ \\\"MoraÄa \\\\\\\\\\\\\\\"&nbsp;<br><br>After a big win in SC \\\\ \\\"MoraÄa \\\\\\\\\\\\\\\" against the Euroleague champion, the next match for our boys will be played on Monday at 18:00 on the eve of the 16th round of the ABA League. This match is very important for our team, because it is the second place on the table. The second place in the table gives priority to the home court during the play. Come and support your club!&nbsp;<br><br>The tickets will be sold on Sundays from 12:00 to 19:00 and on Monday from 12:00 until the start of the match.</p>'),
 (22, 'BLIJEDO IZDANJE U NOVOM MESTU', '<p><i>Plavi poraÅ¾eni u 12.kolu ABA lige od ekipe Krke.</i></p><p>KoÅ¡arkaÅ¡i BuduÄ‡nost VOLI doÅ¾ivjeli su drugi uzastopni poraz u 12.kolu ABA lige, na debiju Bitadze-a i Bell-a, od ekipe Krke iz Novog Mesta. Tok utakmice u mnogome je odredila prva Äetvrtina u kojoj je naÅ¡a ekipa postigla samo 5 poena. Plavi nijesu imali rjeÅ¡enja za agresivnu odbranu domaÄ‡ina koji je dobrom igrom u prvom kvartalu stekao neophodno samopouzdanje. U sliÄnom ritmu se nastavilo i u drugoj Äetvrtini, doduÅ¡e vidjeli smo neÅ¡to bolje napadaÄko izdanje koÅ¡arkaÅ¡a BuduÄ‡nost VOLI ali se na poluvrijeme otiÅ¡lo sa 15 poena zaostatka. Nakon pauze djelovalo je da su se naÅ¡i momci trgli i predvoÄ‘eni veÄeras sjajnim PopoviÄ‡em, uspjeli su da smanje zaostatak domaÄ‡ina. U posljednjoj dionici nastavila je da se topi prednost domaÄ‡ina ali kada je trebalo napraviti odluÄujuÄ‡i korak naÅ¡i momci su promaÅ¡ivali slobodna bacanja. ÄŒini se da je pobjednika odluÄila prva Äetvrtina nakon koje su koÅ¡arkaÅ¡i BuduÄ‡nost VOLI jurili zaostatak do kraja susreta. Jedina svijetla taÄka u redovima naÅ¡e ekipe bio je PopoviÄ‡ sa 16 poena, domaÄ‡ina je do pobjede vodio Lapornik strijelac 12 poena.&nbsp;</p><p>NaÅ¡e momke novo iskuÅ¡enje oÄekuje 28.decembra kada u okviru takmiÄenja u Evroligi gostuju ekipi Bayer Munich.</p>', '2018-12-24', '1548712661clanak-24-12-2018-5c21311830d88.jpg', 1, 'aktivan', 'BLOCKED EDITION IN A NEW PLACE', '<p>Blue defeated in the 12th round of the ABA league from the Krka team.&nbsp;<br><br>Basketball The future of VOLI experienced another consecutive defeat in the 12th round of the ABA League, on the debut of Bitadze and Bell, from the Krka team from Novi Grad. The course of the game has largely determined the first quarter in which our team scored only 5 points. Blue did not have solutions for the aggressive defense of the host who, with a good game in the first quarter, gained the necessary confidence. In a similar rhythm continued in the second quarter, though we have seen a slightly better offensive edition of the basketball player FUTURE VOLI but in the afternoon it left with 15 points behind. After the break, our boys were struck and led by great Popovic tonight, they managed to reduce the backlog of hosts. In the last section, she continued to melt the advantage of the host, but when it was necessary to make a decisive step, our boys missed free throws. It seems that the winner has decided the first quarter after which the basketball players of BuduÄ‡nost VOLI run back to the end of the match. The only bright spot in the ranks of our team was Popovic with 16 points, the host was led by Lapornik 12 points.&nbsp;<br><br>Our guys are waiting for the new temptation on 28 December when they will play Bayer Munich in the Euroleague competition.</p>'),
@@ -972,11 +962,8 @@ INSERT INTO `vijesti` (`id`, `naslov`, `tekst`, `datum`, `fotografija`, `kategor
 (30, 'JOÅ  JEDAN VELIKI TRIJUMF - OSVOJEN I ZAGREB', '<p><i>U drugom kolu Top 16 faze Cedevita - BuduÄ‡nost Voli 75:78</i></p><p>Nakon Crvene zvezde u ABA ligi, pao je joÅ¡ jedan veliki rival, sada na evropskom parketu - BuduÄ‡nost Voli je odigrala joÅ¡ jedan herojski meÄ i slavila u Zagrebu nakon trijumfa nad Cedevitom 78:75. U treÄ‡oj rundi Top 16 faze Evrokupa, plavi su zahvaljujuÄ‡i perfektnoj igri u treÄ‡oj dionici prije svega, upisali prvi trijumf&nbsp;u drugoj fazi.&nbsp;</p><p>Cedevita je od starta meÄa nametnula svoj ritam,&nbsp;otvorila meÄ sa 8:0 i tu prednost uz blage oscilacije odrÅ¾avala do poluvremena. A onda nakon odmora, kao da je na parket izaÅ¡ao drugi tim BuduÄ‡nosti. Odbrana je zategnuta, napad proradio i prednost domaÄ‡ina brzo je poÄela da se topi. Plavi su izgledali moÄ‡no, Cedevita nije mogla da zaustavi GordiÄ‡a, Gibsona i druÅ¾inu. I za deset minuta sa -9, tim Aleksandra DÅ¾ikiÄ‡a stigao je do +7.&nbsp;</p><p>Trebalo je meÄ‘utim samo zavrÅ¡iti posao i plavi su naravno uspjeli u tome -&nbsp;jaÄi nervi u uzbudljivoj zavrÅ¡nici presudila je skupocjenom zagrebaÄkom timu.&nbsp;</p><p>Najefikasniji u redovima naÅ¡eg tima bili su Nemanja GorDIÄ‡ sa 18, po 16 su postigli Kajl Gibson i Sead Å ehoviÄ‡. Kod domaÄ‡ina se istakao tandem Nikols-StiopanoviÄ‡ sa po 13 poena.&nbsp;</p><p>Kompletnu statistiku utakmice moÅ¾ete pogledati <a href=\\\"\\\\&quot;http://www.eurocupbasketball.com/eurocup/games/results/showgame?gamecode=133&amp;seasoncode=U2017\\\\&quot;\\\"><strong>OVDJE</strong></a>.&nbsp;</p><p>BuduÄ‡nost u 3. kolu, naredne srijede, doÄekuje ekipu italijanskog Trenta. Prije toga plavi imaju teÅ¡ko gostovanje Mega Bemaksu u subotu, u okviru 16. kola ABA lige.&nbsp;</p><p>Naprijed plavi!</p>', '2018-07-17', '1548713718cedevitabbudu.jpg', 7, 'aktivan', 'ARE ONE GREAT TRIUMPH - WONDERFUL AND ZAGREB', '<p>In the second round of the Top 16 stage Cedevita - Buducnost Voli 75:78&nbsp;<br><br>After the Red Star in the ABA league, another big rival fell, now on the European parquet - The future of Voli played another hero\\\'s sword and celebrated in Zagreb after a triumph over Cedevita 78:75. In the third round of the Top 16 Stage of the Eurocup, they were blue, thanks to the perfect game in the third stretch first of all, they entered the first triumph in the second stage.&nbsp;<br><br>Since the start of the match, Cedevita has imposed its rhythm, opened the match with 8: 0 and maintained this advantage with a slight oscillation until the half. And then after the break, as if the second team of the Future came out on the parquet floor. The defense was tightened, the attack was over, and the advantage of the host quickly began to melt. The blue looked powerful, Cedevita could not stop Gordic, Gibson and the family. And in ten minutes with -9, Aleksandar Dzikic\\\'s team reached +7.&nbsp;<br><br>However, they only had to finish the job and the blue of course had succeeded in this - a stronger nerve in an exciting finish was decided by the expensive Zagreb team.&nbsp;<br><br>The most efficient in the ranks of our team were Nemanja Gordic with 18, 16 by Kyle Gibson and Sead Sheehovic. Tandem Nikols-Stiopanovic showed 13 points for the host.&nbsp;<br><br>Complete statistics of the game can be found HERE.&nbsp;<br><br>The future in the 3rd round, next Wednesday, is welcomed by the Italian Trent team. Prior to this, the Blue have a hard time hosting Mega Bemax on Saturday, within the 16th round of the ABA League.&nbsp;<br><br>Go ahead!</p>'),
 (31, 'PLAVI DOÄŒEKUJU TRENTO', '<p><i>Zajedno do Äetvrtfinala!</i></p><p>U srijedu, 17. januara,&nbsp;od&nbsp;19:30&nbsp;Äasova, KK BuduÄ‡nost VOLI igra protiv ekipe Dolomiti Energia Trento utakmicu 3. kola Top 16 faze Eurokupa.</p><p><br>Karte Ä‡e se prodavati na biletarnici SC MoraÄa, 15. i 16. janurara od 10 do 17 Äasova, kao i na dan utakmice od 10&nbsp;Äasova</p><p><br>Cijena karte je samo 2 eura.</p><p>DoÄ‘i i podrÅ¾i svoj klub u joÅ¡ jednom vaÅ¾nom meÄu! BuduÄ‡nost se VOLI!</p>', '2019-01-06', '1548713774KKB00004.jpg', 7, 'aktivan', 'BLUE DOES EVEN TRENTO', '<p>Together to the quarterfinals!&nbsp;<br><br>On Wednesday, January 17, at 7:30 pm, KK Buducnost VOLI plays against the Dolomiti Energia Trento team in the third round of the Top 16 stages of Eurocup.&nbsp;<br><br>The tickets will be sold at the SC MoraÄa ticket office, on the 15th and 16th of January from 10 am to 5 pm, as well as on the day of the match of 10 hours&nbsp;<br><br>The price of the ticket is only 2 euros.&nbsp;<br><br>Come and support your club in another important match! FUTURE LOVES!</p>'),
 (32, 'SEZONA ZAVRÅ ENA PORAZOM, PLAVI PREDALI KRUNU', '<p><i>U Äetvrtom meÄu finalne serije Mornar - BuduÄ‡nost Voli 75:63 za 3:1 u pobjedama</i></p><p>BuduÄ‡nost je porazom stavila taÄku na sezonu u kojoj je osvojena ABA liga, plavi su porazom u Äetvrtom melu finalne serije plej-ofa Erste Superlige predali krunu crnogorskog prvaka Mornaru. U punoj dvorani Topolica u Baru, domaÄ‡in je slavio 75:63.</p><p>NaÅ¡ tim je dobro otvorio meÄ , imao +7 veÄ‡ na startu meÄa (12:5), ali je domaÄ‡in brzo odgovorio i na poluvrijeme otiÅ¡ao sa +10 (39:29).&nbsp;</p><p>Izabranici Aleksandra DÅ¾ikiÄ‡a pokazali su reakciju na startu treÄ‡e dionice, poenima Danila NikoliÄ‡a priÅ¡li rivalu na -3 (41:38), ali&nbsp;bilo je to sve. Mornar je zaigrao mnogo bolje, plavi nisu blistali, pa je prednost na Äetiri minuta prije kraja dostigla rekordnih +20 (75:55). Bilo je jasno da vremena za povratak viÅ¡e nema, iako su naÅ¡i momci sve pokuÅ¡ali...</p><p>Najefikasniji u redovima naÅ¡eg tima bili su IvanoviÄ‡ sa 16, Gibson je postigao 14 , dok se kod domaÄ‡ina istakao&nbsp;Strahinja MiÄ‡oviÄ‡ sa 18.&nbsp;</p>', '2019-01-14', '1548713985glibson.jpg', 6, 'aktivan', 'SEASON COMPLETED BY PEACE, BLUE SUFFERING DEF', '<p>In the fourth match of the final series Mornar - Buducnost Voli 75:63 for 3: 1 in victories&nbsp;<br><br>The future put the spot in the season in which the ABA league was won, and they defeated the crowning champion of the Montenegrin champion Mornar in the fourth round of the final series of the Erste Superliga play-off. In the full hall of Topolica in Bar, the host celebrated 75:63.&nbsp;<br><br>Our team opened the match well, had a +7 at the start of the match (12: 5), but the host responded quickly and left for the half with +10 (39:29).&nbsp;<br><br>The selectors of Aleksandar Dzikic showed a reaction at the start of the third stack, with Danilo Nikolic coming to the rivals at -3 (41:38), but that was all. The sailor played much better, the blue did not shine, so the advantage at four minutes before the end reached a record +20 (75:55). It was clear that there was no time to return again, even though our guys tried everything ...&nbsp;<br><br>Ivanovic was the most effective team in the team with 16, Gibson scored 14, while Strahinja MiÄ‡oviÄ‡ was 18.</p>'),
-(33, 'PORAZ NA STARTU FINALNE SERIJE', '<p><i>U prvoj utakmici finalne serije plej-ofa BuduÄ‡nost Voli - Mornar 77:84</i></p><p>BuduÄ‡nost je poraÅ¾ena u prvom meÄu finalne serije plej-ofa za prvaka Crne Gore. Plavi su u uzbudljivom meÄu drugi put ove sezone na domaÄ‡em parketu poklekli nakon duela sa Mornarom.</p><p>Mornar je mnogo bolje otvorio meÄ, veÄ‡ krajem prve dionice imao +14 (27:13) zahvaljujuÄ‡i Strahinji MiÄ‡oviÄ‡u. Plavi su bili primorani da jure prednost rivala, ali je u prvom dijelu malo toga polazilo za rukom kapitenu Å ehoviÄ‡u i druÅ¾ini.&nbsp;</p><p>NaÅ¡ tim je u drugom dijelu na krilima raspoloÅ¾enog Nemanje GordiÄ‡a uhvatio prikljuÄak, bio blizu preokreta, ali su u trenucima kada se meÄ lomio Barani imali Dereka Nidama.&nbsp;</p><p>Najefikasniji u redovima naÅ¡eg tima bili su GordiÄ‡ sa 20 i BaroviÄ‡ sa 16 poena, dok je kod gostiju blistao Nidam sa 34 poena, MiÄ‡oviÄ‡ je dodao 22.</p><p>Naredni meÄ na programu je u subotu, takoÄ‘e u MoraÄi.</p>', '2019-01-07', '1548714025clanak-06-01-2019-5c3254729ec55.jpg', 6, 'aktivan', 'END OF THE FINAL SERIES', '<p>In the first game of the final series of the playoffs, Buducnost Voli - Mornar 77:84&nbsp;<br><br>The future was defeated in the first match of the final series of the playoffs for the champions of Montenegro. Blue in a thrilling match second time this season on home court floor kneel after a duo with Mornar.&nbsp;<br><br>The sailor opened the match much better, but at the end of the first leg he had a +14 (27:13) thanks to Strahinja Micovic. The blue were forced to drive ahead of the rivals, but in the first part little did it go hand in hand to captain Å ehoviÄ‡ and his family.&nbsp;<br><br>Our team in the second part on the wings of the friendly Nemanja Gordic caught the connection, was close to the turn, but in the moments when Barani broke Barani had Derek Nidam.&nbsp;<br><br>The most efficient in the ranks of our team were Gordic with 20 and BaroviÄ‡ with 16 points, while Nidam shone with 34 points, MiÄ‡oviÄ‡ added 22.&nbsp;<br><br>The next match on the program is on Saturday, also in Moraca.</p>');
-INSERT INTO `vijesti` (`id`, `naslov`, `tekst`, `datum`, `fotografija`, `kategorija_id`, `aktivno`, `naslov_en`, `tekst_en`) VALUES
-(34, 'Å AMPIONI PRESKOÄŒILI LOVÄ†EN', '<p><i>U drugom meÄu polufinalne serije LovÄ‡en - BuduÄ‡nost Voli 75:78</i></p><p>BuduÄ‡nost Voli je u novom finalu domaÄ‡eg&nbsp; Å¡ampionata - plavi su do borbi za novu titulu doÅ¡li nakon nove pobjede nad LovÄ‡enom. U drugom meÄu polufinalne serije naÅ¡ tim je slavio na Cetinju 78:75 za 2:0 u ukupnom skoru i plasman u finale.</p><p>Izabranici Aleksandra DÅ¾ikiÄ‡a su tokom cijelog meÄa imali problema sa motivisanim domaÄ‡inom, malo toga je plavima polazilo za rukom, ali je cilj ostvaren,a odlika velikih ekipa je da dobijaju i kada ne blistaju.</p><p>DomaÄ‡in je u uzbudljivom finiÅ¡u imao Å¡ut za produÅ¾etak,ali je pokuÅ¡aj KoraÄ‡a sa centra nakon promaÅ¡enog slobodnog Gibsona zavrÅ¡io na obruÄu.&nbsp;</p>', '2019-01-06', '1548714101FB_IMG_1526926013296.jpg', 6, 'aktivan', 'CHAMPION SKIPPED LOVCEN', '<p>In the second match of the semi-final series LovÄ‡en - BuduÄ‡nost Voli 75:78&nbsp;<br><br>The future of Voli is in the new final of the domestic championship - they are blue until the battle for a new title came after a new win over Lovcen. In the second match of the semi-final series, our team celebrated on Cetinje 78:75 for 2: 0 in the overall scoring and finals.&nbsp;<br><br>Aleksandra DÅ¾ikiÄ‡s electors had problems with the motivated host during the entire match, few of them went hand in hand, but the goal was achieved, and the big teams characteristic is to win and not glitter.&nbsp;<br><br>The host in the thrilling finish had a shot for an extension, but Koracs attempt at the center after the missed free Gibson ended in a rally.</p>'),
-(35, 'LEKCIJA CETINJANIMA', '<p>Bez veÄ‡ih problema Å¡ampion je otvorio plej-of -&nbsp; BuduÄ‡nost Voli je u prvom meÄu polufinalne serije lako savladala LovÄ‡en.&nbsp;</p><p>Plavi su dominirali od samog starta meÄa, jakom odbranom veÄ‡ nakon prve dionice imali veliku prednost 25:9, pa je bilo jasno da Ä‡e Cetinjani na eventualno iznenaÄ‘enje morati da saÄekaju neku drugu priliku. Blistao je Suad Å ehoviÄ‡ u tim trenucima, a IvanoviÄ‡ i GordiÄ‡ potrudili su se da razigraju kompletan roster.&nbsp;</p><p>Na poluvremenu je semafor ispisao 53:23, LovÄ‡en je u treÄ‡oj dionici drÅ¾ao pomenutu distancu, ali su izabranici Aleksandra DÅ¾ikiÄ‡a u posljednjem kvartalu ubacili u brzinu viÅ¡e i u samom finiÅ¡u poveli 91:52, Å¡to je i bila najveÄ‡a prednost na meÄu.&nbsp;</p><p>Najefikasniji u naÅ¡em timu, u kojem su se svi igraÄi upisali u listu strijelaca bili su kapiten Å ehoviÄ‡ sa 15 poena, Gibson je upisao 14, a Andruja SlavkoviÄ‡ 13. Kod gostiju se istakao Aleksa PopoviÄ‡ sa 13.</p>', '2019-01-03', '1548714180BuducnostVoliDarussafaka.png', 6, 'aktivan', 'LECTURE TO CETINJANI', '<p>Without major problems, the champion opened the play-off - The future of Voli was easily overcome by LovÄ‡en in the first match of the semi-final series.\\r\\n\\r\\nBlue dominated from the very beginning of the match, with a strong defense after the first one, they had a great advantage of 25: 9, so it was clear that the Cetinje would have to wait for another chance for a possible surprise. Suad Å ehoviÄ‡ blossomed in those moments, and IvanoviÄ‡ and GordiÄ‡ tried to play a complete roster.\\r\\n\\r\\nAt half-time, the scoreboard was 53:23, while LovÄ‡en held the aforementioned distance in the third, but Aleksandra DÅ¾ikiÄ‡\\\'s favorites in the last quarter were in more speed and in the finish finished 91:52, which was the biggest advantage on the match.\\r\\n\\r\\nThe most efficient in our team, where all the players entered the list of archers were captain Shehovic with 15 points, Gibson enrolled 14, and Andruja Slavkovic 13. The guests pointed out Aleksa Popovic with 13.</p>'),
-(36, 'Poraz u Moskvi', '<p><i>Plavi su 21. kolu Evrolige poraÅ¾eni od ekipe CSKA Moscow rezultatom 99-69.</i></p><p>KoÅ¡arkaÅ¡i BuduÄ‡nost VOLI prekinuli su niz sjajnih pobjeda i na gostovanju poraÅ¾eni od ekipe CSKA Moscow rezultatom 99-69 u okviru 21. kola Evrolige. NaÅ¡a ekipa nije na najbolji naÄin otvorila utakmicu, prije svega defanzivno. DomaÄ‡in je to kaÅ¾njavao i brzim napadima poveÄ‡avao prednost. Posebno je bilo problema sa defanzivnim skokom, previÅ¡e poena naÅ¡i momci su primili nakon ofanzivnih skokova Moskovljana, o Äemu svjedoÄi Äak 28 poena domaÄ‡ina u prvom kvartalu. Ulaskom Petra PopoviÄ‡a Plavi su zaigrali bolje i sa 2 trojke naÅ¡eg beka smanjili rezultatski deficit. Problemi u skoku su se nastavili a na njih su se nadovezale i liÄne greÅ¡ke Clarka i Bitadzea. Ipak, dobrom igrom u napadu Å¡ampion ABA lige je priveo poluvrijeme kraju uz pristojan zaostatak od 5 poena.</p><p>Kada je Danilo NikoliÄ‡ pogodio trojku za 55-52 djelovalo je da naÅ¡a ekipa ima rezultatski prikljuÄak i da Ä‡e biti neizvijsnosti do kraja. NaÅ¾alost Moskovljani su zaigrali mnogo bolje, pohodili nekoliko teÅ¡kih Å¡uteva i stekli rekordnu prednost do tog momenta. Ulaskom Clarka koji je zbog problema sa faulovima presjedio veÄ‡i dio treÄ‡e Äetvrtine naÅ¡a ekipa priÅ¡la je na 11 poena minusa ali za neÅ¡to viÅ¡e nije imala snage. U posljednjoj Äetvrtini domaÄ‡in je samo poveÄ‡avao prednost a naÅ¡i momci optereÄ‡eni faulovima kljuÄnih igraÄa nijesu imali odgovor. Uzroke poraza treba traÅ¾iti i u skakaÄkoj dominaciji domaÄ‡ina. Jedini dvocifreni u redovima Plavih bili su Cole sa 11 i Bell sa 10 poena. Rusku ekipu predvodio je De Kolo sa 26 poena.</p><p>U narednom 22. kolu Evrolige BuduÄ‡nost VOLI doÄekuje ekipu Khimki Moscow Region. Taj duel je na programu u Äetvrtak 7. februara.</p>', '2019-02-01', '1549110502clanak-01-02-2019-5c549c61bd066.jpg', 4, 'aktivan', 'Defeat in the Moscow', '<p>The blue were defeated by the CSKA Moscow team in the 21st round of Euroleague with 99-69.\\\\r\\\\nBasketball players The future of VOLI broke a series of great victories and were defeated by CSKA Moscow 99-69 in the 21st round of Euroleague. Our team did not open the game in the best way, primarily defensively. The host was punishing it and quick attacks increased the advantage. Especially there were problems with a defensive jump, too many points were received by our guys after the offensive jumps of Moscow, as evidenced by as many as 28 hosts in the first quarter. By joining Petar Popovic Plava played better and with 2 trophies our defeat reduced the deficit. Problems in the jump continued, and they were accompanied by personal mistakes of Clark and Bitadze. However, a good game in the attack of the ABA League champion led to a half-time finish with a decent backlog of 5 points.\\\\r\\\\n\\\\r\\\\nWhen Danilo Nikolic hit the troika for 55-52, our team had a resultual connection and that there would be inconsistencies to the end. Unfortunately, the Muscovites played much better, followed several hard shots and gained a record advantage until that moment. Clark, who had been in trouble for most of the third quarter due to problems with the team, came on 11 points, but did not have the strength anymore. In the last quarter, the host only increased the advantage and our guys loaded with crucial players\\\\\\\' factions did not have the answer. Causes of defeat should also be sought in the domination of the host. The only two-digit in the ranks of the Blues were Cole with 11 and Bell with 10 points. The Russian team was led by De Kolo with 26 points.\\\\r\\\\n\\\\r\\\\nIn the next round of Euroleague, the future of VOLI is waiting for the Khimki Moscow Region team. That duel is on the program on Thursday, February 7th.</p>');
+(33, 'PORAZ NA STARTU FINALNE SERIJE', '<p><i>U prvoj utakmici finalne serije plej-ofa BuduÄ‡nost Voli - Mornar 77:84</i></p><p>BuduÄ‡nost je poraÅ¾ena u prvom meÄu finalne serije plej-ofa za prvaka Crne Gore. Plavi su u uzbudljivom meÄu drugi put ove sezone na domaÄ‡em parketu poklekli nakon duela sa Mornarom.</p><p>Mornar je mnogo bolje otvorio meÄ, veÄ‡ krajem prve dionice imao +14 (27:13) zahvaljujuÄ‡i Strahinji MiÄ‡oviÄ‡u. Plavi su bili primorani da jure prednost rivala, ali je u prvom dijelu malo toga polazilo za rukom kapitenu Å ehoviÄ‡u i druÅ¾ini.&nbsp;</p><p>NaÅ¡ tim je u drugom dijelu na krilima raspoloÅ¾enog Nemanje GordiÄ‡a uhvatio prikljuÄak, bio blizu preokreta, ali su u trenucima kada se meÄ lomio Barani imali Dereka Nidama.&nbsp;</p><p>Najefikasniji u redovima naÅ¡eg tima bili su GordiÄ‡ sa 20 i BaroviÄ‡ sa 16 poena, dok je kod gostiju blistao Nidam sa 34 poena, MiÄ‡oviÄ‡ je dodao 22.</p><p>Naredni meÄ na programu je u subotu, takoÄ‘e u MoraÄi.</p>', '2019-01-07', '1548714025clanak-06-01-2019-5c3254729ec55.jpg', 6, 'aktivan', 'END OF THE FINAL SERIES', '<p>In the first game of the final series of the playoffs, Buducnost Voli - Mornar 77:84&nbsp;<br><br>The future was defeated in the first match of the final series of the playoffs for the champions of Montenegro. Blue in a thrilling match second time this season on home court floor kneel after a duo with Mornar.&nbsp;<br><br>The sailor opened the match much better, but at the end of the first leg he had a +14 (27:13) thanks to Strahinja Micovic. The blue were forced to drive ahead of the rivals, but in the first part little did it go hand in hand to captain Å ehoviÄ‡ and his family.&nbsp;<br><br>Our team in the second part on the wings of the friendly Nemanja Gordic caught the connection, was close to the turn, but in the moments when Barani broke Barani had Derek Nidam.&nbsp;<br><br>The most efficient in the ranks of our team were Gordic with 20 and BaroviÄ‡ with 16 points, while Nidam shone with 34 points, MiÄ‡oviÄ‡ added 22.&nbsp;<br><br>The next match on the program is on Saturday, also in Moraca.</p>'),
+(34, 'Å AMPIONI PRESKOÄŒILI LOVÄ†EN', '<p><i>U drugom meÄu polufinalne serije LovÄ‡en - BuduÄ‡nost Voli 75:78</i></p><p>BuduÄ‡nost Voli je u novom finalu domaÄ‡eg&nbsp; Å¡ampionata - plavi su do borbi za novu titulu doÅ¡li nakon nove pobjede nad LovÄ‡enom. U drugom meÄu polufinalne serije naÅ¡ tim je slavio na Cetinju 78:75 za 2:0 u ukupnom skoru i plasman u finale.</p><p>Izabranici Aleksandra DÅ¾ikiÄ‡a su tokom cijelog meÄa imali problema sa motivisanim domaÄ‡inom, malo toga je plavima polazilo za rukom, ali je cilj ostvaren,a odlika velikih ekipa je da dobijaju i kada ne blistaju.</p><p>DomaÄ‡in je u uzbudljivom finiÅ¡u imao Å¡ut za produÅ¾etak,ali je pokuÅ¡aj KoraÄ‡a sa centra nakon promaÅ¡enog slobodnog Gibsona zavrÅ¡io na obruÄu.&nbsp;</p>', '2019-01-06', '1548714101FB_IMG_1526926013296.jpg', 6, 'aktivan', 'CHAMPION SKIPPED LOVCEN', '<p>In the second match of the semi-final series LovÄ‡en - BuduÄ‡nost Voli 75:78&nbsp;<br><br>The future of Voli is in the new final of the domestic championship - they are blue until the battle for a new title came after a new win over Lovcen. In the second match of the semi-final series, our team celebrated on Cetinje 78:75 for 2: 0 in the overall scoring and finals.&nbsp;<br><br>Aleksandra DÅ¾ikiÄ‡s electors had problems with the motivated host during the entire match, few of them went hand in hand, but the goal was achieved, and the big teams characteristic is to win and not glitter.&nbsp;<br><br>The host in the thrilling finish had a shot for an extension, but Koracs attempt at the center after the missed free Gibson ended in a rally.</p>');
 
 --
 -- Indexes for dumped tables
@@ -1220,19 +1207,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `album`
 --
 ALTER TABLE `album`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `baneri`
 --
 ALTER TABLE `baneri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `cg`
 --
 ALTER TABLE `cg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `eurocup`
@@ -1250,7 +1237,7 @@ ALTER TABLE `euroleague`
 -- AUTO_INCREMENT for table `fotografije`
 --
 ALTER TABLE `fotografije`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `juniori`
@@ -1268,25 +1255,25 @@ ALTER TABLE `kadeti`
 -- AUTO_INCREMENT for table `kalendar`
 --
 ALTER TABLE `kalendar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `kategorija`
 --
 ALTER TABLE `kategorija`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `lige`
 --
 ALTER TABLE `lige`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `mediji`
 --
 ALTER TABLE `mediji`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `menadzment`
@@ -1334,19 +1321,19 @@ ALTER TABLE `prvi_tim`
 -- AUTO_INCREMENT for table `rezultati`
 --
 ALTER TABLE `rezultati`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `sezone`
 --
 ALTER TABLE `sezone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `sponzori`
 --
 ALTER TABLE `sponzori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `strucni_stab`
@@ -1358,19 +1345,19 @@ ALTER TABLE `strucni_stab`
 -- AUTO_INCREMENT for table `tagovi`
 --
 ALTER TABLE `tagovi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `timovi`
 --
 ALTER TABLE `timovi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `trofeji`
 --
 ALTER TABLE `trofeji`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `upravni_odbor`
@@ -1382,13 +1369,13 @@ ALTER TABLE `upravni_odbor`
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `vijesti`
 --
 ALTER TABLE `vijesti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- Constraints for dumped tables

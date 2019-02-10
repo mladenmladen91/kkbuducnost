@@ -11,7 +11,7 @@ include "../includes/functions.php";
 
 
 // getting the number of posts
-	$queryAll = "SELECT * FROM kalendar a JOIN lige b ON a.liga_id = b.id WHERE b.naziv='{$criteria}' AND a.datum > CURDATE()";
+	$queryAll = "SELECT * FROM kalendar a JOIN lige b ON a.liga_id = b.id WHERE b.naziv='{$criteria}' AND a.datum >= CURDATE()";
 	$resultAll = mysqli_query($connection, $queryAll);
 
 	$countAll = mysqli_num_rows($resultAll);
