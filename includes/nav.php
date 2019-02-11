@@ -9,8 +9,8 @@
 <nav class="col-xl-10 col-lg-10 navbar navbar-expand-xl nav_container" >
     <div class="brand_holder" style="position:relative; display:none">  
     <a class="navbar-brand" href="index.php"><img class="img-responsive" src="images/buducnostvoli.svg" height="80" width="80" alt="kk budućnost"></a>
-    <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=me" class="language_link <?php echo ($_SESSION['lang']=== 'me')? 'language_link_active':'' ?>" style="position:absolute; left:3; top:80;padding: 1px !important">ME</a>
-    <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=en" class="language_link <?php echo ($_SESSION['lang']=== 'en')? 'language_link_active':'' ?> language_link_en" style="position:absolute; left:52; top:80;padding: 1px !important">EN</a>    
+    <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=me" class="language_link language_link_me <?php echo ($_SESSION['lang']=== 'me')? 'language_link_active':'' ?>" style="position:absolute; left:3; top:80;padding: 1px !important">ME</a>
+    <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=en" class="language_link language_link_en <?php echo ($_SESSION['lang']=== 'en')? 'language_link_active':'' ?> language_link_en" style="position:absolute; left:52; top:80;padding: 1px !important">EN</a>    
     </div>    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="ham2"></span>
@@ -38,7 +38,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $lang['VIJESTI'] ?></a>
             <div class="dropdown-menu nav_dropdown-menu text-center p-0" aria-labelledby="dropdown01">
-                <a class="dropdown-item f-s-10" href="klub.php"><span><?php echo $lang['klub'] ?></span></a>
+                <a class="dropdown-item f-s-10 klub" href="klub.php"><span><?php echo $lang['klub'] ?></span></a>
                 <a class="dropdown-item aba" href="aba.php"><span><?php echo $lang['aba'] ?></span></a>
                 <a class="dropdown-item euroleague" href="euroleague.php"><span>Euroleague</span></a>
                 <a class="dropdown-item eurocup" href="eurocup.php"><span>EuroCup</span></a>
@@ -108,9 +108,29 @@
 
        function myFunction() {
           if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
+                navbar.classList.add("sticky");
+              if($(window).width() > 451){
+                $(".language_link_en").css({
+                    "top": 35,
+                    "left": 130
+                });
+                $(".language_link_me").css({
+                    "top": 35,
+                    "left": 90
+                });
+                $(".brand_holder").css({"padding-bottom": 0});  
+              }
           } else {
                navbar.classList.remove("sticky");
+               $(".language_link_en").css({
+                    "top": 80,
+                    "left": 52
+                });
+                $(".language_link_me").css({
+                    "top": 80,
+                    "left": 3
+                });
+              $(".brand_holder").css({"padding-bottom": 20});
           }
 } 
     

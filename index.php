@@ -46,7 +46,7 @@
 
             </div>                
                 <!-- first team -->
-                <div class="col-lg-12 section_holder  my-4">
+                <div class="col-lg-12 section_holder my-4 blue_section">
                    <div class="row justify-content-center">    
                     <div class="col-lg-4 col-8 text-center section_header">
                         <span><i class="fas fa-basketball-ball"></i>&ensp;<?php echo $lang['tim'] ?></span>
@@ -105,7 +105,7 @@
             <!-- tables and calendar -->
             <div class="calendar_holder col-lg-12 m-2">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 tables_left">
                         <div class="row justify-content-center">
                             <div class="col-lg-12 game_navigation mb-4">
                                  <div class="row">
@@ -140,7 +140,7 @@
                           </div>
                     </div>
                     
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 tables_right">
                         <div class="row justify-content-center">
                             <div class="col-lg-8 game_navigation mb-4">
                                  <div class="row">
@@ -293,6 +293,30 @@
         prevEl: '.swiper-button-prev',
       },
     });
+$(document).ready(function(){   
+// showing elements on window scrolling
+    $(window).scroll(function() {
+          $(".tables_left").each(function(){
+              var pos = $(this).offset().top;
+              var winTop = $(window).scrollTop();
+              
+               if (pos < winTop + 250) {
+                   $(this).addClass("show_tables");
+                   $(".tables_right").addClass("show_tables");
+               }
+         });
+        
+        $(".blue_section").each(function(){
+              var pos = $(this).offset().top;
+              var winTop = $(window).scrollTop();
+            
+               if (pos < winTop + 330) {
+                   $(this).addClass("show_blue");
+               }
+         });
+        
+    });
+ });
     
 </script>    
 <!-- footer including -->

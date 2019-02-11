@@ -75,6 +75,38 @@
     padding: 10px;
     
 }
+.blue_section{
+    opacity: 0;
+    transform: translateY(30%) !important;
+    transition: transform .4s linear;
+}
+
+.tables_left{
+    opacity: 0;
+    transform: translateX(-5%) !important;
+    transition: transform .4s linear;
+}
+.tables_right{
+    opacity: 0;
+    transform: translateX(5%) !important;
+    transition: transform .4s linear;
+}
+.show_tables{
+    opacity: 1;
+    transform: translateX(0%) !important;
+    transition: transform .4s linear;
+   
+}
+
+.show_blue{
+    opacity: 1;
+    transform: translateY(0%) !important;
+    transition: transform .4s linear;
+   
+}
+
+
+
 
 @media(max-width: 575px){
     .small_sponsors_images{

@@ -41,15 +41,15 @@ session_start();
         for($i = 0; $i < 3; $i++){
     ?>
       <div class="carousel-item <?php echo ($i === 0)? 'active':'' ?>">
-      <a href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>">     
+      <a href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>"  title="<?php echo ($_SESSION['lang'] === 'en')? $newsArray[$i]['naslov_en'] :$newsArray[$i]['naslov'] ?>">     
       <img src="admin/images/vijesti/<?php echo $newsArray[$i]['fotografija'] ?>" alt="Los Angeles" width="1100" height="500">
       <div class="carousel-caption col-xs-9" style="position:absolute; left:-17">
           <div class="col-lg-12 p-0">
-              <a href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>" style=" display: table;">
+              <a href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>" style=" display: table;"  title="<?php echo ($_SESSION['lang'] === 'en')? $newsArray[$i]['naslov_en'] :$newsArray[$i]['naslov'] ?>">
                   <span class="datum_slajd"><?php echo $newDate = date("d.m.Y", strtotime($newsArray[$i]['datum'])) ?></span>
               
           </div>
-              <a style="text-decoration: none;"  href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>">
+              <a style="text-decoration: none;"  href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>"  title="<?php echo ($_SESSION['lang'] === 'en')? $newsArray[$i]['naslov_en'] :$newsArray[$i]['naslov'] ?>">
                   <div class="col-lg-6 naslov_slajd">
                       <?php echo ($_SESSION['lang'] === 'en')? $newsArray[$i]['naslov_en'] :$newsArray[$i]['naslov'] ?>
                   </div>
