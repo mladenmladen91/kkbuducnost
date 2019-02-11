@@ -52,6 +52,7 @@
     
     &_title{
         border-bottom: 2px solid $cl-s;
+          
         &_span{
             color: $cl-f;
             padding-left: 0 !important;
@@ -64,7 +65,7 @@
         &_border{
             border: 1px solid $cl-s;
             margin-top: 1px;
-        }
+       }
         &_date{
             font-size: 1.4rem !important;
             color: $cl-f !important;
@@ -72,8 +73,6 @@
         }
     }
 }
-
-
 
 @keyframes show{
      0%{
