@@ -52,7 +52,7 @@ $sezona_id = $_GET['sezona_id'];
                           
                         ?>  
                           <div class="col-lg-3 col-sm-6 p-0 sponsor_hover" style="margin-bottom: 30px;">
-                              <a href="album_fotografije.php?id=<?php echo $row['id'] ?>">
+                              <a href="album_fotografije.php?id=<?php echo $row['id'] ?>" title="<?php echo $row['naziv'] ?>">
                                 <div class="col-lg-12 photo_league p-2">
                                   <div class="col-lg-12 p-0">
                                       <div class="col-lg-12" style="height:220px;

@@ -7,7 +7,7 @@
   while($stmt->fetch()){
 ?>
 <div class="col-lg-12 p-0 py-2">
-    <a href="<?php echo $link ?>" target="_blank" class="p-0 m-0"><img src="admin/images/baneri/<?php echo $fotografija ?>" class="img-responsive m-0 banner_container_img" style="width:100% !important;"></a>    
+    <a href="<?php echo $link ?>" target="_blank" class="p-0 m-0"><img src="admin/images/baneri/<?php echo $fotografija ?>" class="img-responsive m-0 banner_container_img" style="width:100% !important;" title="<?php echo $link ?>"></a>    
 </div>
 <?php } ?>
 <div class='col-sm-12 col-xs-12 p-0 text-center' style="padding: 0; margin-top: 30px;">
