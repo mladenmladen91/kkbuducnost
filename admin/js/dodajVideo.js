@@ -37,8 +37,7 @@ function saveVideo(formData, tableName, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    returndata = returndata.replace(" ", "");
-                    returndata = returndata.trim();
+                     returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);
                     }else{

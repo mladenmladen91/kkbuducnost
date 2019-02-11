@@ -40,6 +40,7 @@ function savePhoto(formData, id){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
+                    returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);
                         
@@ -85,7 +86,6 @@ function deleteSection(izbrisi){
                 type: 'POST',
                 data: "id="+id+"&photo="+photo,
                 success: function (returndata) {
-                    returndata = returndata.replace(" ", "");
                     returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);

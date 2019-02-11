@@ -36,7 +36,6 @@ function saveNews(formData, id){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    returndata = returndata.replace(" ", "");
                     returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);

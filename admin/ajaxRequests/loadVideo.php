@@ -29,7 +29,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="link">Link</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea required type="text" name="link" id="link" class="add_news_form_text form-control form-control-lg" maxlength="500"><?php echo $link ?></textarea>
+                            <textarea required type="text" name="link" id="link" class="add_news_form_text form-control form-control-lg" maxlength="200"><?php echo $link ?></textarea>
                         </div>
                     </div>
                     

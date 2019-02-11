@@ -30,8 +30,7 @@ function deleteSection(izbrisi){
                 type: 'POST',
                 data: "id="+id,
                 success: function (returndata) {
-                    returndata = returndata.replace(" ", "");
-                    returndata = returndata.trim();
+                     returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);
                     }else{

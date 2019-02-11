@@ -56,7 +56,7 @@ include "../../includes/functions.php";
                     
                     <div class="col-sm-12 col-12 form-group my-4">
                         <div class="col-sm-6 col-12 pl-0">
-                            <label class="news_form_label" for="tekst">Tekst objave</label>
+                            <label class="news_form_label" for="tekst">Tekst objave(* Maksimalna dužina teksta je 2000 karaktera)</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
                             <textarea required name="tekst" id="text1" class="add_news_form_textarea" ><?php echo $tekst; ?></textarea>
@@ -65,7 +65,7 @@ include "../../includes/functions.php";
                     
                     <div class="col-sm-12 col-12 form-group my-4">
                         <div class="col-sm-6 col-12 pl-0">
-                            <label class="news_form_label" for="tekst2">Tekst objave-engleski</label>
+                            <label class="news_form_label" for="tekst2">Tekst objave-engleski(* Maksimalna dužina teksta je 2000 karaktera)</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
                             <textarea name="tekst_en" id="text2" class="add_news_form_textarea" ><?php echo $tekst_en; ?></textarea>

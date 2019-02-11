@@ -42,7 +42,7 @@ redirect();
                     
                     <div class="col-sm-12 col-12 form-group my-4">
                         <div class="col-sm-6 col-12 pl-0">
-                            <label class="news_form_label" for="tekst">Tekst objave</label>
+                            <label class="news_form_label" for="tekst">Tekst objave(* Maksimalna dužina teksta je 2000 karaktera)</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
                            <textarea name="tekst" id="texter" class="add_news_form_textarea"></textarea>

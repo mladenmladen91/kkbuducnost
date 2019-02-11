@@ -18,7 +18,7 @@
     if($naziv === '' || $dvorana === ''){
         echo "Morate popuniti sva polja";
     }else if(!extension($fotografija)){
-        echo "Unesite jpg ili png format fotografije";
+        echo "Unesite  jpg ili png format fotografije";
     }else{
 
        $stmtAdd = mysqli_prepare($connection, "INSERT INTO timovi VALUES(null, ?, ?, ?)");

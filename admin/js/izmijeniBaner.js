@@ -36,13 +36,12 @@ function saveBaner(formData, id){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    returndata = returndata.replace(" ", "");
                     returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);
                         
                     }else{
-                        swal("Trofej Izmijenjen!", "Uspješno ste izmijenili baner!", "success").then(function(){
+                        swal("Baner Izmijenjen!", "Uspješno ste izmijenili baner!", "success").then(function(){
                            loadBaner(id);
                         });
                       
