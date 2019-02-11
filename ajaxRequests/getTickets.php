@@ -25,6 +25,8 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
             $header = "From:".$mail;
             if(mail($to, $subject, $message, $header)){
                echo ($_SESSION['lang'] === 'en')? "* Mail successfully sent":"* Uspješno ste poslali mail!";
+            }else{
+               echo ($_SESSION['lang'] === 'en')? "* Mail unsuccessfully sent":"* Nespješno ste poslali mail!"; 
             }
         }
         else

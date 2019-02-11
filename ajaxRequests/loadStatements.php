@@ -12,7 +12,7 @@ include "../includes/functions.php";
           if($count > 0){
                while($row = mysqli_fetch_assoc($result)){
 ?>
-                    <div class="col-lg-12 media_container mb-2">
+                    <div class="col-lg-12 media_container mb-2 table_show">
                              <div class="row">
                                  <div class="col-lg-9 p-4">
                                      <a target="_blank" href="admin/izjave/<?php echo $row['izjava'] ?>"><span class="media_container_span"><img src="images/pdf.svg" class="img-responsive" style="width:20px"><span class="media_container_span_title"><?php echo $row['naslov'] ?></span></span></a>

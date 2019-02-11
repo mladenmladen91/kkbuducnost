@@ -54,7 +54,7 @@
                         <span id="result_message" style="font-size:14px; color: red"></span>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <button class="ticket_input_button" type="submit"><?php echo $lang['send'] ?></button>
+                        <button class="ticket_input_button sponsor_hover" type="submit"><?php echo $lang['send'] ?></button>
                     </div>
                        
                 </div>

@@ -104,7 +104,27 @@
     transition: transform .4s linear;
    
 }
-
+.sponsor{
+    &_section{
+    opacity: 0;
+    transition: all .3s ease;
+    
+    }
+    
+    &_hover{
+        transition: transform .4s ease;
+        backface-visibility: hidden;
+        &:hover{
+            backface-visibility: hidden;
+            transition: transform .4s ease;
+            transform: scale(1.05);
+        }
+    }
+}
+.show_sponsors{
+    opacity: 1;
+    transition: all .3s ease;
+}
 
 
 

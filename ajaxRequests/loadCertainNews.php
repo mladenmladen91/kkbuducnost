@@ -36,7 +36,7 @@ if($_SESSION['lang'] === 'en'){
                     <?php for($i = 0; $i < sizeof($newsArray); $i++){ ?>    
                        <div class="col-lg-4 col-md-6 col-sm-6 m-0" style="margin-bottom: 20px !important">
                           <a href="clanak.php?id=<?php echo $newsArray[$i]['id'] ?>" title="<?php echo ($_SESSION['lang'] === 'en')? $newsArray[$i]['naslov_en'] :$newsArray[$i]['naslov'] ?>">    
-                            <div class="col-lg-12 other_news_container p-0 mx-2">
+                            <div class="col-lg-12 other_news_container other_news_container_hover p-0 mx-2">
                                  <div class="col-lg-12 other_news_container_image p-2">
                                      <img class="img-responsive" src="admin/images/vijesti/<?php echo $newsArray[$i]['fotografija'] ?>" alt="image">
                                  </div>

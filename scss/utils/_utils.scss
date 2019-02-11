@@ -217,6 +217,17 @@ a{
         font-weight: 600;
     }
     
+    &_hover{
+        backface-visibility: hidden;
+        &:hover{
+            backface-visibility: hidden;
+            & .other_news_container_heading > span{
+                transition: all .4s ease;
+                text-decoration: underline;
+            }
+        }
+    }
+    
 }
 .section{
     &_holder{
@@ -386,7 +397,22 @@ a{
     border-right-color: transparent;
     
 }
+.table_show{
+    visibility: visible;
+    animation: showTable .5s linear;
+}
 
+@keyframes showTable{
+    0% {
+       visibility: hidden;
+       transform: translateY(70%);
+    }
+
+   100% {
+       visibility: visible;
+       transform: translateY(0%);
+   }
+}
 
 
 @media(max-width: 990px){

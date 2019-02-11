@@ -16,7 +16,9 @@
       $izjava = time().$_FILES['izjava']['name'];
       $izjava_tmp = $_FILES['izjava']['tmp_name'];       
 
-     if($naslov === ''){
+     if($datum > date('Y-m-d')){
+         echo "Datum ne može biti u budućnosti"; 
+      }elseif($naslov === ''){
          echo "Popunite prazno polje";
      }elseif(!documentRecognizer($izjava)){
          echo "Unesite fajl formata pdf, doc ili docx";

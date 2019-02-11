@@ -16,8 +16,10 @@
          echo "Datum mora biti sadašnji";
      }elseif(clearSpace($tekst)){ 
          echo "Popunite polje validnim tekstom";
+     }elseif(strlen($tekst) > 2000){ 
+         echo "Tekst ne smije biti duži od 2000 karaktera";
      }else{
-         echo $tekst;
+        
        $query = "SELECT * FROM newsfeed_emails";
        $result = mysqli_query($connection, $query);
        testQuery($result);

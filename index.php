@@ -75,7 +75,7 @@
                                         <input class="swiper_visina" type="hidden" name="swiper_visina" value="<?php echo $visina ?> cm">
                                         <input class="swiper_pozicija" type="hidden" name="swiper_pozicija" value="<?php echo $pozicija ?>">
                                         <input class="swiper_datum" type="hidden" name="swiper_datum" value="<?php echo $newDate = date("d.m.Y", strtotime($datum_rodjenja)) ?>">    
-                                         <img src="admin/images/igraci/<?php echo $fotografija ?>" class="img-responsive mx-auto d-block" height="100" width="100" style="object-fit:cover; object-position:top">
+                                         <img src="admin/images/igraci/<?php echo $fotografija ?>" class="img-responsive mx-auto d-block sponsor_hover" height="100" width="100" style="object-fit:cover; object-position:top">
                                          </div>
                                          <div class="col-lg-12 p-0 m-0 text-center">     
                                              <span class="player_name text-center"><?php echo $ime ?></span><br>
@@ -165,7 +165,7 @@
                     <div class="col-lg-6 col-12 text-center section_header">
                         <span><i class="fas fa-sign-language"></i>&ensp;<?php echo $lang['sponzori'] ?></span>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 sponsor_section">
                         <?php
                             $rank5= [];
                             $rank3= [];
@@ -191,13 +191,13 @@
                         <div class="row justify-content-center">
                          <?php for($i = 0; $i < sizeof($rank5); $i++){ ?>    
                             <div class="col-lg-6 text-center" style="margin-top:80px;margin-bottom:40px">
-                                <a target="_blank" href="<?php echo $rank5[$i]['link'] ?>"><img class="img-responsive" alt="image" src="admin/images/sponzori/<?php echo $rank5[$i]['fotografija'] ?>" style="max-height: 100px"></a>
+                                <a target="_blank" href="<?php echo $rank5[$i]['link'] ?>" title="<?php echo $rank5[$i]['link'] ?>"><img class="img-responsive sponsor_hover" alt="image" src="admin/images/sponzori/<?php echo $rank5[$i]['fotografija'] ?>" style="max-height: 100px"></a>
                             </div>
                             <?php } ?>
                             <div class="col-lg-10" style="margin-bottom: 40px;">
                                <div class="row justify-content-center">
                                   <?php for($i = 0; $i < sizeof($rank3); $i++){ ?>  <div class="col-lg-3 text-center" style="margin-bottom:30px">
-                                       <a target="_blank" href="<?php echo $rank3[$i]['link'] ?>"><img class="img-responsive" alt="image" src="admin/images/sponzori/<?php echo $rank3[$i]['fotografija'] ?>" style="max-height: 50px"></a>
+                                       <a target="_blank" href="<?php echo $rank3[$i]['link'] ?>" title="<?php echo $rank3[$i]['link'] ?>"><img class="img-responsive sponsor_hover" alt="image" src="admin/images/sponzori/<?php echo $rank3[$i]['fotografija'] ?>" style="max-height: 50px"></a>
                                    </div>
                                   <?php } ?> 
                                    </div> 
@@ -206,7 +206,7 @@
                                     <div class="row justify-content-center">
                                      <?php for($i = 0; $i < sizeof($rank1); $i++){ ?>     
                                         <div class="col-sm-1 col-md-2 col-lg-1 text-center justify-content-center" style="position:relative; padding: 20px !important; margin-bottom: 40px">
-                                            <a target="_blank" href="<?php echo $rank1[$i]['link'] ?>" ><img class="small_sponsors_images img-responsive" alt="image" src="admin/images/sponzori/<?php echo $rank1[$i]['fotografija'] ?>" style="max-width:70%; position:absolute; left:50%, top:50%; transform: translate(-50%, -50%)">
+                                            <a target="_blank" href="<?php echo $rank1[$i]['link'] ?>" title="<?php echo $rank1[$i]['link'] ?>"><img class="small_sponsors_images img-responsive" alt="image" src="admin/images/sponzori/<?php echo $rank1[$i]['fotografija'] ?>" style="max-width:70%; position:absolute; left:50%, top:50%; transform: translate(-50%, -50%)">
                                             </a>
                                         </div>
                                      <?php } ?>   
@@ -225,7 +225,7 @@
                               <!-- POPUP igrac -->
 
 <div class="container">
-    <div class="modal" id="igrac">
+    <div class="modal fade" id="igrac">
         <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header text-center py-0">
@@ -296,22 +296,34 @@
 $(document).ready(function(){   
 // showing elements on window scrolling
     $(window).scroll(function() {
+        // showing tables
           $(".tables_left").each(function(){
               var pos = $(this).offset().top;
               var winTop = $(window).scrollTop();
               
-               if (pos < winTop + 250) {
+               if (pos < winTop + 380) {
                    $(this).addClass("show_tables");
                    $(".tables_right").addClass("show_tables");
                }
          });
         
+        // showing team
         $(".blue_section").each(function(){
               var pos = $(this).offset().top;
               var winTop = $(window).scrollTop();
             
-               if (pos < winTop + 330) {
+               if (pos < winTop + 380) {
                    $(this).addClass("show_blue");
+               }
+         });
+        
+        // showing sponsors
+        $(".sponsor_section").each(function(){
+              var pos = $(this).offset().top;
+              var winTop = $(window).scrollTop();
+            
+               if (pos < winTop + 400) {
+                   $(this).addClass("show_sponsors");
                }
          });
         

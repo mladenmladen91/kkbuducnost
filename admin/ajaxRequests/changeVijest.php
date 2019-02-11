@@ -22,8 +22,12 @@
       $fotografija = time().$_FILES['fotografija']['name'];
       $fotografija_tmp = $_FILES['fotografija']['tmp_name'];
     
-      if(clearSpace($tekst) || clearSpace($tekst_en) || $naslov === '' || $naslov_en === ''){ 
+      if($datum > date('Y-m-d')){
+         echo "Datum ne može biti u budućnosti"; 
+      }elseif(clearSpace($tekst) || clearSpace($tekst_en) || $naslov === '' || $naslov_en === ''){ 
          echo "Popunite polja validnim tekstom";
+     }elseif(strlen($tekst) > 2000 || strlen($tekst_en) > 2000){ 
+         echo "Tekst ne smije biti duži od 2000 karaktera";
      }elseif($_FILES['fotografija']['name'] === ''){
            $stmtUpdate = mysqli_prepare($connection, "UPDATE vijesti SET naslov=?, tekst=?, datum=?, kategorija_id=?, naslov_en=?, tekst_en=? WHERE id=?");
            $stmtUpdate->bind_param('sssissi', $naslov, $tekst, $datum, $kategorija_id, $naslov_en, $tekst_en, $id);

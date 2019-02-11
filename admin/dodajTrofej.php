@@ -54,7 +54,7 @@ redirect();
                             <label class="news_form_label" for="sezone">Sezone</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea required type="text" name="sezone" id="sezone" class="add_news_form_textarea form-control form-control-lg"></textarea>
+                            <textarea required type="text" name="sezone" id="sezone" class="add_news_form_textarea form-control form-control-lg" maxlength="400"></textarea>
                         </div>
                     </div>
                     

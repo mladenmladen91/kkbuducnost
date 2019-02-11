@@ -45,7 +45,8 @@ function saveData(formData, page){
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
-                    console.log(returndata.length);
+                    returndata = returndata.replace(" ", "");
+                    returndata = returndata.trim();
                     if(returndata !== "Success"){
                         swal(returndata);
                         

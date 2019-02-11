@@ -33,7 +33,7 @@ while($row = mysqli_fetch_assoc($result)){
                 $stmtSezone->bind_result($id, $naziv, $logo, $broj_utakmica, $dobijene, $izgubljene, $krajnja_razlika, $bodovi);
             
 ?>
-             <div class="col-lg-12">
+             <div class="col-lg-12 table_show">
                 <div class="row justify-content-center">  
                 <div class="col-lg-10 game_navigation mb-4">
                                  <div class="row">
