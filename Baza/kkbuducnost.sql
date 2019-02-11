@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2019 at 08:50 PM
+-- Generation Time: Feb 11, 2019 at 08:51 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -359,8 +359,7 @@ INSERT INTO `liga_tim` (`liga_id`, `tim_id`) VALUES
 (3, 15),
 (2, 18),
 (2, 19),
-(2, 20),
-(2, 22);
+(2, 20);
 
 -- --------------------------------------------------------
 
@@ -848,8 +847,7 @@ INSERT INTO `timovi` (`id`, `naziv`, `logo`, `dvorana`) VALUES
 (16, 'KK Partizan', '1549027732partizan.png', 'Aleksandar NikoliÄ‡'),
 (18, 'FC Barcelona Lassa', '1549027956barcelona.png', 'Barcelona arena'),
 (19, 'BC Panathinaikos', '1549028007panathaniakois.png', 'Dvorana mira i prijateljstva'),
-(20, 'Fenerbahce Ulker', '1549028048fenerbache.png', 'Abdi Pekci arena'),
-(22, 'sds', '15498996481382087_412794025486703_602864734_n.jpg', 'dsd');
+(20, 'Fenerbahce Ulker', '1549028048fenerbache.png', 'Abdi Pekci arena');
 
 -- --------------------------------------------------------
 
