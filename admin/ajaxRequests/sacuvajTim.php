@@ -16,7 +16,7 @@
       $fotografija_tmp = $_FILES['logo']['tmp_name'];
 
     if($naziv === '' || $dvorana === ''){
-        echo "Morate popuniti sva polja";
+        echo "Morate popuniti sva polja validnim tekstom";
     }else if(!extension($fotografija)){
         echo "Unesite  jpg ili png format fotografije";
     }else{

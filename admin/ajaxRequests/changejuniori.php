@@ -21,7 +21,7 @@
       if($broj < 1 || $broj > 99){
          echo "Broj mora biti u rangu od 1 do 99"; 
       }elseif($ime === '' || $prezime === ''){
-        echo "Morate popuniti sva polja";
+        echo "Morate popuniti sva polja validnim tekstom";
       }elseif($_FILES['fotografija']['name'] === ''){
            $stmtUpdate = mysqli_prepare($connection, "UPDATE juniori SET ime=?, prezime=?, broj=? WHERE id=?");
            $stmtUpdate->bind_param('ssii', $ime, $prezime, $broj, $id);

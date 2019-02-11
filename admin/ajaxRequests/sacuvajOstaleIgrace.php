@@ -31,7 +31,7 @@
        }
 
      if($ime === '' || $prezime === ''){
-        echo "Morate popuniti sva polja";
+        echo "Morate popuniti sva polja validnim tekstom";
       }else if(!extension($fotografija)){
         echo "Unesite jpg ili png format fotografije";
       }else{

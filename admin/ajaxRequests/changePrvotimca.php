@@ -26,7 +26,7 @@
       if($datumRodjenja >= date("Y-m-d")){
          echo "Datum rođenja mora biti u prošlosti"; 
       }elseif($ime === '' || $prezime === '' || $nacionalnost === '' || $pozicija === ''){
-        echo "Morate popuniti sva polja";
+        echo "Morate popuniti sva polja validnim tekstom";
       }elseif($_FILES['fotografija']['name'] === ''){
            $stmtUpdate = mysqli_prepare($connection, "UPDATE prvi_tim SET ime=?, prezime=?, nacionalnost=?, visina=?, karijera=?, pozicija=?, broj=?, datum_rodjenja=? WHERE id=?");
            $stmtUpdate->bind_param('sssissisi', $ime, $prezime, $nacionalnost, $visina, $karijera, $pozicija, $broj, $datumRodjenja, $id);

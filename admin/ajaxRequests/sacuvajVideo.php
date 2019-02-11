@@ -11,7 +11,7 @@
       $naslov = clean(strip_tags(trim(mysqli_real_escape_string($connection, $_POST['naslov']))));
       $datum = mysqli_real_escape_string($connection, $_POST['datum']);
    if($link === '' || $naslov === ''){
-       echo "Morate popuniti sva polja"; 
+       echo "Morate popuniti sva polja validnim tekstom"; 
    }elseif($datum > date('Y-m-d')){
     echo "Ne možete odabratti datum u budućnosti";
    }else{

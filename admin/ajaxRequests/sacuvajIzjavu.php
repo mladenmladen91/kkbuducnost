@@ -19,7 +19,7 @@
      if($datum > date('Y-m-d')){
          echo "Datum ne može biti u budućnosti"; 
       }elseif($naslov === ''){
-         echo "Popunite prazno polje";
+         echo "Popunite polje validnim tekstom";
      }elseif(!documentRecognizer($izjava)){
          echo "Unesite fajl formata pdf, doc ili docx";
      }else{

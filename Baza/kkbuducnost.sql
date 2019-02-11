@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2019 at 10:15 PM
+-- Generation Time: Feb 11, 2019 at 08:50 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -274,8 +274,7 @@ INSERT INTO `kadeti` (`id`, `ime`, `prezime`, `fotografija`, `broj`) VALUES
 (9, 'Danilo', 'IvanoviÄ‡', '1548374317danilo_ivanovic.jpg', 5),
 (10, 'Maksim', 'VujoviÄ‡', '1548374343maksim_vujovic.jpg', 13),
 (11, 'Veljko', 'Rakonjac', '1548374374veljko_rakonjac.jpg', 6),
-(12, 'Mikola', 'RatkniÄ‡', '1548374401nikola_ratknic.jpg', 9),
-(13, 'Stefan', 'JoksimoviÄ‡', '1548374427stefan_joksimovic.jpg', 12);
+(12, 'Mikola', 'RatkniÄ‡', '1548374401nikola_ratknic.jpg', 9);
 
 -- --------------------------------------------------------
 
@@ -300,7 +299,7 @@ CREATE TABLE `kalendar` (
 --
 
 INSERT INTO `kalendar` (`id`, `domacin`, `gost`, `datum`, `vrijeme`, `liga_id`, `domacin_logo`, `gost_logo`, `dvorana`) VALUES
-(8, 'KK BuduÄ‡nost VOLI', 'KK Partizan', '2019-02-10', '18:00:00', 1, '1548623774buducnostpng.png', '1549027732partizan.png', 'SC MoraÄa'),
+(8, 'KK BuduÄ‡nost VOLI', 'KK Partizan', '2019-02-14', '18:00:00', 1, '1548623774buducnostpng.png', '1549027732partizan.png', 'SC MoraÄa'),
 (10, 'KK CSKA', 'KK BuduÄ‡nost VOLI', '2019-02-07', '20:00:00', 2, '1549026498cska.png', '1548623774buducnostpng.png', 'Megasport arena'),
 (12, 'BC Panathinaikos', 'KK BuduÄ‡nost VOLI', '2019-02-10', '13:00:00', 2, '1549028007panathaniakois.png', '1548623774buducnostpng.png', 'Dvorana mira i prijateljstva'),
 (13, 'KK Cedevita', 'KK BuduÄ‡nost VOLI', '2019-02-12', '13:00:00', 1, '1549026590cedevita.png', '1548623774buducnostpng.png', 'SC Zagreb');
@@ -360,7 +359,8 @@ INSERT INTO `liga_tim` (`liga_id`, `tim_id`) VALUES
 (3, 15),
 (2, 18),
 (2, 19),
-(2, 20);
+(2, 20),
+(2, 22);
 
 -- --------------------------------------------------------
 
@@ -573,7 +573,7 @@ CREATE TABLE `prvi_tim` (
 
 INSERT INTO `prvi_tim` (`id`, `ime`, `prezime`, `nacionalnost`, `visina`, `fotografija`, `karijera`, `pozicija`, `broj`, `datum_rodjenja`) VALUES
 (1, 'Aleksa', 'IliÄ‡', 'MNE', 204, '1548365377aleksa_ilic.JPG', '', 'Krilo', 13, '1996-08-17'),
-(11, 'Petar', 'PopoviÄ‡', 'MNE', 193, '1548365796petar_popovic.JPG', '', 'Bek', 30, '1996-09-13'),
+(11, 'Petar', 'PopoviÄ‡', 'MNE', 193, '1548365796petar_popovic.JPG', 'nepoznato', 'Bek', 30, '1996-09-13'),
 (12, 'Sead', 'Å ehoviÄ‡', 'MNE', 201, '1548365881sead_sehovic.JPG', '', 'Bek', 8, '1989-08-22'),
 (13, 'Suad', 'Å ehoviÄ‡', 'MNE', 198, '1548365937suad_sehovic.JPG', '', 'Bek', 4, '1987-02-19'),
 (14, 'Nemanja', 'GordiÄ‡', 'SRB', 193, '1548366021nemanja_gordic.JPG', '', 'Krilo', 10, '1988-09-25'),
@@ -614,7 +614,7 @@ CREATE TABLE `rezultati` (
 --
 
 INSERT INTO `rezultati` (`id`, `domacin`, `gost`, `domacin_kosevi`, `gost_kosevi`, `datum`, `vrijeme`, `liga_id`, `domacin_logo`, `gost_logo`, `dvorana`) VALUES
-(12, 'KK BuduÄ‡nost VOLI', 'Fenerbahce Ulker', 80, 90, '2019-01-23', '20:00:00', 2, '1548623774buducnostpng.png', '1549028048fenerbache.png', 'SC MoraÄa'),
+(12, 'KK BuduÄ‡nost VOLI', 'Fenerbahce Ulker', 80, 70, '2019-01-23', '20:00:00', 2, '1548623774buducnostpng.png', '1549028048fenerbache.png', 'SC MoraÄa'),
 (13, 'KK Cedevita', 'KK BuduÄ‡nost VOLI', 70, 75, '2019-01-15', '20:00:00', 1, '1549026590cedevita.png', '1548623774buducnostpng.png', 'SC Zagreb'),
 (15, 'KK BuduÄ‡nost VOLI', 'KK Partizan', 0, 100, '2018-11-20', '19:00:00', 1, '1548623774buducnostpng.png', '1549027732partizan.png', 'SC MoraÄa'),
 (16, 'KK BuduÄ‡nost VOLI', 'KK Cedevita', 33, 29, '2019-02-09', '18:01:00', 1, '1548623774buducnostpng.png', '1549026590cedevita.png', 'SC MoraÄa');
@@ -647,11 +647,11 @@ INSERT INTO `sezona_kategorija` (`sezona_id`, `kategorija_id`) VALUES
 (29, 4),
 (29, 6),
 (29, 11),
-(30, 1),
-(30, 4),
-(30, 6),
-(30, 11),
-(30, 4);
+(31, 1),
+(31, 4),
+(31, 6),
+(31, 11),
+(31, 6);
 
 -- --------------------------------------------------------
 
@@ -672,7 +672,7 @@ INSERT INTO `sezone` (`id`, `broj`) VALUES
 (27, '2016/2017'),
 (28, '2017/2018'),
 (29, '2018/2019'),
-(30, 'ostalo');
+(31, 'ostalo');
 
 -- --------------------------------------------------------
 
@@ -697,7 +697,7 @@ INSERT INTO `sponzori` (`id`, `link`, `fotografija`, `ranking`, `aktivan`) VALUE
 (4, 'http://www.teamedica.co.me/me/', '15486922431Tea_Medica_novi-logo.png', 3, 'aktivan'),
 (5, 'http://monteput.me/', '1548692270monteput.png', 3, 'aktivan'),
 (6, 'https://www.telekom.me/', '1548692299tcom.png', 3, 'aktivan'),
-(7, 'https://www.nlb.me/me/stanovnistvo/pocetna', '1548692347nlbbanka.png', 0, 'aktivan'),
+(7, 'https://www.nlb.me/me/stanovnistvo/pocetna', '1548692347nlbbanka.png', 1, 'aktivan'),
 (8, 'https://www.nlb.me/me/stanovnistvo/pocetna', '1548692363nlbbanka.png', 3, 'aktivan'),
 (9, 'https://www.erstebank.me/sr_ME/stanovnistvo', '1548692393erste (1).png', 3, 'aktivan'),
 (10, 'http://nallgrupa.com/', '15486924291NALL-GRUPA-LOGO.png', 3, 'aktivan'),
@@ -773,8 +773,7 @@ INSERT INTO `tagovi` (`id`, `naziv`) VALUES
 (54, 'euroleague'),
 (56, 'Kup Crne Gore'),
 (57, 'aba'),
-(58, 'eurocup'),
-(59, 'KK LovÄ‡en');
+(58, 'eurocup');
 
 -- --------------------------------------------------------
 
@@ -792,7 +791,6 @@ CREATE TABLE `tag_vijest` (
 --
 
 INSERT INTO `tag_vijest` (`tag_id`, `vijest_id`) VALUES
-(59, 34),
 (5, 33),
 (5, 32),
 (58, 31),
@@ -817,8 +815,6 @@ INSERT INTO `tag_vijest` (`tag_id`, `vijest_id`) VALUES
 (57, 23),
 (5, 22),
 (8, 22),
-(5, 21),
-(10, 21),
 (5, 20),
 (10, 20),
 (5, 18),
@@ -852,7 +848,8 @@ INSERT INTO `timovi` (`id`, `naziv`, `logo`, `dvorana`) VALUES
 (16, 'KK Partizan', '1549027732partizan.png', 'Aleksandar NikoliÄ‡'),
 (18, 'FC Barcelona Lassa', '1549027956barcelona.png', 'Barcelona arena'),
 (19, 'BC Panathinaikos', '1549028007panathaniakois.png', 'Dvorana mira i prijateljstva'),
-(20, 'Fenerbahce Ulker', '1549028048fenerbache.png', 'Abdi Pekci arena');
+(20, 'Fenerbahce Ulker', '1549028048fenerbache.png', 'Abdi Pekci arena'),
+(22, 'sds', '15498996481382087_412794025486703_602864734_n.jpg', 'dsd');
 
 -- --------------------------------------------------------
 
@@ -922,7 +919,7 @@ INSERT INTO `video` (`id`, `link`, `naslov`, `datum`) VALUES
 (3, 'src=\"https://www.youtube.com/embed/H_j_TA9m658\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'de', '2019-02-13'),
 (4, '\"560\" \"315\" src=\"https://www.youtube.com/embed/02ux1dKNPXo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'Joe ropgan', '2019-02-13'),
 (5, '\"560\" \"315\" src=\"https://www.youtube.com/embed/02ux1dKNPXo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'Joe Rogan', '2019-02-10'),
-(7, '\"560\" \"315\" src=\"https://www.youtube.com/embed/MsjhqyCvfW4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'sdede', '2019-02-10');
+(7, 'src=\"https://www.youtube.com/embed/MsjhqyCvfW4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen', 'sdede', '2019-02-10');
 
 -- --------------------------------------------------------
 
@@ -950,7 +947,6 @@ INSERT INTO `vijesti` (`id`, `naslov`, `tekst`, `datum`, `fotografija`, `kategor
 (16, 'MORAÄŒA PROGUTALA Å AMPIONA EVROPE!', '<p><i>FantastiÄnom igrom koÅ¡arkaÅ¡i BuduÄ‡nost VOLI sruÅ¡ili su prvaka Evrope Real Madrid!</i></p><p>U atmosferi koja odavno nije viÄ‘ena koÅ¡arkaÅ¡i BuduÄ‡nost VOLI napravili su veliki podvig i pobijedili aktuelnog prvaka Evrope Real Madrid rezultatom 73-60! NaÅ¡a ekipa je sjajno otvorila meÄ i na krilima Colea i Jacksona povela 7-0. NoÅ¡eni sjajnom podrÅ¡kom sa tribina Plavi su nastavili u dobrom ritmu, odbrana je bila na visokom nivou i protivniku je dozvoljeno samo 15 poena u prvom kvartalu. OdliÄna kontrola ritma i mali broj izgubljenih lopti usmjerili su utakmicu u pravcu koji viÅ¡e odgovara naÅ¡oj ekipi. Protivniku nijesu dozvoljeni laki poeni, odbrana je bila veoma agresivna i na poluvrijeme se otiÅ¡lo sa prednoÅ¡Ä‡u naÅ¡e ekipe od 36-28.&nbsp;</p><p>TreÄ‡a Äetvrtina je otvorena na najbolji moguÄ‡i naÄin, Cole i Clark su pogodili po jednu trojku i prvi put Plavi dolaze do dvocifrene prednosti. U tim momentima posebno se u defanzivi istakao Earl Clark nakon Äijih je reakcija ekipa postizala lagane poene. Odbrana Plavih nije posustajala, tjerala je protivnika na veliki broj izgubljenih lopti, na kraju gotovo nevjerovatnih 18! U posljednjoj Äetvrtini vidjeli smo mnogo atraktivnih poteza naÅ¡e ekipe i veÄ‡ pomenutu granitnu odbranu, rotacije su bile pravovremene bez gotovo ijedne greÅ¡ke. Na kraju ubjedljivih 73-60 i samo 7 izgubljenih lopti dovoljno govori o partiji Å¡ampiona ABA lige. Plave su do velikog trijumfa vodili Cole sa 14, Bitadze 13 poena dok je Earl Clark uz 10 poena imao nemjerljiv defanzivni doprinos. Kod Å¡ampiona Evrope jediniigraÄ sa dvocifrenim uÄinkom bio je Llull sa 10 poena.</p><p>U ponedjeljak 20. januara naÅ¡u ekipu oÄekuje derbi ABA lige protiv ekipe Cedevite.</p>', '2019-01-18', '1548619049clanak-18-01-2019-5c42354ab3f22.jpg', 4, 'aktivan', 'MORAÄŒA DROWNS EUROLEAGUE CHAMPION!', '<p>The fantastic game of basketball The future of VOLI crashed the champions of Europe Real Madrid!&nbsp;<br><br>In an atmosphere that has not been seen before, the Future of VOLI have made a big feat and have won the Real Madrid Real Madrid 73-60! Our team greatly opened the match and led 7-0 on the wings of Cole and Jackson. Carried with great support from the tribune Plava continued in good rhythm, the defense was high and the opponent was allowed only 15 points in the first quarter. Excellent control of the rhythm and a small number of lost balls directed the game in a direction that suits our team. The opponent was not allowed light points, the defense was very aggressive and in the half time went with the advantage of our team from 36-28.&nbsp;<br><br>The third quarter was opened in the best possible way, Cole and Clark scored a triple, and for the first time, Plavi came up to a two-point advantage. At the moment, Earl Clark was particularly prominent in the defensive, after which the team scored a lightweight point. The Blacks\\\\\\\' defense did not let go, it drove the opponent to a large number of lost balls, at the end of almost unbelievable 18! In the last quarter we saw many attractive moves of our team and already mentioned granite defense, the rotations were timely without almost any mistake. At the end of a convincing 73-60 and only 7 lost balls enough talk about the ABA league champions league. The Blues were led by Cole with 14, Bitadze 13 points while Earl Clark with 10 points had an unbelievable defensive contribution. With a European champion, the single-player with a double-digit performance was Llull with 10 points.&nbsp;<br><br>On Monday, January 20th, our team is expecting a derby of the ABA League against the Cedevite team.</p>'),
 (18, '30.01. KK BUDUÄ†NOST VOLI DOÄŒEKUJE KK IBAR R', '<p><i>U srijedu u 19:00h plavi igraju u Äetvrtfinalu Kupa Crne Gore.</i></p><p>Nakon utakmice protiv Petrol Olimpije plavi svoju sledeÄ‡u utakmicu igraju na domaÄ‡em terenu protiv KK Ibar RoÅ¾aje.</p><p>Za ovu utakmicu je ulaz slobodan, dok sezonske karte zadrÅ¾avaju svoju numeraciju</p>', '2019-01-26', '1548712327buducnostpng.png', 11, 'aktivan', '30.01. KK BUDUÄ†NOST LOVES EVENTS KK IBAR ROÅ', '<p>On Wednesday at 19:00 the blue play in the quarterfinals of the Cup of Montenegro.&nbsp;<br><br>After the game against Petrol Olimpija Plavi will play their next match on home court against KK Ibar Rozaje.&nbsp;<br><br>For this game, the entry is free, while season tickets retain their numbering</p>'),
 (20, 'SRCE Å AMPIONA!', '<p><i>Plavi su u veoma neizvijesnoj zavrÅ¡nici savladali Cedevitu rezultatom 80-78.</i></p><p>U triler zavrÅ¡nici i fenomenalnoj atmosferi Spottskog centra MoraÄa koÅ¡arkaÅ¡i BuduÄ‡nost VOLI savladali su u derbiju 16. kola ABA lige ekipu Cedevite rezultatom 80-78 i na taj naÄin se izjednaÄili po broju pobjeda. NaÅ¡a ekipa je mnoho bolje otvorila meÄ i na krilima Noris Colea stekla prvu osjetniju prednost. Gosti su se ulaskom Pullena stabilizovali i doveli utakmicu u ravnoteÅ¾u, kada mu se i Cobbs prikljuÄio gosti su preuzeli voÄ‘stvo i dobili prvu Äetvrtinu rezultatom 22-21. Bekovski tandem gostiju je nastavio sa dobrom igrom i naÅ¡a ekipa nije uspijevala da povrati prednost. U meÄu bez pretjeranog ritma i sa velikim brojem prekrÅ¡aja bolje se snaÅ¡la ekipa iz Zagreba i na poluvrijeme otiÅ¡la sa prednoÅ¡Ä‡u od 2 poena.</p><p>Nastavak je poÄeo sjajno, Cole je pogodio pod faulom i Äinilo se da je momentum na strani naÅ¡e ekipe. Ipak gosti su nastavili sjajnonda igraju, teÄno u napadu i kombinovanom odbranom pravili mnogo problema aktuelnom Å¡ampionu. NaÅ¡i momci su pokuÅ¡avali individualnim rjeÅ¡enjima da se nametnu u napadu ali bez mnogo uspijeha. U posljednjem kvartalu trener RepeÅ¡a je zaigrao sa dva plejmejkera ali ni to nije dalo previÅ¡e rezultata. Kada su gosti poveli rezultatom 76-68 Plavi su pokazali zaÅ¡to su Å¡ampioni ABA lige i da imaju veliko srce. Serijom 12-0 koju su napadaÄki predvodili Cole i Clarke povratili su prednost. U odbrani su dominirali Bitadze i Clark i praktiÄno zakljuÄali reket. Posebno treba istaÄ‡i trojku Cole za 80-76 nakon koje je MoraÄa \\\\\\\"eksplodirala\\\\\\\". NoÅ¡eni fenomenalnom publikom Plavi su odbranili posljednji napad i donijeli navijaÄima neopisivno slavlje. Prvi meÄ‘u jednakima u naÅ¡oj ekipi bili su Clark sa 17 i Jackson sa 14 poena. Treba istaÄ‡i i fenomenalnu rolu Clarke u zavtÅ¡nici, krilo Plavih je susret zavrÅ¡ilo sa 10 poena. PoraÅ¾enu ekipu je predvodio bekovski tandem Pullen- Cobbs sa 25 odnosno 18 poena.</p><p>Naredni meÄ naÅ¡a ekipa igra taloÄ‘e u MoraÄi, kada u okviru 20.kola Evrolige doÄekuje ekipu Herbalife Gran Canaria. MeÄ je na programu u petak 25. januara.</p>', '2019-01-21', '1548712491clanak-25-01-2019-5c4b70fa5365b.jpg', 1, 'aktivan', 'A HEART OF THE CHAMPION', '<p>In a very uncertain finale, Blue won the Cedevita 80-78.&nbsp;<br><br>In the thriller finals and the phenomenal atmosphere of the Spots Center Moraca, the basketball players of the VOLI FUDA won the derby of the 16th round of the ABA League team Cedevita by the score of 80-78 and thus equaled the number of victories. Our team opened the sword better, and on the wings of Norris Cole gained the first sensation. With Pullen entering, the guests stabilized and brought the game into balance, when Cobbs joined him, the guests took the lead and scored the first quarter with a score of 22-21. Beck\\\'s tandem of guests continued with a good game and our team was not able to regain advantage. In the match without excessive rhythm and with a large number of violations, the team from Zagreb scored better and half-time went with the advantage of 2 points.&nbsp;<br><br>The continuation started great, Cole hit the foul and it seemed that the momentum was on the side of our team. However, the hosts continued to play a bright game, in the attack and combined defense, they made many problems to the current champion. Our guys tried to get individual solutions to attack in the attack, but without much success. In the last quarter, Coach Repes played with two playmakers, but this did not give too much result. When the hosts scored a score of 76-68 Blue showed why they are ABA league champions and have a big heart. The 12-0 series led by Cole and Clarke took the lead. The defense was dominated by Bitadze and Clark and practically locked the racket. It is especially worth mentioning the Troika Cole for 80-76 after which Moraca \\\\ \\\"exploded \\\\\\\". Carried to the phenomenal crowd Plavi defended the last attack and brought the fans an indescribable celebration. The first among the equals in our team were Clark with 17 and Jackson with 14 points. It should also be noted that Clarke\\\'s phenomenal role in the flank, the wing of the Blues ended with 10 points. The defeated team was led by the Bundesliga tandem Pullen-Cobbs with 25 and 18 points.&nbsp;<br><br>The next match, our team plays a pitch in Moraca, when in the 20th round of Euroleague they are waiting for the team Herbalife Gran Canaria. The match is on the program on Friday, January 25th.</p>'),
-(21, 'Najava utakmive protiv KK Cedevita', '<p><i>21.01.2019. plavi doÄekuju ekipu KK Cedevita u SC \\\\\\\\\\\\\\\"MoraÄa\\\\\\\\\\\\\\\"</i></p><p>Nakon velike pobjede u SC \\\\\\\\\\\\\\\"MoraÄa\\\\\\\\\\\\\\\" protiv Å¡ampiona evrolige, sljedeÄ‡a utakmica za naÅ¡e momke Ä‡e se odigrati&nbsp;u ponedjeljak u 18:00h uoÄi 16. kola ABA lige. Ova utakmica je od velike vaÅ¾nosti za naÅ¡u ekipu, jer od nje zavisi drugo mjesto na tabeli. Drugo mjesto na tabeli daje prednost domaÄ‡eg terena tokom plej ofa. DoÄ‘i i podrÅ¾i svoj klub!</p><p>Karte Ä‡e se prodavati u nedjelju od 12:00h do 19:00h i u ponedjeljak od 12:00h do poÄetka utakmice.</p>', '2019-01-19', '1548712549clanak-21-01-2019-5c45824b657f2.png', 1, 'aktivan', 'Announcement of the match against KK Cedevita', '<p>01/21/2019. blue are welcoming the team of KK Cedevita in SC \\\\\\\\\\\\ \\\"MoraÄa \\\\\\\\\\\\\\\"&nbsp;<br><br>After a big win in SC \\\\ \\\"MoraÄa \\\\\\\\\\\\\\\" against the Euroleague champion, the next match for our boys will be played on Monday at 18:00 on the eve of the 16th round of the ABA League. This match is very important for our team, because it is the second place on the table. The second place in the table gives priority to the home court during the play. Come and support your club!&nbsp;<br><br>The tickets will be sold on Sundays from 12:00 to 19:00 and on Monday from 12:00 until the start of the match.</p>'),
 (22, 'BLIJEDO IZDANJE U NOVOM MESTU', '<p><i>Plavi poraÅ¾eni u 12.kolu ABA lige od ekipe Krke.</i></p><p>KoÅ¡arkaÅ¡i BuduÄ‡nost VOLI doÅ¾ivjeli su drugi uzastopni poraz u 12.kolu ABA lige, na debiju Bitadze-a i Bell-a, od ekipe Krke iz Novog Mesta. Tok utakmice u mnogome je odredila prva Äetvrtina u kojoj je naÅ¡a ekipa postigla samo 5 poena. Plavi nijesu imali rjeÅ¡enja za agresivnu odbranu domaÄ‡ina koji je dobrom igrom u prvom kvartalu stekao neophodno samopouzdanje. U sliÄnom ritmu se nastavilo i u drugoj Äetvrtini, doduÅ¡e vidjeli smo neÅ¡to bolje napadaÄko izdanje koÅ¡arkaÅ¡a BuduÄ‡nost VOLI ali se na poluvrijeme otiÅ¡lo sa 15 poena zaostatka. Nakon pauze djelovalo je da su se naÅ¡i momci trgli i predvoÄ‘eni veÄeras sjajnim PopoviÄ‡em, uspjeli su da smanje zaostatak domaÄ‡ina. U posljednjoj dionici nastavila je da se topi prednost domaÄ‡ina ali kada je trebalo napraviti odluÄujuÄ‡i korak naÅ¡i momci su promaÅ¡ivali slobodna bacanja. ÄŒini se da je pobjednika odluÄila prva Äetvrtina nakon koje su koÅ¡arkaÅ¡i BuduÄ‡nost VOLI jurili zaostatak do kraja susreta. Jedina svijetla taÄka u redovima naÅ¡e ekipe bio je PopoviÄ‡ sa 16 poena, domaÄ‡ina je do pobjede vodio Lapornik strijelac 12 poena.&nbsp;</p><p>NaÅ¡e momke novo iskuÅ¡enje oÄekuje 28.decembra kada u okviru takmiÄenja u Evroligi gostuju ekipi Bayer Munich.</p>', '2018-12-24', '1548712661clanak-24-12-2018-5c21311830d88.jpg', 1, 'aktivan', 'BLOCKED EDITION IN A NEW PLACE', '<p>Blue defeated in the 12th round of the ABA league from the Krka team.&nbsp;<br><br>Basketball The future of VOLI experienced another consecutive defeat in the 12th round of the ABA League, on the debut of Bitadze and Bell, from the Krka team from Novi Grad. The course of the game has largely determined the first quarter in which our team scored only 5 points. Blue did not have solutions for the aggressive defense of the host who, with a good game in the first quarter, gained the necessary confidence. In a similar rhythm continued in the second quarter, though we have seen a slightly better offensive edition of the basketball player FUTURE VOLI but in the afternoon it left with 15 points behind. After the break, our boys were struck and led by great Popovic tonight, they managed to reduce the backlog of hosts. In the last section, she continued to melt the advantage of the host, but when it was necessary to make a decisive step, our boys missed free throws. It seems that the winner has decided the first quarter after which the basketball players of BuduÄ‡nost VOLI run back to the end of the match. The only bright spot in the ranks of our team was Popovic with 16 points, the host was led by Lapornik 12 points.&nbsp;<br><br>Our guys are waiting for the new temptation on 28 December when they will play Bayer Munich in the Euroleague competition.</p>'),
 (23, 'FURIOZNO DRUGO POLUVRIJEME!', '<p><i>KoÅ¡arkaÅ¡i BuduÄ‡nost VOLI savladali su u 14. kolu ABA lige ekipu Igokee rezultatom 96-70.</i></p><p>Sjajnim izdanjem, prije svega u drugom poluvremenu, koÅ¡arkaÅ¡i BuduÄ‡nost VOLI savladali su Igokeu u 14. kolu ABA lige i na taj naÄin upisali devetu pobjedu. Plavi su meÄ zapoÄeli u neÅ¡to sporijem ritmu Å¡to je protivnik znao da iskoristi i u prvom kvartalu uglavnom bude u prednosti.Cole i PopoviÄ‡ su svojim ulaskom donijeli prijeko potrebnu energiju i prednost gostiju je bila sve manja i manja. Ipak, na poluvrijeme se otiÅ¡lo sa prednoÅ¡Ä‡u Igokee 46-43.</p><p>U drugom poluvremenu kao da je druga ekipa izaÅ¡la na teren, Plavi su zaigrali mnogo agresivnije u odbrani, veÄ‡ pomenutim Cole i PopoviÄ‡u su se prikljuÄili i ostali igraÄi i za 3 minuta naÅ¡a ekipa je bila u prednosti. U tom periodu sjajan je bio Bitadze koji je sa nekoliko zakucavanja i poena pod faulom podigao publiku na noge. Treba istaÄ‡i i rolu koju je imao Earl Clark, prije svega defanzivnu a uz to je i pogodio nekoliko Å¡uteva na drugoj strani. Do kraja susreta prednost je samo rasla a publika je uÅ¾ivala u atraktivnim potezima naÅ¡ih momaka. Na kraju ubjedljivih 96-70 na debiju Jasmina RepeÅ¡e pred domaÄ‡om publikom.&nbsp;</p><p>U naÅ¡oj ekipi poeni su bili sjajno rasporeÄ‘eni, PopoviÄ‡ je bio najefikasniji sa 14 poena a istakli su se Suad&nbsp; Å ehoviÄ‡ sa 13, Bitadze i NikoliÄ‡ sa po 12 dok je Cole uz 11 poena imao i 6 asistencija. Kod gostiju bolji od ostalih bili su ZubÄiÄ‡ i AnÄ‘yÅ¡iÄ‡ sa po 17 poena.</p><p>Naredni meÄ koÅ¡arkaÅ¡i BuduÄ‡nost VOLI igraju u okviru 17. kola Evrolige kada Ä‡e gostovati ekipi Maccabi FOX Tel Aviv u srijedu 9. januara.</p>', '2019-01-06', '1548712754clanak-06-01-2019-5c3254729ec55.jpg', 1, 'aktivan', 'FURIOUS SECOND HALF!', '<p>Basketball players BuduÄ‡nost VOLI won the 14th round of the ABA league for the team Igokee with 96-70.&nbsp;<br><br>With a great edition, primarily in the second half, basketball players Buducnost VOLI won the Igokea in the 14th round of the ABA League and in that way recorded the ninth victory. The blue sword started in a somewhat slower rhythm, which the opponent knew to use and in the first quarter it was mostly in advantage. Cole and Popovic brought in the most needed energy and the advantage of the guests was getting smaller and smaller. However, the half-time went with the advantage of Igokea 46-43.&nbsp;<br><br>In the second half as if the other team went out on the field, Plavi played much more aggressively in the defense, but the other players joined Cole and Popovic, and in 3 minutes our team was in advantage. During that period, Bitadze was great, who raised the crowd to his feet with a few dives and points under the foul. It should also be noted that the role played by Earl Clark, above all, was defensive, and he also hit several shots on the other side. By the end of the meeting, the advantage was only growing and the audience enjoyed the attractive moves of our guys. At the end of the convincing 96-70 on the debut of Jasmin Repesha before the domestic audience.&nbsp;<br><br>In our team, the points were splendidly arranged, Popovic was the most effective with 14 points, and Suad Shehovic with 13, Bitadze and Nikolic scored with 12, while Cole with 11 points had 6 assists. Among the guests better than others were Zubcic and Anjusic with 17 points.&nbsp;<br><br>Next Match Basketball The Future of VOLI play within the 17th round of Euroleague when they will be visiting Maccabi FOX Tel Aviv on Wednesday, January 9th.</p>'),
 (24, 'RUTINSKA POBJEDA', '<p><i>Plavi su bez veÄ‡ih problema savladali ekipu FMP u 15. kolu ABA lige.</i></p><p>Sjajnom igrom od samog starta Plavi su bez veÄ‡ih problema savladali ekipu FMP rezultatom 87-70. NaÅ¡a ekipa je kontrolu igre uspostavila dobrom unutraÅ¡njom igrom u kojoj je prednjaÄio BaroviÄ‡, sa 6 vezanih poena ukljuÄujuÄ‡i i sjajno zakucavanje odliÄno se uveo u utakmicu i najavio svoje sjajno izdanje. OdliÄnom odbranom i kontrolom skoka Plavi su poveÄ‡avali prednost. U drugoj dionici naÅ¡a ekipa je sjajnom timskom igrom i 28 postignutih poena stekla 16 poena prednosti i mirno privela poluvrijeme kraju.</p><p>U treÄ‡oj dionici ekipa BuduÄ‡nost VOLI nije bila u napadaÄkom ritmu iz prvog poluvremenu i uz malo opuÅ¡tanje protivnik je uspio da smanji zaostatak. Ipak, pojaÄanom agresivnoÅ¡Ä‡u u odbrani stvari su doÅ¡le na svoje mjesto. U posljednjem kvartalu nezaustavljivi su bili Earl Clark i Coty Clarke Å¡to je bilo dovoljno za miran kraj meÄa. Treba napomenuti sjajnu timsku igru naÅ¡e ekipe, o Äemu svjedoÄi 25 asistencija, u tom segmentu prednjaÄili su GordiÄ‡ i Cole sa po 7, odnosno Jackson sa 6 uspjeÅ¡nih dodavanja. Kada su poeni u pitanju, najefikasniji su bili Clark sa 17, BaroviÄ‡ sa 16, odnosno Clarke sa 15 poena. Kod domaÄ‡ina istakao se ApiÄ‡ sa 26 poena.</p><p>U petak 18. januara u MoraÄi nas oÄekuje spektakl, kada u okviru 19. kola Evrolige naÅ¡a ekipa doÄekuje aktuelnog prvaka Evrope - Real Madrid.</p>', '2019-01-14', '1548712826clanak-14-01-2019-5c3ce04b965cb.jpg', 1, 'aktivan', 'EASY WIN', '<p>The Blues won the FMP team in the 15th round of the ABA League without major problems.&nbsp;<br><br>With a great game from the very start, the Blues managed to beat the FMP team with 87-70 without major problems. Our team set up control of the game with a good internal game in which Barovic was leading, with 6 points, including a great dashing, and he introduced himself into the game and announced his great edition. With the excellent defense and control of the Blue jump, they increased the advantage. In the second part, our team scored 16 points advantageously with a great team game and 28 points scored and quietly ripped the half-timer to the end.&nbsp;<br><br>In the third section, BuduÄ‡nost VOLI was not in the first half of the attack rhythm and with a little relaxation the opponent managed to reduce backlog. Nevertheless, the increased aggressiveness in defense of things came to their place. In the last quarter, Earl Clark and Coty Clarke were unstoppable, which was enough for the quiet end of the match. We should mention the team\\\'s great team team, as evidenced by 25 assists, with Gordic and Cole with 7, and Jackson with 6 successful passes. When the points were in question, the most effective were Clark with 17, Barovic with 16, and Clarke with 15 points. ApiÄ‡ with 26 points showed off with the host.&nbsp;<br><br>On Friday, January 18 in MoraÄa we expect a spectacle, when within the 19th round of Euroleague our team is welcoming the current champion of Europe - Real Madrid.</p>'),
@@ -1219,7 +1215,7 @@ ALTER TABLE `baneri`
 -- AUTO_INCREMENT for table `cg`
 --
 ALTER TABLE `cg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `eurocup`
@@ -1243,43 +1239,43 @@ ALTER TABLE `fotografije`
 -- AUTO_INCREMENT for table `juniori`
 --
 ALTER TABLE `juniori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `kadeti`
 --
 ALTER TABLE `kadeti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `kalendar`
 --
 ALTER TABLE `kalendar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `kategorija`
 --
 ALTER TABLE `kategorija`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `lige`
 --
 ALTER TABLE `lige`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `mediji`
 --
 ALTER TABLE `mediji`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `menadzment`
 --
 ALTER TABLE `menadzment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `mladje_selekcije`
@@ -1303,7 +1299,7 @@ ALTER TABLE `newsfeed_emails`
 -- AUTO_INCREMENT for table `osoblje`
 --
 ALTER TABLE `osoblje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `pioniri`
@@ -1315,19 +1311,19 @@ ALTER TABLE `pioniri`
 -- AUTO_INCREMENT for table `prvi_tim`
 --
 ALTER TABLE `prvi_tim`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `rezultati`
 --
 ALTER TABLE `rezultati`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `sezone`
 --
 ALTER TABLE `sezone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `sponzori`
@@ -1339,25 +1335,25 @@ ALTER TABLE `sponzori`
 -- AUTO_INCREMENT for table `strucni_stab`
 --
 ALTER TABLE `strucni_stab`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tagovi`
 --
 ALTER TABLE `tagovi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `timovi`
 --
 ALTER TABLE `timovi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `trofeji`
 --
 ALTER TABLE `trofeji`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `upravni_odbor`
@@ -1369,13 +1365,13 @@ ALTER TABLE `upravni_odbor`
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `vijesti`
 --
 ALTER TABLE `vijesti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables

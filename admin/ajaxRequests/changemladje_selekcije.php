@@ -19,7 +19,7 @@
       $fotografija_tmp = $_FILES['fotografija']['tmp_name'];
     
        if($ime === '' || $prezime === '' || $pozicija === ''){
-           echo "Morate popuniti sva polja";
+           echo "Morate popuniti sva polja validnim tekstom";
        }elseif($_FILES['fotografija']['name'] === ''){
            $stmtUpdate = mysqli_prepare($connection, "UPDATE mladje_selekcije SET ime=?, prezime=?, pozicija=? WHERE id=?");
            $stmtUpdate->bind_param('sssi', $ime, $prezime, $pozicija, $id);

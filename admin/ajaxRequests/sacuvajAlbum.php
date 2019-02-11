@@ -21,7 +21,7 @@
      if($datum > date('Y-m-d')){
          echo "Datum ne može biti u budućnosti"; 
       }elseif($naziv === ''){
-         echo "Morate popuniti sva polja"; 
+         echo "Morate popuniti sva polja validnim tekstom"; 
       }elseif(!extension($fotografija)){
           echo "Unesite jpg ili png format fotografije";
       }else{
