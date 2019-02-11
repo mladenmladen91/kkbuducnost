@@ -39,13 +39,13 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="link">Link</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="link" id="link" class="add_news_form_text form-control form-control-lg" value="<?php echo $link  ?>">
+                            <input required type="text" name="link" id="link" class="add_news_form_text form-control form-control-lg" value="<?php echo $link  ?>" maxlength="90">
                         </div>
                     </div>
                     
                     <div class="col-sm-12 col-12 form-group my-4">
                         <div class="col-sm-4 col-12 pl-0">
-                            <button class="add_news_btn" type="submit"><i class="far fa-save"></i>&ensp;Sačuvaj tim</button>
+                            <button class="add_news_btn" type="submit"><i class="far fa-save"></i>&ensp;Sačuvaj Baner</button>
                         </div>
 
 

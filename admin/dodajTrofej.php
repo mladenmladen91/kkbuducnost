@@ -38,7 +38,7 @@ redirect();
                             <label class="news_form_label" for="naziv">Naziv</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" maxlength="40">
                         </div>
                     </div>
                     

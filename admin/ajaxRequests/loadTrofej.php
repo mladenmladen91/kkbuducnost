@@ -39,7 +39,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="naziv">Naziv</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" value="<?php echo $naziv ?>">
+                            <input required type="text" name="naziv" id="naziv" class="add_news_form_text form-control form-control-lg" value="<?php echo $naziv ?>" maxlength="30">
                         </div>
                     </div>
                     
@@ -59,7 +59,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="sezone">Sezone</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea required type="text" name="sezone" id="sezone" class="add_news_form_textarea form-control form-control-lg"><?php echo $sezone ?></textarea>
+                            <textarea required type="text" name="sezone" id="sezone" class="add_news_form_textarea form-control form-control-lg" maxlength="300"><?php echo $sezone ?></textarea>
                         </div>
                     </div>
                     

@@ -62,7 +62,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="dobijene">Dobijene utakmice</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="dobijene" id="dobijene" class="add_news_form_text form-control form-control-lg" value="<?php echo $dobijene ?>" min="0">
+                            <input required type="number" name="dobijene" id="dobijene" class="add_news_form_text form-control form-control-lg" value="<?php echo $dobijene ?>" min="0" max="100">
                         </div>
                     </div>
                     
@@ -71,7 +71,7 @@ include "../../includes/functions.php";
                             <label class="news_form_label" for="izgubljene">Izgubljene utakmice</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="number" name="izgubljene" id="izgubljene" class="add_news_form_text form-control form-control-lg" value="<?php echo $izgubljene ?>" min="0">
+                            <input required type="number" name="izgubljene" id="izgubljene" class="add_news_form_text form-control form-control-lg" value="<?php echo $izgubljene ?>" min="0" max="100">
                         </div>
                     </div>
                     

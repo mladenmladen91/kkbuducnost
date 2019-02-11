@@ -32,7 +32,7 @@ redirect();
                             <label class="news_form_label" for="link">Link(* U dijelu share opcija embed kopirajte sadržaj unutar iframe elementa)</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea required name="link" id="link" class="add_news_form_text form-control form-control-lg" ></textarea>
+                            <textarea required name="link" id="link" class="add_news_form_text form-control form-control-lg" maxlength="400"></textarea>
                         </div>
                     </div>
                     

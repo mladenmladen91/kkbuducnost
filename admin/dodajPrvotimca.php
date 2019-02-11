@@ -32,7 +32,7 @@ redirect();
                             <label class="news_form_label" for="ime">Ime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" maxlength="25">
+                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" maxlength="40">
                         </div>
                     </div>
                     
@@ -41,7 +41,7 @@ redirect();
                             <label class="news_form_label" for="prezime">Prezime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" maxlength="25">
+                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" maxlength="40">
                         </div>
                     </div>
                     
@@ -75,7 +75,7 @@ redirect();
                             <label class="news_form_label" for="pozicija">Pozicija</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg" maxlength="15">
+                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg" maxlength="30">
                         </div>
                     </div>
                     
@@ -93,7 +93,7 @@ redirect();
                             <label class="news_form_label" for="text1">Karijera</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <textarea name="karijera" id="text1" class="add_news_form_textarea" required></textarea>
+                            <textarea name="karijera" id="text1" class="add_news_form_textarea" required maxlength="400"></textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 col-12 form-group my-4">

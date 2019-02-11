@@ -36,7 +36,7 @@ while($row = $result->fetch_assoc()){
                             <label class="news_form_label" for="ime">Ime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="ime" id="ime" class="add_news_form_text form-control form-control-lg" maxlength="40">
                         </div>
                     </div>
                     
@@ -45,7 +45,7 @@ while($row = $result->fetch_assoc()){
                             <label class="news_form_label" for="prezime">Prezime</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="prezime" id="prezime" class="add_news_form_text form-control form-control-lg" maxlength="40">
                         </div>
                     </div>
                     
@@ -62,7 +62,7 @@ while($row = $result->fetch_assoc()){
                             <label class="news_form_label" for="pozicija">Pozicija</label>
                         </div>
                         <div class="col-sm-12 col-12 pl-0">
-                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg">
+                            <input required type="text" name="pozicija" id="pozicija" class="add_news_form_text form-control form-control-lg" maxlength="50">
                         </div>
                     </div>
                     
