@@ -44,6 +44,15 @@
         }
     }
 }
+.circleimg{
+    backface-visibility: hidden;
+    transition: transform .3s ease;
+    &:hover{
+        backface-visibility: hidden;
+        transition: perspective(1px) transform .3s ease;
+        transform: scale(1.05);
+    }
+}
 @media(max-width: 575px){
     .footer_newsletter_form{
         margin-left: 40px;

@@ -23,8 +23,8 @@ include "../includes/functions.php";
                     <?php
                         while($stmt->fetch()){
                     ?>
-                          <div class="col-lg-3 col-sm-6 p-0" style="margin-bottom: 30px">
-                              <a href="album.php?sezona_id=<?php echo $section ?>&kategorija_id=<?php echo $kategorijaId ?>">
+                          <div class="col-lg-3 col-sm-6 p-0 sponsor_hover" style="margin-bottom: 30px">
+                              <a href="album.php?sezona_id=<?php echo $section ?>&kategorija_id=<?php echo $kategorijaId ?>" title="<?php echo $kategorijaNaziv ?>">
                                 <div class="col-lg-12 photo_league p-2">
                                   <div class="col-lg-12 photo_league_container_<?php echo ($kategorijaNaziv === 'prva liga')? 'prva':$kategorijaNaziv ?>">
                                   </div>

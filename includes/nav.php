@@ -9,8 +9,8 @@
 <nav class="col-xl-10 col-lg-10 navbar navbar-expand-xl nav_container" >
     <div class="brand_holder" style="position:relative; display:none">  
     <a class="navbar-brand" href="index.php"><img class="img-responsive" src="images/buducnostvoli.svg" height="80" width="80" alt="kk budućnost"></a>
-    <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=me" class="language_link language_link_me <?php echo ($_SESSION['lang']=== 'me')? 'language_link_active':'' ?>" style="position:absolute; left:3; top:80;padding: 1px !important">ME</a>
-    <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=en" class="language_link language_link_en <?php echo ($_SESSION['lang']=== 'en')? 'language_link_active':'' ?> language_link_en" style="position:absolute; left:52; top:80;padding: 1px !important">EN</a>    
+    <a href="<?php echo $_SERVER["PHP_SELF"] ?>?lang=me" class="language_link language_link_me <?php echo ($_SESSION['lang']=== 'me')? 'language_link_active':'' ?>" style="position:absolute; left:3; top:80;padding: 1px !important">ME</a>
+    <a href="<?php echo $_SERVER["PHP_SELF"] ?>?lang=en" class="language_link language_link_en <?php echo ($_SESSION['lang']=== 'en')? 'language_link_active':'' ?> language_link_en" style="position:absolute; left:52; top:80;padding: 1px !important">EN</a>    
     </div>    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="ham2"></span>
@@ -56,8 +56,8 @@
           </li>
           <li class="nav-item logo_holder" style="padding-top: 1px !important; position:relative; padding:0 40px;">
             <a class="navbar-brand logo_sign" href="index.php"><img style="position:absolute; top:-42; left:20; z-index: 1000" class="img-responsive" src="images/buducnostvoli.svg" height="80" width="80" alt="kk budućnost"></a>
-            <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=me" class="language_link <?php echo ($_SESSION['lang']=== 'me')? 'language_link_active':'' ?>" style="position:absolute; left:5; bottom:-13">ME</a>
-            <a href="<?php echo basename($_SERVER["PHP_SELF"]) ?>?lang=en" class="language_link <?php echo ($_SESSION['lang']=== 'en')? 'language_link_active':'' ?>" style="position:absolute; right:5; bottom:-13">EN</a>
+            <a href="<?php echo $_SERVER["PHP_SELF"] ?>?lang=me" class="language_link <?php echo ($_SESSION['lang']=== 'me')? 'language_link_active':'' ?>" style="position:absolute; left:5; bottom:-13">ME</a>
+            <a href="<?php echo $_SERVER["PHP_SELF"] ?>?lang=en" class="language_link <?php echo ($_SESSION['lang']=== 'en')? 'language_link_active':'' ?>" style="position:absolute; right:5; bottom:-13">EN</a>
           </li>    
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $lang['UPRAVA'] ?></a>

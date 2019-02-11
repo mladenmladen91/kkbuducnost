@@ -301,7 +301,7 @@ $(document).ready(function(){
               var pos = $(this).offset().top;
               var winTop = $(window).scrollTop();
               
-               if (pos < winTop + 380) {
+               if (pos < winTop + 500) {
                    $(this).addClass("show_tables");
                    $(".tables_right").addClass("show_tables");
                }
@@ -322,7 +322,7 @@ $(document).ready(function(){
               var pos = $(this).offset().top;
               var winTop = $(window).scrollTop();
             
-               if (pos < winTop + 400) {
+               if (pos < winTop + 600) {
                    $(this).addClass("show_sponsors");
                }
          });

@@ -117,13 +117,13 @@
         &:hover{
             backface-visibility: hidden;
             transition: transform .4s ease;
-            transform: scale(1.05);
+            transform: perspective(1px) scale(1.05);
         }
     }
 }
 .show_sponsors{
     opacity: 1;
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
 

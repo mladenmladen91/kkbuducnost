@@ -69,7 +69,7 @@
                             </div>
                             <div class="col-lg-12 text-center mb-4">
                               <div class="row justify-content-center">   
-                                <a class="col-xs-3 media_link p-2" href="images/medijabuducnost.png" target="_blank">
+                                <a class="col-xs-3 media_link p-2" href="images/medijabuducnost.png" target="_blank" title="png logo">
                                      <div class="col-xs-12 col-lg-12 media_icon">
                                       <div class="col-xs-12 text-center py-2">
                                             <img src="images/download.svg" width="16px" class="img-responsive">   
@@ -79,7 +79,7 @@
                                         </div>  
                                      </div>
                                 </a>
-                                <a class="col-xs-3 media_link p-2" href="images/medijakutakbuducnost.jpg" target="_blank">
+                                <a class="col-xs-3 media_link p-2" href="images/medijakutakbuducnost.jpg" target="_blank" title="jpg logo">
                                      <div class="col-xs-12 col-lg-12 media_icon">
                                       <div class="col-xs-12 text-center py-2">
                                             <img src="images/download.svg" width="16px" class="img-responsive">   
@@ -89,7 +89,7 @@
                                         </div>  
                                      </div>
                                 </a>
-                                <a class="col-xs-3 media_link p-2" href="images/medijakutakbuducnost.pdf" target="_blank">
+                                <a class="col-xs-3 media_link p-2" href="images/medijakutakbuducnost.pdf" target="_blank" title="pdf logo">
                                      <div class="col-xs-12 col-lg-12 media_icon">
                                       <div class="col-xs-12 text-center py-2">
                                             <img src="images/download.svg" width="16px" class="img-responsive">   

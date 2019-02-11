@@ -38,13 +38,13 @@
                     <span class="footer_newsletter_span" style="font-size: 14px !important"><?php echo $lang['pratite'] ?>:</span>     
                 </div>
                 <div class="col-lg-6 text-center">
-                    <a target="_blank" href="https://www.facebook.com/KkBuducnostVoli/">
+                    <a target="_blank" href="https://www.facebook.com/KkBuducnostVoli/" title="KK Budućnost VOLI facebook">
 				        <img src="images/fb.svg" class="img-circle circleimg" style="width: 35px;margin-right: 0px;">					
 				    </a>
-                    <a target="_blank" href="https://www.instagram.com/buducnostvoli/?hl=en">
+                    <a target="_blank" href="https://www.instagram.com/buducnostvoli/?hl=en" title="KK Budućnost VOLI instagram">
 				        <img src="images/instagram.svg" class="img-circle circleimg" style="width: 35px; margin-left: 10px;">				
 				   </a>
-                   <a target="_blank" href="https://twitter.com/KKBuducnostVOLI">
+                   <a target="_blank" href="https://twitter.com/KKBuducnostVOLI" title="KK Budućnost VOLI twitter">
 							<img src="images/tw.svg" class="img-circle circleimg" style="width: 35px; margin-left: 10px;">				
 				  </a>    
                 </div>
