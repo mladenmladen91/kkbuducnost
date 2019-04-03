@@ -11,8 +11,12 @@ $category = $_POST['category'];
     $stmtKalendar = mysqli_prepare($connection,"SELECT domacin, gost, datum, vrijeme, domacin_logo, gost_logo, dvorana FROM kalendar WHERE datum >= CURDATE() ORDER BY datum ASC LIMIT 1 ");
     $stmtKalendar->execute();
     testQuery($stmtKalendar);
+    $stmtKalendar->store_result();
+    $broj = $stmtKalendar->num_rows();
     $stmtKalendar->bind_result($domacin, $gost, $datum, $vrijeme, $domacin_logo, $gost_logo, $dvorana);
     $stmtKalendar->fetch();
+
+      if($broj > 0){
   
 ?>
  <div class="col-lg-12 game_container_info">
@@ -55,4 +59,9 @@ $category = $_POST['category'];
                             </div>
                         </div>
                     </div>
+<?php }else{ ?>
 
+      <div class="col-lg-12 text-center" style="padding: 20px; font-size: 2rem; color: gray; font-weight: bold">NEMA NAREDNIH UTAKMICA</div>
+<?php } ?>
+          
+          
