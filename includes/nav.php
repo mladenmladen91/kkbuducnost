@@ -3,6 +3,9 @@
    $stranica = str_replace('.php','',basename(__FILE__));
   
    include "config.php";
+
+    $Url = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+$Url .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
 ?>
 <div class="container-fluid" id="navbar" style="z-index:3000">
 <div class="row justify-content-center">    

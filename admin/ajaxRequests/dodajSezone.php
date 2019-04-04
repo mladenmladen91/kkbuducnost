@@ -2,7 +2,7 @@
     session_start();
 
     
-    $connection = mysqli_connect('localhost','root','','kkbuducnost');
+    include "../../includes/db.php";
 
      if(!$connection){
   	   die('error '.mysqli_error($connection));
