@@ -1,4 +1,3 @@
-<!-- header including -->
 <?php include "includes/adminHeader.php";?>
 
 
@@ -12,6 +11,12 @@
     if(isset($_SESSION['username'])){
         header('location: vijesti.php');
     } 
+
+     if(isset($_GET['signout'])){  
+   if($_GET['signout'] == "izloguj"){
+       unset($_SESSION['username']);
+   }
+  }
 
 ?>
     

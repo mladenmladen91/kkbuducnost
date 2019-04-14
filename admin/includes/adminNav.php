@@ -69,7 +69,7 @@
           </li>     
             
           <li class="nav-item" >
-            <a class="nav-link signout_btn" href="logout.php">ODJAVI SE</a>
+            <a class="nav-link signout_btn" href="index.php?signout=izloguj">ODJAVI SE</a>
           </li>    
         </ul>
        </div>
