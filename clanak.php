@@ -27,7 +27,7 @@ $stmt->close();
 
 //redirecting if id not found
 if($rows <= 0){
-    header("location: 404.php");
+    header("location: index.php");
 }
 ?>
 
